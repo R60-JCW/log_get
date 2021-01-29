@@ -1,22 +1,41 @@
-[ACI]
-aci1 ansible_host=xx.xx.xx.xx
-aci2 ansible_host=xx.xx.xx.xx
+[XRv:children]
+core
+wan
 
-[NETWORK:children]  # Network内に分類はないが、test用にネスト
-ACI
+[NX-OSv:children]
+dist
+access
 
 
-[TEMP_ACI2]
-#temp_aci2 ansible_host=xx.xx.xx.xx
+[core]
+core1 ansible_host=172.16.30.128
+core2 ansible_host=172.16.30.129
 
-[TEMP_ACI3]
-temp_aci3 ansible_host=xx.xx.xx.xx
+[dist]
+dist3 ansible_host=172.16.30.130
+dist4 ansible_host=172.16.30.131
 
-[TMP_NF:children]  # Network以外のターゲット種別想
-TEMP_ACI2
-TEMP_ACI3
+[access]
+access5 ansible_host=172.16.30.125
+access6 ansible_host=172.16.30.126
+
+[wan]
+wan9 ansible_host=172.16.30.132
+
+[XRv:vars]
+ansible_connection=network_cli
+ansible_network_os=iosxr
+ansible_user=cisco
+ansible_password=cisco
+
+[NX-OSv:vars]
+ansible_connection=network_cli
+ansible_network_os=nxos
+ansible_user=cisco
+ansible_password=cisco
 
 [all:vars]
+#ansible_connection=local
 #ansible_user=#ユーザー名記載 #マスク処理
 #ansible_password=#パスワード記載 #マスク処理
 repository_dir=tmp-facts
@@ -26,9 +45,3 @@ process_json_script=process_json.py
 process_facts_json_script=process_facts_json.py
 process_csv_script=process_unstractured-data_csv.py
 
-[server]
-#logSV ansible_host=10.5.106.19 ansible_user=#ユーザー名記載 #マスク処理
-logSV ansible_host=10.5.106.19 ansible_user=#ユーザー名記載 #マスク処理 ansible_password=#パスワード記載 #マスク処理
-jiraSV ansible_host=10.5.106.16 ansible_user=#ユーザー名記載 #マスク処理 ansible_password=#パスワード記載 #マスク処理
-
-#localhost ansible_connection=local
