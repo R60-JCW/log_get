@@ -133,16 +133,20 @@ rlt_msg="検証環境の構成に変更が発生しました。変更可箇所�
 
 ### 通知実行(メッセージに改行ができないため、通知を2つに分ける)
 #curl -X POST http://xx.xx.xx.xx:XXXX/v1/notify/teams \
-curl -X POST http://xx.xx.xx.xx:XXXX/v1/notify/teams \
-  --header 'Content-Type: text/plain' \
-  --data "${rlt_msg}"
+#curl -X POST http://xx.xx.xx.xx:XXXX/v1/notify/teams \
+#  --header 'Content-Type: text/plain' \
+#  --data "${rlt_msg}"
 
-curl -X POST http://xx.xx.xx.xx:XXXX/v1/notify/teams \
-  --header 'Content-Type: text/plain' \
-  --data "${diff_rlt_msg}"
+curl -X POST --data-urlencode "payload={\"channel\": \"#通知テスト\", \"username\": \"webhookbot\", \"text\": \"${rlt_msg}\", \"icon_emoji\": \":ghost:\"}" https://hooks.slack.com/services/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
+
+#curl -X POST http://xx.xx.xx.xx:XXXX/v1/notify/teams \
+#  --header 'Content-Type: text/plain' \
+#  --data "${diff_rlt_msg}"
 #  --data "test2  \ntest2"
 #  --data-raw "検証環境の構成に変更が発生しました。変更可箇所はリポジトリ:${changed_repo}のコミットコード:${commit_code}を確認してください。\\n$diff_rlt_msg"
-#echo -e ${rlt_msg} | curl -X POST http://xx.xx.xx.xx:XXXX/v1/notify/teams \
+#echo -e ${rlt_msg} | curl -X POST http://xx.xx.xx.xx:XXXX/v1/notify/teams
+
+curl -X POST --data-urlencode "payload={\"channel\": \"#通知テスト\", \"username\": \"webhookbot\", \"text\": \"${diff_rlt_msg}\", \"icon_emoji\": \":ghost:\"}" https://hooks.slack.com/services/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
 
 fi
 # リモートリポジトリへのpush処理ここまで
