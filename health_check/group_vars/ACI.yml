@@ -1,0 +1,26 @@
+---
+ansible_user: #ユーザー名記載 #マスク処理
+ansible_password: #パスワード記載 #マスク処理
+
+commands:
+##- file name: api path
+  - file_name: xxxxx
+    command_: /api/node/mo/uni/xxxxx.json?query-target=subtree&rsp-prop-include=config-only
+    delete: no
+
+
+#  - file_name: infraHPortS
+#    command_: /api/class/infraHPortS.json?rsp-subtree=full&rsp-subtree-class=infraPortBlk,infraRsAccBaseGrp
+
+  - file_name: lldpIfPol
+    command_: /api/class/lldpIfPol.json?rsp-subtree=full&rsp-subtree-class=infraPortBlk,infraRsAccBaseGrp
+    delete: yes
+
+process_file:
+  - process_command: lldpIfPol
+    cmd_process_file: process_lldpIfPol_list.txt
+
+  - process_command: xxxxx
+    cmd_process_file: process_xxxxx_list.txt
+
+

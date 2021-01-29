@@ -1,0 +1,7 @@
+- name: do process python file for delete value in text file
+  command: "python3 {{ inventory_dir }}/{{ process_dir }}/{{ process_text_script }} {{ repodir.path }}{{ inventory_hostname }}_{{ item.process_command }}.log {{ inventory_dir }}/{{ process_dir }}/{{ item.cmd_process_file }}"
+  args:
+    chdir: "{{ inventory_dir }}/{{ process_dir }}/"
+  loop: "{{ process_file }}"
+  delegate_to: localhost
+

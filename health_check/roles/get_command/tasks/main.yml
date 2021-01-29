@@ -1,0 +1,9 @@
+---
+- name: get command
+  command: "{{ item.command_ }}" 
+  register: command_result
+  loop: "{{ commands }}"
+  
+- name: set aci status results
+  set_fact:
+    results: "{{ command_result.results }}"

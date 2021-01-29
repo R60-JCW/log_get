@@ -1,0 +1,14 @@
+--- 
+- name: remove old result file #結果ファイルはplaybook単位での出力としたいので、スクリプト実行前に削除を行う
+  file: 
+    path: "{{ inventory_dir }}/{{ process_dir }}/process_result_file.txt"
+    state: absent 
+
+- name: do process python file from unstractured data to csv
+# command: python3 script.py process_target_log_in_repodir template_file process_list_file
+  command: "python3 {{ inventory_dir }}/{{ process_dir }}/{{ process_csv_script }} {{ repodir.path }}{{ inventory_hostname }}_{{ item.file_name }}.log {{ inventory_dir }}/{{ process_dir }}/{{ item.template_file }} {{ inventory_dir }}/{{ process_dir }}/{{ item.del_list_file }}"
+  args:
+    chdir: "{{ inventory_dir }}/{{ process_dir }}/"
+  loop: "{{ commands }}"
+  when: item.template_file is defined
+  delegate_to: localhost

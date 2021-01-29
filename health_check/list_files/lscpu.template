@@ -1,0 +1,54 @@
+Value Architecture (\S+)
+Value CPU_op_mode (\S+\s+\S+)
+Value Byte_Order (\S+\s+\S+)
+Value CPU (\S+)
+#Value On-line_CPU_list (\S+)
+Value Thread_per_core (\S+)
+Value Core_per_socket (\S+)
+Value Socket (\S+)
+Value NUMA_node (\S+)
+Value Vendor_ID (\S+)
+Value CPU_family (\S+)
+Value Model (\S+)
+Value Model_name (\S+\s+\S+\s+\S+)
+Value Stepping (\S+)
+Value CPU_MHz (\S+)
+Value BogoMIPS (\S+)
+Value Hypervisor_vendor (\S+)
+Value Virtualization_type (\S+)
+Value L1d_cache (\S+)
+Value L1i_cache (\S+)
+Value L2_cache (\S+)
+Value L3_cache (\S+)
+Value NUMA_node0_CPU (\S+)
+#Value Flags (\S+)
+
+Start
+#  ^ -> Record ALL
+#
+#ALL
+  ^Architecture:\s+${Architecture}
+  ^CPU op-mode\(s\):\s+${CPU_op_mode}
+  ^Byte Order:\s+${Byte_Order}
+  ^CPU\(s\):\s+${CPU}
+#  ^On-line CPU\(s\) list:\s+${On-line_CPU_list}
+  ^Thread\(s\) per core:\s+${Thread_per_core}
+  ^Core\(s\) per socket:\s+${Core_per_socket}
+  ^Socket\(s\):\s+${Socket}
+  ^NUMA node\(s\):\s+${NUMA_node}
+  ^Vendor ID:\s+${Vendor_ID}
+  ^CPU family:\s+${CPU_family}
+  ^Model:\s+${Model}
+  ^Model name:\s+${Model_name}
+  ^Stepping:\s+${Stepping}
+  ^CPU MHz:\s+${CPU_MHz}
+  ^BogoMIPS:\s+${BogoMIPS}
+  ^Hypervisor vendor:\s+${Hypervisor_vendor}
+  ^Virtualization type:\s+${Virtualization_type}
+  ^L1d cache:\s+${L1d_cache}
+  ^L1i cache:\s+${L1i_cache}
+  ^L2 cache:\s+${L2_cache}
+  ^L3 cache:\s+${L3_cache}
+  ^NUMA node0 CPU\(s\):\s+${NUMA_node0_CPU} -> Record
+  #^Flags:\s+${Flags} -> Record
+

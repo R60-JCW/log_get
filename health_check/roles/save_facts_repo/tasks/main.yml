@@ -1,0 +1,6 @@
+---
+- name: save to repository
+  copy:
+    src: "{{ logdir.path }}/{{ inventory_hostname }}_ansible_facts.txt"
+    dest: "{{ inventory_dir }}/{{ repository_dir }}/{{ inventory_hostname }}_ansible_facts.txt"
+  delegate_to: localhost

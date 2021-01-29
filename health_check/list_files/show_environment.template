@@ -1,0 +1,51 @@
+# VALUE for power-supply-units
+Value ID (\d+)
+Value CAPACITY (\d*\.\d*)
+Value VOLTAGE_SOURCE (\d*v)
+Value VOLTAGE (\d*\.\d*)
+Value ALARM_LEG (\d+)
+Value STATE (ok|shut)
+Value MODEL (\S*)
+Value VENDOR (\S+[\S ]+)
+Value SERIAL (\w*)
+# VALUE for fan-trays
+Value F_ID (\d+)
+Value F_STATE (\w*)
+Value F_MODEL (\S*)
+Value F_VENDOR (\w*)
+Value F_SERIAL (\S*)
+# VALUE for equipment-sensors
+Value E_ID (\d+)
+Value E_TYPE (\S*)
+Value E_MAJOR_THRESHOLD (\d*)
+Value E_MINOR_THRESHOLD (\d*)
+Value E_CUR_TEMP (\d*)
+
+Start
+  ^power-supply-units -> PSU
+  ^fan-trays -> FT
+  ^equipment-sensors -> ES
+
+PSU
+  # 全要素一致パターン分(一致確認済み)
+  ^${ID}\s+${CAPACITY}\s+${VOLTAGE_SOURCE}\s+${VOLTAGE}\s+${ALARM_LEG}\s+${STATE}\s+${MODEL}\s+${VENDOR}\s+${SERIAL} -> Record
+  # テスト用、要素削りパターン
+  #^${ID}\s+\S+\s+\S+\s+\S+\s+${ALARM_LEG}\s+${STATE} -> Record
+  ^\s*$$ -> Start
+
+FT
+  # 全要素一致パターン分(一致確認済み)
+  ^${F_ID}\s+${F_STATE}\s+${F_MODEL}\s+${F_VENDOR}\s+${F_SERIAL} -> Record
+  # テスト用、要素削りパターン
+  #^${F_ID}\s+${F_STATE}\s+${F_MODEL}\s+\S+\s+${F_SERIAL} -> Record
+  ^\s*$$
+  ^line-modules/1/equipment-sensors -> Start
+
+ES
+  # 全要素一致パターン分(一致確認済み)
+  ^${E_ID}\s+${E_TYPE}\s+${E_MAJOR_THRESHOLD}\s+${E_MINOR_THRESHOLD}\s+${E_CUR_TEMP} -> Record
+  # テスト用、要素削りパターン
+  #^${E_ID}\s+${E_TYPE}\s+${E_MAJOR_THRESHOLD}\s+${E_MINOR_THRESHOLD}\s+${E_CUR_TEMP} -> Record
+  ^/home/user
+  ^\s*$$ -> Start
+  ^This command is being deprecated on APIC controller, please use NXOS-style equivalent command

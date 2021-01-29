@@ -1,0 +1,36 @@
+commands:
+  - file_name: id
+    command_: id
+  - file_name: pwd
+    command_: pwd
+  - file_name: ls
+    command_: ls -alF
+  - file_name: free
+    command_: free
+  - file_name: lscpu
+    command_: lscpu
+# 非構造データを構造化リストにする際の変数
+    template_file: lscpu.template
+    del_list_file: lscpu_del_list.txt
+  - file_name: meminfo
+    command_: cat /proc/meminfo
+# 非構造データを構造化リストにする際の変数
+    template_file: meminfo.template
+    del_list_file: meminfo_del_list.txt
+  - file_name: lsblk
+    command_: lsblk
+  - file_name: uname
+    command_: uname -a
+
+# textログの加工時の記載方法
+# process_file:
+#   - process_command: lscpu
+#     cmd_process_file: process_lscpu_list.txt
+# 
+#   - process_command: meminfo
+#     cmd_process_file: process_meminfo_list.txt
+
+# factsログの加工時の記載方法
+# process_file:
+#   - process_command: facts
+#     cmd_process_file: facts_list.txt

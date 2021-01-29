@@ -1,0 +1,10 @@
+---
+- name: save config per commands to repository dir
+  copy:
+#        content: "{{ config_result }}"
+    content: "{{ item.imdata | to_nice_json }}"
+    dest: "{{ repodir.path }}/{{ inventory_hostname }}_{{ item.item.file_name }}.log"
+  loop: "{{ results }}"
+  delegate_to: localhost
+  no_log: True
+

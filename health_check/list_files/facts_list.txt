@@ -1,0 +1,24 @@
+env.LS_COLORS
+env.SSH_CLIENT
+env.SSH_CONNECTION
+env.XDG_SESSION_ID
+
+eth0.features.tx_checksum_ipv6
+eth0.features.tx_tcp6_segmentation
+
+memfree_mb
+memory_mb.nocache
+memory_mb.real.free
+memory_mb.real.used
+
+mounts.block_available #キー内のリストはアクセス不可のためキーごと消去
+mounts.block_used
+mounts.size_available
+mounts.inode_available
+mounts.inode_used
+mounts
+
+uptime_seconds
+
+date_time
+

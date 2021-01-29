@@ -1,0 +1,16 @@
+---
+- name: Get aci infomation by json
+  aci_rest:
+    host: "{{ aci_rest_host }}"
+    username: "{{ aci_rest_username }}" 
+    password: "{{ aci_rest_password }}"
+    method: get
+    path: "{{ item.command_ }}"
+    validate_certs: no
+#      delegate_to: localhost
+  register: command_result
+  loop: "{{ commands }}"
+
+- name: set vars
+  set_fact: 
+    results: "{{ command_result.results }} "
