@@ -1,5 +1,5 @@
 ---
-- hosts: server
+- hosts: all
   gather_facts: false
   tasks:
     - name: dable start check  # 2重起動防止シェルの確認
@@ -75,8 +75,8 @@
   hosts: XRv 
   gather_facts: false
   roles:
-    - get_ios_command
-    - save_ios_command_logdir
+    - get_iosxr_command
+    - save_iosxr_command_logdir
     #- save_ios_command_repodir
     #- process_unstractured_csv
   #vars_files:
