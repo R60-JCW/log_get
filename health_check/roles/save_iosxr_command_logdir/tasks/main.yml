@@ -1,17 +1,34 @@
 ---
-- name: save show
+- name: save show per commands
   copy:
-    content: "{{ show_result | to_nice_json }}"
-    dest: "{{ logdir.path }}/{{ inventory_hostname }}_{{ commands_show }}"
-  #loop: "{{ show_results }}"
-  delegate_to: localhost
-  no_log: True
+    content: "{{ item.stdout[0] }}"
+    dest: "{{ logdir.path }}/{{ inventory_hostname }}_{{ item.item | replace(' ', '_') }}.log"
+  loop: "{{ show_results }}"
+  loop_control:
+    label: "{{ item.item }}"
+  #delegate_to: localhost
+  #no_log: True
 
-- name: save route
-  copy:
-    content: "{{ route_result | to_nice_json }}"
-    dest: "{{ logdir.path }}/{{ inventory_hostname }}_{{ commands_route }}"
-  #loop: "{{ route_results }}"
-  delegate_to: localhost
-  no_log: True
+- name: save show per hosts
+  blockinfile:
+    block: "{{ item.stdout[0] }}"
+    path: "{{ logdir.path }}/{{ inventory_hostname }}_show.log"
+    marker: "======================  {{ item.item }} ======================="
+    create: yes
+  loop: "{{ show_results }}"
+  loop_control:
+    label: "{{ item.item }}"
+
+
+- name: save route per hosts
+  blockinfile:
+    block: "{{ item.stdout[0] }}"
+    path: "{{ logdir.path }}/{{ inventory_hostname }}_route.log"
+    marker: "======================  {{ item.item }} ======================="
+    create: yes
+  #delegate_to: localhost
+  loop: "{{ route_results }}"
+  loop_control:
+    label: "{{ item.item }}"
+  #no_log: True
 
