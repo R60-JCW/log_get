@@ -71,24 +71,24 @@
 ##    - "{{ inventory_dir }}/group_vars/{{ group_names }}.yml"
 #    - "{{ inventory_dir }}/group_vars/server.yml"
 
-- name: server section
-  hosts: server
+- name: XR section
+  hosts: XRv 
   gather_facts: false
   roles:
-    - get_command
-    - save_command_log
-    - save_command_repo
-    - process_unstractured_csv
-  vars_files:
-    - "{{ inventory_dir }}/group_vars/server.yml"
+    - get_ios_command
+    - save_ios_command_logdir
+    #- save_ios_command_repodir
+    #- process_unstractured_csv
+  #vars_files:
+    #- "{{ inventory_dir }}/group_vars/server.yml"
 
   post_tasks:
-    - name: git
-      shell: "sh git_and_notify.sh {{ trigger }} {{ exe_date }} {{ repository_dir }}"
-      args:
-        chdir: "{{ inventory_dir }}"
-      delegate_to: localhost
-      run_once: true
+    #- name: git
+      #shell: "sh git_and_notify.sh {{ trigger }} {{ exe_date }} {{ repository_dir }}"
+      #args:
+        #chdir: "{{ inventory_dir }}"
+      #delegate_to: localhost
+      #run_once: true
     
     - name: finish dable start check shell  # 2重起動防止シェルの終了
       shell: "sh finish_dable_start.sh"
