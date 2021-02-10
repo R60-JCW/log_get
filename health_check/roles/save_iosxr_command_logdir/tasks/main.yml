@@ -3,16 +3,15 @@
   copy:
     content: "{{ show_results | to_nice_json }}"
     dest: "{{ logdir.path }}/{{ inventory_hostname }}_{{ commands_show }}"
-  #loop: "{{ results }}"
+  #loop: "{{ show_results }}"
   delegate_to: localhost
   no_log: True
-
 
 - name: save route
   copy:
     content: "{{ route_results | to_nice_json }}"
     dest: "{{ logdir.path }}/{{ inventory_hostname }}_{{ commands_route }}"
-  #loop: "{{ results }}"
-   delegate_to: localhost
-   no_log: True
+  #loop: "{{ route_results }}"
+  delegate_to: localhost
+  no_log: True
 

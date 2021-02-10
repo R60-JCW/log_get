@@ -25,7 +25,8 @@
       set_fact:
         logdir_date: "{{ inventory_dir }}/log/log_{{ exe_date }}"
         #logdir_date: "./log/log_{{ lookup('pipe', 'date +%Y%m%d_%H%M_%S') }}"
-    
+      run_once: true
+  
     - name: create directory for log      # ログ保存用実行日時別ディレクトリ作成
       file:
         path: "{{ logdir_date }}/"
@@ -33,6 +34,7 @@
       register: logdir
 #      become: yes
       delegate_to: localhost
+      run_once: true
 
     - name: create directory for repository   # リポジトリ保存用ディレクトリ作成
       file:
@@ -41,9 +43,10 @@
       register: repodir
 #      become: yes
       delegate_to: localhost
+      run_once: true
 
     - name: Syncronize Remote Repo
-      command: git pull --rebase origin master
+      command: git pull --rebase origin main
       args:
         chdir: "{{ inventory_dir }}/{{ repository_dir }}/"
       changed_when: false
