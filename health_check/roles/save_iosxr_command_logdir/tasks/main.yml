@@ -1,7 +1,7 @@
 ---
 - name: save show
   copy:
-    content: "{{ show_results | to_nice_json }}"
+    content: "{{ show_result | to_nice_json }}"
     dest: "{{ logdir.path }}/{{ inventory_hostname }}_{{ commands_show }}"
   #loop: "{{ show_results }}"
   delegate_to: localhost
@@ -9,7 +9,7 @@
 
 - name: save route
   copy:
-    content: "{{ route_results | to_nice_json }}"
+    content: "{{ route_result | to_nice_json }}"
     dest: "{{ logdir.path }}/{{ inventory_hostname }}_{{ commands_route }}"
   #loop: "{{ route_results }}"
   delegate_to: localhost
