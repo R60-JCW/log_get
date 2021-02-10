@@ -1,1 +1,2 @@
-staging用のレポジトリディレクトリ
+# upload-test
+for staging
