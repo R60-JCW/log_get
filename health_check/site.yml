@@ -45,13 +45,13 @@
       delegate_to: localhost
       run_once: true
 
-    - name: Syncronize Remote Repo
-      command: git pull --rebase origin main
-      args:
-        chdir: "{{ inventory_dir }}/{{ repository_dir }}/"
-      changed_when: false
-      delegate_to: localhost
-      run_once: true
+#    - name: Syncronize Remote Repo
+#      command: git pull --rebase origin main
+#      args:
+#        chdir: "{{ inventory_dir }}/{{ repository_dir }}/"
+#      changed_when: false
+#      delegate_to: localhost
+#      run_once: true
 
 #- name: server section get fact
 #  hosts: server
