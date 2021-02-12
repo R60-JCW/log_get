@@ -78,12 +78,17 @@
   hosts: XRv 
   gather_facts: false
   roles:
-    - get_iosxr_command
-    - save_iosxr_command_logdir
+    #- get_iosxr_command
+    #- save_iosxr_command_logdir
+    - { role: get_iosxr_command, when: "'XRv' in groups and inventory_hostname in groups['XRv']" }  
+    - { role: save_iosxr_command_logdir, when: "'XRv' in groups and inventory_hostname in groups['XRv']" }  
+
+
+#when: "'XRv' in groups and inventory_hostname in groups['XRv']"
     #- save_ios_command_repodir
     #- process_unstractured_csv
   #vars_files:
-    #- "{{ inventory_dir }}/group_vars/server.yml"
+    #- "{{ inventory_dir }}//server.yml"
 
   post_tasks:
     #- name: git
