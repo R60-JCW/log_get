@@ -1,0 +1,20 @@
+---
+- name: get nxos_command_show
+  cisco.nxos.nxos_command:
+    commands: "{{ item }}" 
+  register: show_result
+  loop: "{{ lookup('file', '{{ inventory_dir }}/{{ process_dir }}/{{ commands_show }}').splitlines() }}"
+  
+- name: set show results
+  set_fact:
+    show_results: "{{ show_result.results }}"
+
+- name: get iosxr_command_route
+  cisco.nxos.nxos_command:
+    commands: "{{ item }}"
+  register: route_result
+  loop: "{{ lookup('file', '{{ inventory_dir }}/{{ process_dir }}/{{ commands_route }}').splitlines() }}"
+
+- name: set route results
+  set_fact:
+    route_results: "{{ route_result.results }}"
