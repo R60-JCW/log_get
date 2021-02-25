@@ -45,35 +45,6 @@
       delegate_to: localhost
       run_once: true
 
-#    - name: Syncronize Remote Repo
-#      command: git pull --rebase origin main
-#      args:
-#        chdir: "{{ inventory_dir }}/{{ repository_dir }}/"
-#      changed_when: false
-#      delegate_to: localhost
-#      run_once: true
-
-#- name: server section get fact
-#  hosts: server
-#  gather_facts: yes
-#  tasks:
-#    - name: set_fact path
-#      set_fact:
-#        log_path: "{{ logdir }}/{{inventory_hostname}}_ansible_facts_{{ exe_date }}.txt"
-
-#- name: server section
-#  hosts: server
-#  gather_facts: no
-#  roles:
-#    - get_facts_json
-#    - save_facts_log
-#    - save_facts_repo
-#    - process_facts_json
-#  vars_files:
-##    - "{{ inventory_dir }}/host_vars/{{ inventory_hostname }}.yml"
-##    - "{{ inventory_dir }}/group_vars/{{ group_names }}.yml"
-#    - "{{ inventory_dir }}/group_vars/server.yml"
-
 - name: XR section
   hosts: XRv 
   gather_facts: false
@@ -96,12 +67,6 @@
   roles:
     - { role: get_nxos_command, when: "'NX-OSv' in groups and inventory_hostname in groups['NX-OSv']" }  
     - { role: save_cisco_command_logdir, when: "'NX-OSv' in groups and inventory_hostname in groups['NX-OSv']" }  
-
-#when: "'XRv' in groups and inventory_hostname in groups['XRv']"
-    #- save_ios_command_repodir
-    #- process_unstractured_csv
-  #vars_files:
-    #- "{{ inventory_dir }}//server.yml"
 
   post_tasks:
     #- name: git
