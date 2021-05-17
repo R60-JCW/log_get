@@ -52,6 +52,7 @@
     - { role: get_ios_command, when: "'IOS' in groups and inventory_hostname in groups['IOS']" }
     - { role: save_cisco_command_logdir, when: "'IOS' in groups and inventory_hostname in groups['IOS']" }
     - { role: save_cisco_command_repodir, when: "'IOS' in groups and inventory_hostname in groups['IOS']" }
+    - { role: process_text, when: "'IOS' in groups and inventory_hostname in groups['IOS'] and 'process_file' is defined" }
 
 #- name: XR section
 #  hosts: XR 

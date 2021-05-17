@@ -23,7 +23,7 @@ if __name__ == "__main__":
             if del_list in tgt_list:
                 tgt_lists.remove(tgt_list)
 
-    with open(sys.argv[1], mode='w') as f:
+    with open('processed_' + sys.argv[1], mode='w') as f:
         for d in tgt_lists:
             f.write("%s\n" % d)
 
