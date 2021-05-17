@@ -9,14 +9,6 @@
   #delegate_to: localhost
   #no_log: True
 
-- name: save route per commands
-  copy:
-    content: "{{ item.stdout[0] }}"
-    dest: "{{ logdir.path }}/{{ inventory_hostname }}_{{ item.item | replace(' ', '_') }}.log"
-  loop: "{{ route_results }}"
-  loop_control:
-    label: "{{ item.item }}"
-
 - name: save show per hosts
   blockinfile:
     block: "{{ item.stdout[0] }}"
