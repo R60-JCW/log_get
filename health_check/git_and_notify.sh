@@ -98,8 +98,8 @@ git add .
 git commit -m "${MSG}"
 
 ### リモートリポジトリにpush
-git push origin master -n
-git push origin master
+git push origin main -n
+git push origin main
 
 ## コミットコードの代入
 commit_code=$(git log --oneline -1 | head -c7)
