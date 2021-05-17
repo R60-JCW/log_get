@@ -45,14 +45,21 @@
       delegate_to: localhost
       run_once: true
 
+- name: IOS section
+  hosts: IOS
+  gather_facts: false
+  roles:
+    - { role: get_ios_command, when: "'IOS' in groups and inventory_hostname in groups['IOS']" }
+    - { role: save_cisco_command_logdir, when: "'IOS' in groups and inventory_hostname in groups['IOS']" }
+
 - name: XR section
-  hosts: XRv 
+  hosts: XR 
   gather_facts: false
   roles:
     #- get_iosxr_command
     #- save_iosxr_command_logdir
-    - { role: get_iosxr_command, when: "'XRv' in groups and inventory_hostname in groups['XRv']" }  
-    - { role: save_cisco_command_logdir, when: "'XRv' in groups and inventory_hostname in groups['XRv']" }  
+    - { role: get_iosxr_command, when: "'XR' in groups and inventory_hostname in groups['XR']" }  
+    - { role: save_cisco_command_logdir, when: "'XR' in groups and inventory_hostname in groups['XR']" }  
 
 - name: XE section
   hosts: XE 
@@ -61,20 +68,20 @@
     - { role: get_ios_command, when: "'XE' in groups and inventory_hostname in groups['XE']" }  
     - { role: save_cisco_command_logdir, when: "'XE' in groups and inventory_hostname in groups['XE']" }  
 
-- name: NX-OSv section
-  hosts: NX-OSv 
+- name: NXOS section
+  hosts: NXOS 
   gather_facts: false
   roles:
-    - { role: get_nxos_command, when: "'NX-OSv' in groups and inventory_hostname in groups['NX-OSv']" }  
-    - { role: save_cisco_command_logdir, when: "'NX-OSv' in groups and inventory_hostname in groups['NX-OSv']" }  
+    - { role: get_nxos_command, when: "'NXOS' in groups and inventory_hostname in groups['NXOS']" }  
+    - { role: save_cisco_command_logdir, when: "'NXOS' in groups and inventory_hostname in groups['NXOS']" }  
 
   post_tasks:
-    #- name: git
-      #shell: "sh git_and_notify.sh {{ trigger }} {{ exe_date }} {{ repository_dir }}"
-      #args:
+    - name: git
+      shell: "sh git_and_notify.sh {{ trigger }} {{ exe_date }} {{ repository_dir }}"
+      args:
         #chdir: "{{ inventory_dir }}"
-      #delegate_to: localhost
-      #run_once: true
+      delegate_to: localhost
+      run_once: true
     
     - name: finish dable start check shell  # 2重起動防止シェルの終了
       shell: "sh finish_dable_start.sh"

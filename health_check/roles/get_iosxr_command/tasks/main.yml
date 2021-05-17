@@ -1,6 +1,6 @@
 ---
 - name: get iosxr_command_show
-  cisco.iosxr.iosxr_command:
+  iosxr_command:
     commands: "{{ item }}" 
   register: show_result
   loop: "{{ lookup('file', '{{ inventory_dir }}/{{ process_dir }}/{{ commands_show }}').splitlines() }}"
@@ -10,7 +10,7 @@
     show_results: "{{ show_result.results }}"
 
 - name: get iosxr_command_route
-  cisco.iosxr.iosxr_command:
+  iosxr_command:
     commands: "{{ item }}"
   register: route_result
   loop: "{{ lookup('file', '{{ inventory_dir }}/{{ process_dir }}/{{ commands_route }}').splitlines() }}"
