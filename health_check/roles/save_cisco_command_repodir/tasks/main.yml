@@ -1,34 +1,18 @@
 ---
 - name: save show per commands
   copy:
-    content: "{{ item.stdout[0] }}"
-    dest: "{{ logdir.path }}/{{ inventory_hostname }}_{{ item.item | replace(' ', '_') }}.log"
+    content: "{{ logdir.path }}/{{ inventory_hostname }}_{{ item.item | replace(' ', '_') }}.log"
+    dest: "{{ repodir.path }}/"
   loop: "{{ show_results }}"
   loop_control:
     label: "{{ item.item }}"
   #delegate_to: localhost
   #no_log: True
 
-- name: save show per hosts
-  blockinfile:
-    block: "{{ item.stdout[0] }}"
-    path: "{{ logdir.path }}/{{ inventory_hostname }}_show.log"
-    marker: "======================  {{ item.item }} ======================="
-    create: yes
-  loop: "{{ show_results }}"
-  loop_control:
-    label: "{{ item.item }}"
-
-
-- name: save route per hosts
-  blockinfile:
-    block: "{{ item.stdout[0] }}"
-    path: "{{ logdir.path }}/{{ inventory_hostname }}_route.log"
-    marker: "======================  {{ item.item }} ======================="
-    create: yes
-  #delegate_to: localhost
+- name: save route per commands
+  copy:
+    content: "{{ logdir.path }}/{{ inventory_hostname }}_{{ item.item | replace((' ', '_') }}.log"
+    dest: "{{ repodir.path }}/"
   loop: "{{ route_results }}"
   loop_control:
     label: "{{ item.item }}"
-  #no_log: True
-
