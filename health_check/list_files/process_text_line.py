@@ -4,7 +4,7 @@ import sys
 
 # 加工対象ファイル
 tgt_file = sys.argv[1]
-new_file = 'processed_' + tgt_file
+new_file = tgt_file + '_processed'
 
 # 削除リスト
 del_file = sys.argv[2]
