@@ -53,31 +53,29 @@
     - { role: save_cisco_command_logdir, when: "'IOS' in groups and inventory_hostname in groups['IOS']" }
     - { role: save_cisco_command_repodir, when: "'IOS' in groups and inventory_hostname in groups['IOS']" }
 
-- name: XR section
-  hosts: XR 
-  gather_facts: false
-  roles:
-    #- get_iosxr_command
-    #- save_iosxr_command_logdir
-    - { role: get_iosxr_command, when: "'XR' in groups and inventory_hostname in groups['XR']" }  
-    - { role: save_cisco_command_logdir, when: "'XR' in groups and inventory_hostname in groups['XR']" }  
-    - { role: save_cisco_command_repodir, when: "'IOS' in groups and inventory_hostname in groups['IOS']" }
+#- name: XR section
+#  hosts: XR 
+#  gather_facts: false
+#  roles:
+#    - { role: get_iosxr_command, when: "'XR' in groups and inventory_hostname in groups['XR']" }  
+#    - { role: save_cisco_command_logdir, when: "'XR' in groups and inventory_hostname in groups['XR']" }  
+#    - { role: save_cisco_command_repodir, when: "'IOS' in groups and inventory_hostname in groups['IOS']" }
 
-- name: XE section
-  hosts: XE 
-  gather_facts: false
-  roles:
-    - { role: get_ios_command, when: "'XE' in groups and inventory_hostname in groups['XE']" }  
-    - { role: save_cisco_command_logdir, when: "'XE' in groups and inventory_hostname in groups['XE']" }  
-    - { role: save_cisco_command_repodir, when: "'XE' in groups and inventory_hostname in groups['XE']" }  
+#- name: XE section
+#  hosts: XE 
+#  gather_facts: false
+#  roles:
+#    - { role: get_ios_command, when: "'XE' in groups and inventory_hostname in groups['XE']" }  
+#    - { role: save_cisco_command_logdir, when: "'XE' in groups and inventory_hostname in groups['XE']" }  
+#    - { role: save_cisco_command_repodir, when: "'XE' in groups and inventory_hostname in groups['XE']" }  
 
-- name: NXOS section
-  hosts: NXOS 
-  gather_facts: false
-  roles:
-    - { role: get_nxos_command, when: "'NXOS' in groups and inventory_hostname in groups['NXOS']" }  
-    - { role: save_cisco_command_logdir, when: "'NXOS' in groups and inventory_hostname in groups['NXOS']" }  
-    - { role: save_cisco_command_repodir, when: "'NXOS' in groups and inventory_hostname in groups['NXOS']" }  
+#- name: NXOS section
+#  hosts: NXOS 
+#  gather_facts: false
+#  roles:
+#    - { role: get_nxos_command, when: "'NXOS' in groups and inventory_hostname in groups['NXOS']" }  
+#    - { role: save_cisco_command_logdir, when: "'NXOS' in groups and inventory_hostname in groups['NXOS']" }  
+#    - { role: save_cisco_command_repodir, when: "'NXOS' in groups and inventory_hostname in groups['NXOS']" }  
 
   post_tasks:
     - name: git
