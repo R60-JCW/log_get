@@ -1,0 +1,14 @@
+commands:
+#  - file_name: show_run
+    #command_: show run
+    #del_list_file: show_run_del_ist.txt
+- file_name: show_version
+    command_: show version
+    template_file:cisco_ios_show_version.textfsm
+    del_list_file: show_version_del_list.txt
+        
+process_file:
+  - process_command: show_run
+    cmd_process_file: process_show_run_del_list.txt
+
+
