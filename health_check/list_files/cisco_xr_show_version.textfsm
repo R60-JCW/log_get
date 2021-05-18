@@ -20,7 +20,7 @@ Start
   ^Package\s+active
   ^hfr-doc -> CRS
   ^\s*$$
-  ^. -> Error
+#  ^. -> Error
   
 # A VARIATION OF THE OUTPUT, EX. NCS PLATFORM
 Build_Info
