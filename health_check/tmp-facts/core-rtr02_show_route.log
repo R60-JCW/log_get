@@ -10,35 +10,35 @@ Codes: C - connected, S - static, R - RIP, B - BGP, (>) - Diversion path
 
 Gateway of last resort is 172.16.253.4 to network 0.0.0.0
 
-S*   0.0.0.0/0 [1/0] via 172.16.253.4, 06:59:12
-O    172.16.101.0/24 [110/42] via 172.16.252.25, 06:55:53, GigabitEthernet0/0/0/2
-                     [110/42] via 172.16.252.33, 06:55:53, GigabitEthernet0/0/0/3
-O    172.16.102.0/24 [110/42] via 172.16.252.25, 06:55:53, GigabitEthernet0/0/0/2
-                     [110/42] via 172.16.252.33, 06:55:53, GigabitEthernet0/0/0/3
-O    172.16.103.0/24 [110/42] via 172.16.252.25, 06:55:53, GigabitEthernet0/0/0/2
-                     [110/42] via 172.16.252.33, 06:55:53, GigabitEthernet0/0/0/3
-O    172.16.104.0/24 [110/42] via 172.16.252.25, 06:55:53, GigabitEthernet0/0/0/2
-                     [110/42] via 172.16.252.33, 06:55:53, GigabitEthernet0/0/0/3
-O    172.16.105.0/24 [110/42] via 172.16.252.25, 06:55:53, GigabitEthernet0/0/0/2
-                     [110/42] via 172.16.252.33, 06:55:53, GigabitEthernet0/0/0/3
-O    172.16.252.0/30 [110/2] via 172.16.252.25, 06:55:55, GigabitEthernet0/0/0/2
-O    172.16.252.4/30 [110/2] via 172.16.252.33, 06:57:49, GigabitEthernet0/0/0/3
-O    172.16.252.8/30 [110/2] via 172.16.252.25, 06:55:53, GigabitEthernet0/0/0/2
-O    172.16.252.12/30 [110/2] via 172.16.252.33, 06:57:49, GigabitEthernet0/0/0/3
-O    172.16.252.16/30 [110/2] via 172.16.252.25, 06:55:44, GigabitEthernet0/0/0/2
-                      [110/2] via 172.16.252.33, 06:55:44, GigabitEthernet0/0/0/3
-O    172.16.252.20/30 [110/2] via 172.16.252.37, 06:55:53, GigabitEthernet0/0/0/0
-                      [110/2] via 172.16.253.2, 06:55:53, GigabitEthernet0/0/0/1
-                      [110/2] via 172.16.252.25, 06:55:53, GigabitEthernet0/0/0/2
-C    172.16.252.24/30 is directly connected, 06:59:12, GigabitEthernet0/0/0/2
-L    172.16.252.26/32 is directly connected, 06:59:12, GigabitEthernet0/0/0/2
-O    172.16.252.28/30 [110/2] via 172.16.252.37, 06:57:49, GigabitEthernet0/0/0/0
-                      [110/2] via 172.16.253.2, 06:57:49, GigabitEthernet0/0/0/1
-                      [110/2] via 172.16.252.33, 06:57:49, GigabitEthernet0/0/0/3
-C    172.16.252.32/30 is directly connected, 06:59:12, GigabitEthernet0/0/0/3
-L    172.16.252.34/32 is directly connected, 06:59:12, GigabitEthernet0/0/0/3
-C    172.16.252.36/30 is directly connected, 06:59:12, GigabitEthernet0/0/0/0
-L    172.16.252.38/32 is directly connected, 06:59:12, GigabitEthernet0/0/0/0
-C    172.16.253.0/29 is directly connected, 06:59:12, GigabitEthernet0/0/0/1
-L    172.16.253.3/32 is directly connected, 06:59:12, GigabitEthernet0/0/0/1
-O E2 172.31.0.0/16 [110/20] via 172.16.253.4, 06:59:07, GigabitEthernet0/0/0/1
+S*   0.0.0.0/0 [1/0] via 172.16.253.4, 07:13:34
+O    172.16.101.0/24 [110/42] via 172.16.252.25, 07:10:15, GigabitEthernet0/0/0/2
+                     [110/42] via 172.16.252.33, 07:10:15, GigabitEthernet0/0/0/3
+O    172.16.102.0/24 [110/42] via 172.16.252.25, 07:10:15, GigabitEthernet0/0/0/2
+                     [110/42] via 172.16.252.33, 07:10:15, GigabitEthernet0/0/0/3
+O    172.16.103.0/24 [110/42] via 172.16.252.25, 07:10:15, GigabitEthernet0/0/0/2
+                     [110/42] via 172.16.252.33, 07:10:15, GigabitEthernet0/0/0/3
+O    172.16.104.0/24 [110/42] via 172.16.252.25, 07:10:15, GigabitEthernet0/0/0/2
+                     [110/42] via 172.16.252.33, 07:10:15, GigabitEthernet0/0/0/3
+O    172.16.105.0/24 [110/42] via 172.16.252.25, 07:10:15, GigabitEthernet0/0/0/2
+                     [110/42] via 172.16.252.33, 07:10:15, GigabitEthernet0/0/0/3
+O    172.16.252.0/30 [110/2] via 172.16.252.25, 07:10:17, GigabitEthernet0/0/0/2
+O    172.16.252.4/30 [110/2] via 172.16.252.33, 07:12:10, GigabitEthernet0/0/0/3
+O    172.16.252.8/30 [110/2] via 172.16.252.25, 07:10:15, GigabitEthernet0/0/0/2
+O    172.16.252.12/30 [110/2] via 172.16.252.33, 07:12:10, GigabitEthernet0/0/0/3
+O    172.16.252.16/30 [110/2] via 172.16.252.25, 07:10:05, GigabitEthernet0/0/0/2
+                      [110/2] via 172.16.252.33, 07:10:05, GigabitEthernet0/0/0/3
+O    172.16.252.20/30 [110/2] via 172.16.252.37, 07:10:15, GigabitEthernet0/0/0/0
+                      [110/2] via 172.16.253.2, 07:10:15, GigabitEthernet0/0/0/1
+                      [110/2] via 172.16.252.25, 07:10:15, GigabitEthernet0/0/0/2
+C    172.16.252.24/30 is directly connected, 07:13:34, GigabitEthernet0/0/0/2
+L    172.16.252.26/32 is directly connected, 07:13:34, GigabitEthernet0/0/0/2
+O    172.16.252.28/30 [110/2] via 172.16.252.37, 07:12:10, GigabitEthernet0/0/0/0
+                      [110/2] via 172.16.253.2, 07:12:10, GigabitEthernet0/0/0/1
+                      [110/2] via 172.16.252.33, 07:12:10, GigabitEthernet0/0/0/3
+C    172.16.252.32/30 is directly connected, 07:13:34, GigabitEthernet0/0/0/3
+L    172.16.252.34/32 is directly connected, 07:13:34, GigabitEthernet0/0/0/3
+C    172.16.252.36/30 is directly connected, 07:13:34, GigabitEthernet0/0/0/0
+L    172.16.252.38/32 is directly connected, 07:13:34, GigabitEthernet0/0/0/0
+C    172.16.253.0/29 is directly connected, 07:13:34, GigabitEthernet0/0/0/1
+L    172.16.253.3/32 is directly connected, 07:13:34, GigabitEthernet0/0/0/1
+O E2 172.31.0.0/16 [110/20] via 172.16.253.4, 07:13:29, GigabitEthernet0/0/0/1

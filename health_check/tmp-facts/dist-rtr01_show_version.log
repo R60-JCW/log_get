@@ -18,8 +18,8 @@ software.
 
 ROM: IOS-XE ROMMON
 
-dist-rtr01 uptime is 6 hours, 59 minutes
-Uptime for this control processor is 7 hours, 2 minutes
+dist-rtr01 uptime is 7 hours, 14 minutes
+Uptime for this control processor is 7 hours, 17 minutes
 System returned to ROM by reload
 System image file is "bootflash:packages.conf"
 Last reload reason: factory-reset
