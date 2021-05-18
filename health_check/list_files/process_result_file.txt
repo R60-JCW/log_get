@@ -1,12 +1,12 @@
 ###############################################################################################
-# 対象コマンド： edge-sw01_show_version
-## 構造化データ化処理開始
-### 構造化対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/edge-sw01_show_version.log 」及び、
-### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_version.textfsm 」の確認結果
-###############################################################################################
 # 対象コマンド： internet-rtr01_show_version
 ## 構造化データ化処理開始
 ### 構造化対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/internet-rtr01_show_version.log 」及び、
+### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_version.textfsm 」の確認結果
+###############################################################################################
+# 対象コマンド： edge-sw01_show_version
+## 構造化データ化処理開始
+### 構造化対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/edge-sw01_show_version.log 」及び、
 ### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_version.textfsm 」の確認結果
 ###############################################################################################
 # 対象コマンド： iosv-0_show_version
