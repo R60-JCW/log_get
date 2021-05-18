@@ -1,711 +1,140 @@
-Buuuuuiiiiiiiildiiiiiiiinnnnnnnnnggggg         ccccoooooonnnnnnnnnfffiiiiiiiiggggguuuuurrrrraaaaaattttttiiiiiiiioooooonnnnnnnnn
-
-
-
-
-
-
-
-
-
-                  
-
-
-
-
-Cuuuuurrrrrrrrrreennnnnnnnntttttt         ccccoooooonnnnnnnnnfffiiiiiiiiggggguuuuurrrrraaaaaattttttiiiiiiiioooooonnnnnnnnn         :                  ttttttees
-
-
-
 
 !
-
-
-
-
-!         Laaaaaastttttt         ccccoooooonnnnnnnnnfffiiiiiiiiggggguuuuurrrrraaaaaattttttiiiiiiiioooooonnnnnnnnn         cccchaaaaaannnnnnnnngggggee         aaaaaatttttt         ::         C         oooooonnnnnnnnn         aaaaaa                  
-
-
-
-
 !
-
-
-
-
-eerrrrrsiiiiiiiioooooonnnnnnnnn         
-
-
-
-
-seerrrrriiiiiiiiccccee         ttttttiiiiiiiieesttttttaaaaaas         deeuuuuuggggg         daaaaaatttttteettttttiiiiiiiiee         seecccc
-
-
-
-
-seerrrrriiiiiiiiccccee         ttttttiiiiiiiieesttttttaaaaaas         looooooggggg         daaaaaatttttteettttttiiiiiiiiee         seecccc
-
-
-
-
-nnnnnnnnnoooooo         seerrrrriiiiiiiiccccee         aaaaaassoooooorrrrrdeennnnnnnnnccccrrrrrttttttiiiiiiiioooooonnnnnnnnn
-
-
-
-
+version 15.9
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
 !
-
-
-
-
-hoooooosttttttnnnnnnnnnaaaaaaee         iiiiiiiioooooos
-
-
-
-
+hostname iosv-0
 !
-
-
-
-
-oooooooooooottttttsttttttaaaaaarrrrrttttttaaaaaarrrrreerrrrr
-
-
-
-
-ooooooooooootttttteennnnnnnnndaaaaaarrrrreerrrrr
-
-
-
-
+boot-start-marker
+boot-end-marker
 !
-
-
-
-
 !
-
-
-
-
-eennnnnnnnnaaaaaalee         seeccccrrrrreetttttt                  fffeerrrrrccccuuuuuttttttdlrrrrreesnnnnnnnnnB
-
-
-
-
+enable secret 9 $9$bykFDQ0VQqYTUf$GEQzzebzrcTPEvHutdzjlr2JNVq.eRS4VswUnNXY2B.
 !
-
-
-
-
-nnnnnnnnnoooooo         aaaaaaaaaaaaaaaaaa         nnnnnnnnneeoooooodeel
-
-
-
-
+no aaa new-model
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
-iiiiiiii         oooooolliiiiiiiinnnnnnnnngggggiiiiiiiinnnnnnnnntttttteerrrrraaaaaal         
-
-
-
-
-nnnnnnnnnoooooo         iiiiiiii         aaaaaauuuuuttttttooooooccccoooooonnnnnnnnnfffiiiiiiiiggggguuuuurrrrree
-
-
-
-
-nnnnnnnnnoooooo         iiiiiiii         cccc
-
-
-
-
-iiiiiiii         snnnnnnnnnttttttiiiiiiiieeoooooouuuuutttttt         
-
-
-
-
+mmi polling-interval 60
+no mmi auto-configure
+no mmi pvc
+mmi snmp-timeout 180
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
-nnnnnnnnnoooooo         iiiiiiii         dooooooaaaaaaiiiiiiiinnnnnnnnn         loooooooooooouuuuu
-
-
-
-
-iiiiiiii         dooooooaaaaaaiiiiiiiinnnnnnnnn         nnnnnnnnnaaaaaaee         cccciiiiiiiisccccooooooccccoooooo
-
-
-
-
-iiiiiiii         cccceefff
-
-
-
-
-nnnnnnnnnoooooo         iiiiiiii         cccceefff
-
-
-
-
+no ip domain lookup
+ip domain name cisco.com
+ip cef
+no ipv6 cef
 !
-
-
-
-
-uuuuulttttttiiiiiiiiliiiiiiiinnnnnnnnn         uuuuunnnnnnnnndleennnnnnnnnaaaaaaee         aaaaaauuuuuttttttheennnnnnnnnttttttiiiiiiiiccccaaaaaatttttteed
-
-
-
-
+multilink bundle-name authenticated
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
-uuuuuseerrrrrnnnnnnnnnaaaaaaee         cccciiiiiiiisccccoooooo         rrrrriiiiiiiiiiiiiiiileegggggee                  aaaaaassoooooorrrrrd                  cccciiiiiiiisccccoooooo
-
-
-
-
+username cisco privilege 15 password 0 cisco
 !
-
-
-
-
-rrrrreeduuuuunnnnnnnnndaaaaaannnnnnnnncccc
-
-
-
-
+redundancy
 !
-
-
-
-
 !
-
-
-
-
-!         
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
-iiiiiiiinnnnnnnnntttttteerrrrrfffaaaaaaccccee         iiiiiiiigggggaaaaaaiiiiiiiittttttttttttheerrrrrnnnnnnnnneetttttt
-
-
-
-
-         iiiiiiii         aaaaaaddrrrrreess                  
-
-
-
-
-         duuuuulee         aaaaaauuuuuttttttoooooo
-
-
-
-
-         seeeed         aaaaaauuuuuttttttoooooo
-
-
-
-
-         eediiiiiiiiaaaaaattttttee         rrrrr
-
-
-
-
 !
-
-
-
-
-iiiiiiiinnnnnnnnntttttteerrrrrfffaaaaaaccccee         iiiiiiiigggggaaaaaaiiiiiiiittttttttttttheerrrrrnnnnnnnnneetttttt
-
-
-
-
-         iiiiiiii         aaaaaaddrrrrreess                  
-
-
-
-
-         duuuuulee         aaaaaauuuuuttttttoooooo
-
-
-
-
-         seeeed         aaaaaauuuuuttttttoooooo
-
-
-
-
-         eediiiiiiiiaaaaaattttttee         rrrrr
-
-
-
-
+interface GigabitEthernet0/0
+ip address 10.10.0.254 255.255.255.0
+duplex auto
+speed auto
+media-type rj45
 !
-
-
-
-
-iiiiiiiinnnnnnnnntttttteerrrrrfffaaaaaaccccee         iiiiiiiigggggaaaaaaiiiiiiiittttttttttttheerrrrrnnnnnnnnneetttttt
-
-
-
-
-         nnnnnnnnnoooooo         iiiiiiii         aaaaaaddrrrrreess
-
-
-
-
-         shuuuuuttttttdoooooonnnnnnnnn
-
-
-
-
-         duuuuulee         aaaaaauuuuuttttttoooooo
-
-
-
-
-         seeeed         aaaaaauuuuuttttttoooooo
-
-
-
-
-         eediiiiiiiiaaaaaattttttee         rrrrr
-
-
-
-
+interface GigabitEthernet0/1
+ip address 10.10.20.254 255.255.255.0
+duplex auto
+speed auto
+media-type rj45
 !
-
-
-
-
-iiiiiiiinnnnnnnnntttttteerrrrrfffaaaaaaccccee         iiiiiiiigggggaaaaaaiiiiiiiittttttttttttheerrrrrnnnnnnnnneetttttt
-
-
-
-
-         nnnnnnnnnoooooo         iiiiiiii         aaaaaaddrrrrreess
-
-
-
-
-         shuuuuuttttttdoooooonnnnnnnnn
-
-
-
-
-         duuuuulee         aaaaaauuuuuttttttoooooo
-
-
-
-
-         seeeed         aaaaaauuuuuttttttoooooo
-
-
-
-
-         eediiiiiiiiaaaaaattttttee         rrrrr
-
-
-
-
+interface GigabitEthernet0/2
+no ip address
+shutdown
+duplex auto
+speed auto
+media-type rj45
 !
-
-
-
-
-iiiiiiii         fffoooooorrrrraaaaaarrrrrdrrrrroooooottttttooooooccccooooool         nnnnnnnnnd
-
-
-
-
+interface GigabitEthernet0/3
+no ip address
+shutdown
+duplex auto
+speed auto
+media-type rj45
 !
-
-
-
-
+ip forward-protocol nd
 !
-
-
-
-
-nnnnnnnnnoooooo         iiiiiiii         htttttttttttt         seerrrrreerrrrr
-
-
-
-
-nnnnnnnnnoooooo         iiiiiiii         htttttttttttt         seeccccuuuuurrrrreeseerrrrreerrrrr
-
-
-
-
-iiiiiiii         ssh         eerrrrrsiiiiiiiioooooonnnnnnnnn         
-
-
-
-
 !
-
-
-
-
-iiiiiiii         iiiiiiiiooooooaaaaaa         ttttttiiiiiiiieesttttttaaaaaa
-
-
-
-
+no ip http server
+no ip http secure-server
+ip route 0.0.0.0 0.0.0.0 10.10.0.1
+ip ssh version 2
 !
-
-
-
-
+ipv6 ioam timestamp
 !
-
-
-
-
 !
-
-
-
-
-ccccoooooonnnnnnnnnttttttrrrrroooooollaaaaaannnnnnnnnee
-
-
-
-
 !
-
-
-
-
-aaaaaannnnnnnnnnnnnnnnnneerrrrr         eeeecccc         C
-
-
-
-
-
-
-
-
-
-                  iiiiiiiis         sttttttrrrrriiiiiiiiccccttttttl         liiiiiiiiiiiiiiiitttttteed         ttttttoooooo         uuuuusee         fffoooooorrrrr         eeaaaaaaluuuuuaaaaaattttttiiiiiiiioooooonnnnnnnnn         deeoooooonnnnnnnnnsttttttrrrrraaaaaattttttiiiiiiiioooooonnnnnnnnn         aaaaaannnnnnnnnd                           
-
-
-
-
-         eeduuuuuccccaaaaaattttttiiiiiiiioooooonnnnnnnnn                  iiiiiiiis         rrrrrooooooiiiiiiiideed         aaaaaasiiiiiiiis         aaaaaannnnnnnnnd         iiiiiiiis         nnnnnnnnnooooootttttt         suuuuuoooooorrrrrtttttteed                  Ciiiiiiiisccccoooooos                                                      
-
-
-
-
-         eecccchnnnnnnnnniiiiiiiiccccaaaaaal         diiiiiiiisoooooorrrrr         Ceennnnnnnnntttttteerrrrr         nnnnnnnnn         uuuuusee         oooooorrrrr         diiiiiiiisccccloooooosuuuuurrrrree         iiiiiiiinnnnnnnnn         hoooooolee         oooooorrrrr         iiiiiiiinnnnnnnnn         aaaaaarrrrrtttttt         
-
-
-
-
-         oooooofff         tttttthee                  oooooofffttttttaaaaaarrrrree         oooooorrrrr         ooooooccccuuuuueennnnnnnnnttttttaaaaaattttttiiiiiiiioooooonnnnnnnnn         ttttttoooooo         aaaaaannnnnnnnn         tttttthiiiiiiiirrrrrd         aaaaaarrrrrtttttt         fffoooooorrrrr         aaaaaannnnnnnnn                                                               
-
-
-
-
-         uuuuurrrrroooooosees         iiiiiiiis         eerrrrreessl         rrrrroooooohiiiiiiiiiiiiiiiitttttteed         eecccceetttttt         aaaaaas         oooooottttttheerrrrriiiiiiiisee         aaaaaauuuuutttttthoooooorrrrriiiiiiiieed                                                      
-
-
-
-
-         Ciiiiiiiisccccoooooo         iiiiiiiinnnnnnnnn         rrrrriiiiiiiittttttiiiiiiiinnnnnnnnnggggg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-
-
-
-
-C
-
-
-
-
-aaaaaannnnnnnnnnnnnnnnnneerrrrr         iiiiiiiinnnnnnnnnccccooooooiiiiiiiinnnnnnnnnggggg         C
-
-
-
-
-
-
-
-
-
-                  iiiiiiiis         sttttttrrrrriiiiiiiiccccttttttl         liiiiiiiiiiiiiiiitttttteed         ttttttoooooo         uuuuusee         fffoooooorrrrr         eeaaaaaaluuuuuaaaaaattttttiiiiiiiioooooonnnnnnnnn         deeoooooonnnnnnnnnsttttttrrrrraaaaaattttttiiiiiiiioooooonnnnnnnnn         aaaaaannnnnnnnnd                           
-
-
-
-
-         eeduuuuuccccaaaaaattttttiiiiiiiioooooonnnnnnnnn                  iiiiiiiis         rrrrrooooooiiiiiiiideed         aaaaaasiiiiiiiis         aaaaaannnnnnnnnd         iiiiiiiis         nnnnnnnnnooooootttttt         suuuuuoooooorrrrrtttttteed                  Ciiiiiiiisccccoooooos                                                      
-
-
-
-
-         eecccchnnnnnnnnniiiiiiiiccccaaaaaal         diiiiiiiisoooooorrrrr         Ceennnnnnnnntttttteerrrrr         nnnnnnnnn         uuuuusee         oooooorrrrr         diiiiiiiisccccloooooosuuuuurrrrree         iiiiiiiinnnnnnnnn         hoooooolee         oooooorrrrr         iiiiiiiinnnnnnnnn         aaaaaarrrrrtttttt         
-
-
-
-
-         oooooofff         tttttthee                  oooooofffttttttaaaaaarrrrree         oooooorrrrr         ooooooccccuuuuueennnnnnnnnttttttaaaaaattttttiiiiiiiioooooonnnnnnnnn         ttttttoooooo         aaaaaannnnnnnnn         tttttthiiiiiiiirrrrrd         aaaaaarrrrrtttttt         fffoooooorrrrr         aaaaaannnnnnnnn                                                               
-
-
-
-
-         uuuuurrrrroooooosees         iiiiiiiis         eerrrrreessl         rrrrroooooohiiiiiiiiiiiiiiiitttttteed         eecccceetttttt         aaaaaas         oooooottttttheerrrrriiiiiiiisee         aaaaaauuuuutttttthoooooorrrrriiiiiiiieed                                                      
-
-
-
-
-         Ciiiiiiiisccccoooooo         iiiiiiiinnnnnnnnn         rrrrriiiiiiiittttttiiiiiiiinnnnnnnnnggggg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-
-
-
-
-C
-
-
-
-
-aaaaaannnnnnnnnnnnnnnnnneerrrrr         loooooogggggiiiiiiiinnnnnnnnn         C
-
-
-
-
-
-
-
-
-
-                  iiiiiiiis         sttttttrrrrriiiiiiiiccccttttttl         liiiiiiiiiiiiiiiitttttteed         ttttttoooooo         uuuuusee         fffoooooorrrrr         eeaaaaaaluuuuuaaaaaattttttiiiiiiiioooooonnnnnnnnn         deeoooooonnnnnnnnnsttttttrrrrraaaaaattttttiiiiiiiioooooonnnnnnnnn         aaaaaannnnnnnnnd                           
-
-
-
-
-         eeduuuuuccccaaaaaattttttiiiiiiiioooooonnnnnnnnn                  iiiiiiiis         rrrrrooooooiiiiiiiideed         aaaaaasiiiiiiiis         aaaaaannnnnnnnnd         iiiiiiiis         nnnnnnnnnooooootttttt         suuuuuoooooorrrrrtttttteed                  Ciiiiiiiisccccoooooos                                                      
-
-
-
-
-         eecccchnnnnnnnnniiiiiiiiccccaaaaaal         diiiiiiiisoooooorrrrr         Ceennnnnnnnntttttteerrrrr         nnnnnnnnn         uuuuusee         oooooorrrrr         diiiiiiiisccccloooooosuuuuurrrrree         iiiiiiiinnnnnnnnn         hoooooolee         oooooorrrrr         iiiiiiiinnnnnnnnn         aaaaaarrrrrtttttt         
-
-
-
-
-         oooooofff         tttttthee                  oooooofffttttttaaaaaarrrrree         oooooorrrrr         ooooooccccuuuuueennnnnnnnnttttttaaaaaattttttiiiiiiiioooooonnnnnnnnn         ttttttoooooo         aaaaaannnnnnnnn         tttttthiiiiiiiirrrrrd         aaaaaarrrrrtttttt         fffoooooorrrrr         aaaaaannnnnnnnn                                                               
-
-
-
-
-         uuuuurrrrroooooosees         iiiiiiiis         eerrrrreessl         rrrrroooooohiiiiiiiiiiiiiiiitttttteed         eecccceetttttt         aaaaaas         oooooottttttheerrrrriiiiiiiisee         aaaaaauuuuutttttthoooooorrrrriiiiiiiieed                                                      
-
-
-
-
-         Ciiiiiiiisccccoooooo         iiiiiiiinnnnnnnnn         rrrrriiiiiiiittttttiiiiiiiinnnnnnnnnggggg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-
-
-
-
-C
-
-
-
-
+control-plane
 !
-
-
-
-
-liiiiiiiinnnnnnnnnee         ccccoooooonnnnnnnnn         
-
-
-
-
-liiiiiiiinnnnnnnnnee         aaaaaauuuuu         
-
-
-
-
-liiiiiiiinnnnnnnnnee         tttttt                  
-
-
-
-
-         loooooogggggiiiiiiiinnnnnnnnn         looooooccccaaaaaal
-
-
-
-
-         ttttttrrrrraaaaaannnnnnnnnsoooooorrrrrtttttt         iiiiiiiinnnnnnnnnuuuuutttttt         ssh
-
-
-
-
+banner exec ^CC
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************^C
+banner incoming ^CC
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************^C
+banner login ^CC
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************^C
 !
-
-
-
-
-nnnnnnnnnoooooo         sccccheeduuuuuleerrrrr         aaaaaallooooooccccaaaaaattttttee
-
-
-
-
+line con 0
+line aux 0
+line vty 0 4
+login local
+transport input ssh
 !
-
-
-
-
-eennnnnnnnnd
+no scheduler allocate
+!
+end
