@@ -1,3 +1,7 @@
 show run
 show version
+admin show platform
+show interface brief
+show ospf neighbor
+show vrf all
 

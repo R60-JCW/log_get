@@ -1,3 +1,10 @@
 show run
 show version
-
+show ip interface brief
+show vlan
+show ip ospf neighbor
+show vrf
+show spanning-tree
+show vpc
+show port-channel summary 
+show hsrp all
