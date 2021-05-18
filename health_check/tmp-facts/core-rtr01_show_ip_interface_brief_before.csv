@@ -1,0 +1,7 @@
+INTF,IPADDR,STATUS,PROTO,VRF
+Loopback0,unassigned,Shutdown,Down,default
+MgmtEth0/0/CPU0/0,10.10.20.173,Up,Up,Mgmt-intf
+GigabitEthernet0/0/0/0,172.16.252.37,Up,Up,default
+GigabitEthernet0/0/0/1,172.16.253.2,Up,Up,default
+GigabitEthernet0/0/0/2,172.16.252.22,Up,Up,default
+GigabitEthernet0/0/0/3,172.16.252.30,Up,Up,default
