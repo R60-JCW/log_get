@@ -5,13 +5,13 @@ if __name__ == "__main__":
     # 加工対象と削除リストを読み込み、削除リストにある文字列を加工対象から削除
     # 加工対象ファイル
 
-    # tgt_file = sys.argv[1]
-    tgt_file = 'show_run.log'
+    tgt_file = sys.argv[1]
+    #tgt_file = 'show_run.log'
     new_file = tgt_file + '_processed'
 
     # 削除リスト
-    # del_file = sys.argv[2]
-    del_file = 'show_run_del_list.txt'
+    del_file = sys.argv[2]
+    #del_file = 'show_run_del_list.txt'
 
     with open(tgt_file) as f:
         tgt_lines = f.readlines()
