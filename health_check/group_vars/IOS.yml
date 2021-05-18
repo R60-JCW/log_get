@@ -5,6 +5,7 @@ commands:
 - file_name: show_version
   command_: show version
   template_file: cisco_ios_show_version.textfsm
+  del_list_file: show_version_del_list.txt
 - file_name: show_ip_route
   command: show ip route
   template_file: cisco_ios_show_ip_route.textfsm

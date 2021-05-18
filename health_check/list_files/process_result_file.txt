@@ -10,13 +10,13 @@
 ### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_version.textfsm 」の確認結果
 ## 構造化データ化処理終了
 ## 加工処理開始
-### 加工対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/internet-rtr01_show_version_after.csv 」及び、
+### 加工対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/edge-sw01_show_version_after.csv 」及び、
 ### 削除リストファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_version_del_list.txt 」の確認結果(記載なければ問題なし)
 ## 加工処理終了
 ##### 【ファイル無し】「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_version_del_list.txt 」が存在しません。
 ## 構造化データ化処理終了
 ## 加工処理開始
-### 加工対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/edge-sw01_show_version_after.csv 」及び、
+### 加工対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/internet-rtr01_show_version_after.csv 」及び、
 ### 削除リストファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_version_del_list.txt 」の確認結果(記載なければ問題なし)
 ## 加工処理終了
 ##### 【ファイル無し】「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_version_del_list.txt 」が存在しません。
@@ -31,3 +31,27 @@
 ### 削除リストファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_version_del_list.txt 」の確認結果(記載なければ問題なし)
 ## 加工処理終了
 ##### 【ファイル無し】「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_version_del_list.txt 」が存在しません。
+###############################################################################################
+# 対象コマンド： internet-rtr01_show_ip_route
+## 構造化データ化処理開始
+### 構造化対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/internet-rtr01_show_ip_route.log 」及び、
+### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_ip_route.textfsm 」の確認結果
+#####【内容確認】「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_ip_route.textfsm 」にTextFSMTemplateError：
+##### No Value definitions found.
+## 構造化データ化処理終了
+###############################################################################################
+# 対象コマンド： edge-sw01_show_ip_route
+## 構造化データ化処理開始
+### 構造化対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/edge-sw01_show_ip_route.log 」及び、
+### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_ip_route.textfsm 」の確認結果
+#####【内容確認】「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_ip_route.textfsm 」にTextFSMTemplateError：
+##### No Value definitions found.
+## 構造化データ化処理終了
+###############################################################################################
+# 対象コマンド： iosv-0_show_ip_route
+## 構造化データ化処理開始
+### 構造化対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/iosv-0_show_ip_route.log 」及び、
+### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_ip_route.textfsm 」の確認結果
+#####【内容確認】「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_ip_route.textfsm 」にTextFSMTemplateError：
+##### No Value definitions found.
+## 構造化データ化処理終了
