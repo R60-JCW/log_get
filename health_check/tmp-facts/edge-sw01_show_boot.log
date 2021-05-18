@@ -1,0 +1,28 @@
+BOOT variable does not exist
+CONFIG_FILE variable does not exist
+Configuration register is 0x101
+
+IOSv GRUB info:
+
+GRUB multiboot info:
+  IOMEM percent       '25'
+  Config Register     '0x101'
+  Boot loader         'GRUB 2.00'
+  Command line        '/vios_l2-adventerprisek9-m'
+  Memory size         766Mb, low 639K, high 785256K
+  Multiboot info      0x056A2630, flags 0x00000247
+  Boot device         0x8000FFFF
+  Memory map          0x056A288E (168 bytes)
+    0x00000000 .. 0x0009FBFF (     639K, available)
+    0x0009FC00 .. 0x0009FFFF (       1K, reserved)
+    0x000F0000 .. 0x000FFFFF (      64K, reserved)
+    0x00100000 .. 0x2FFD9FFF (  785256K, available)
+    0x2FFDA000 .. 0x2FFFFFFF (     152K, reserved)
+    0xFEFFC000 .. 0xFEFFFFFF (      16K, reserved)
+    0xFFFC0000 .. 0xFFFFFFFF (     256K, reserved)
+Linker:
+  _initdata_start     0x6396FD8
+  _data1_start        0x6F46B60
+  _initdata_end       0x6F46B5C
+
+Router memory: 766Mb, 803447808 bytes
