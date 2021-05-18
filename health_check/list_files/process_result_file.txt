@@ -1,22 +1,20 @@
 ###############################################################################################
-# 対象コマンド： core-rtr01_show_version
-## 構造化データ化処理開始
-### 構造化対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/core-rtr01_show_version.log 」及び、
-### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_xr_show_version.textfsm 」の確認結果
-###############################################################################################
 # 対象コマンド： core-rtr02_show_version
 ## 構造化データ化処理開始
 ### 構造化対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/core-rtr02_show_version.log 」及び、
+### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_xr_show_version.textfsm 」の確認結果
+###############################################################################################
+# 対象コマンド： core-rtr01_show_version
+## 構造化データ化処理開始
+### 構造化対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/core-rtr01_show_version.log 」及び、
 ### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_xr_show_version.textfsm 」の確認結果
 ## 構造化データ化処理終了
 ## 加工処理開始
 ### 加工対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/core-rtr01_show_version_after.csv 」及び、
 ### 削除リストファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/xr_show_version_del_list.txt 」の確認結果(記載なければ問題なし)
-## 加工処理終了
-##### 【ファイル無し】「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/xr_show_version_del_list.txt 」が存在しません。
 ## 構造化データ化処理終了
 ## 加工処理開始
 ### 加工対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/core-rtr02_show_version_after.csv 」及び、
 ### 削除リストファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/xr_show_version_del_list.txt 」の確認結果(記載なければ問題なし)
 ## 加工処理終了
-##### 【ファイル無し】「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/xr_show_version_del_list.txt 」が存在しません。
+## 加工処理終了

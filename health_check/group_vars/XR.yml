@@ -9,7 +9,7 @@ commands:
 - file_name: show_ip_interface_brief
   command: show ip interface brief
   template_file: cisco_xr_show_ip_interface_brief.textfsm
-  #del_list_file: xr_show_ip_int_brief_del_list.txt
+  del_list_file: xr_show_ip_int_brief_del_list.txt
 - file_name: show_ospf_neighbor
   command: show ospf neighbor
   template_file: cisco_xr_show_ospf_neighbor.textfsm
@@ -17,7 +17,7 @@ commands:
 - file_name: admin_show_platform
   command: admin show platform
   template_file: cisco_xr_admin_show_platform.textfsm
-  #del_list_file: xr_admin_show_platform_del_list.txt
+  del_list_file: xr_admin_show_platform_del_list.txt
 - file_name: show_ip_route
   command: admin show ip route
   template_file: cisco_xr_show_ip_route.textfsm
