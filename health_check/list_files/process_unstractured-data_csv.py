@@ -96,7 +96,7 @@ def template_file_check(template_file_path):
         exit()
 
 
-def read_template_file_and_parse(template_file_path, unstractured_date):
+def read_template_file_and_parse(data_file_path, template_file_path, unstractured_date):
     '''
     templateファイルを読み込み、戻り値に格納
     '''
@@ -464,7 +464,7 @@ def main():
     template_file_check(tpl_file)
 
     # templateファイルの読み込みとデータ解析
-    fsm, parsed_data = read_template_file_and_parse(tpl_file, datas)
+    fsm, parsed_data = read_template_file_and_parse(data_file, tpl_file, datas)
     # print(fsm)
 
     # 解析データの保存(拡張子が変わるので、変更後の加工元データファイルを取得)

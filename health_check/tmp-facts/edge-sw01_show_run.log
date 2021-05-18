@@ -1,8 +1,8 @@
 Building configuration...
 
-Current configuration : 4084 bytes
+Current configuration : 3904 bytes
 !
-! Last configuration change at 05:17:07 UTC Mon May 17 2021
+! Last configuration change at 03:23:30 UTC Tue May 18 2021
 !
 version 15.2
 service timestamps debug datetime msec
@@ -29,8 +29,6 @@ enable password cisco
 !
 username cisco privilege 15 password 0 cisco
 no aaa new-model
-no process cpu extended history
-no process cpu autoprofile hog
 !
 !
 !
@@ -84,7 +82,6 @@ interface GigabitEthernet0/0
  ip address 10.10.20.172 255.255.255.0
  duplex full
  no negotiation auto
- no cdp enable
 !
 interface GigabitEthernet0/1
  description to GigabitEthernet0/1.edge-firewall01
@@ -92,7 +89,6 @@ interface GigabitEthernet0/1
  switchport mode access
  duplex full
  no negotiation auto
- no cdp enable
  spanning-tree portfast edge
 !
 interface GigabitEthernet0/2
@@ -101,7 +97,6 @@ interface GigabitEthernet0/2
  switchport mode access
  duplex full
  no negotiation auto
- no cdp enable
  spanning-tree portfast edge
 !
 interface GigabitEthernet0/3
@@ -110,7 +105,6 @@ interface GigabitEthernet0/3
  switchport mode access
  duplex full
  no negotiation auto
- no cdp enable
  spanning-tree portfast edge
 !
 ip forward-protocol nd
@@ -119,12 +113,10 @@ no ip http server
 no ip http secure-server
 !
 ip route vrf Mgmt-intf 0.0.0.0 0.0.0.0 10.10.20.254
-ip ssh version 2
 ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
 ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
 !
 !
-no service-routing capabilities-manager
 !
 !
 !

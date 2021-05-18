@@ -1,861 +1,162 @@
-Buuuuuiiiiiiiildiiiiiiiinnnnnnnnnggggg         ccccoooooonnnnnnnnnfffiiiiiiiiggggguuuuurrrrraaaaaattttttiiiiiiiioooooonnnnnnnnn
-
-
-
-
-
-
-
-
-
-Cuuuuurrrrrrrrrreennnnnnnnntttttt         ccccoooooonnnnnnnnnfffiiiiiiiiggggguuuuurrrrraaaaaattttttiiiiiiiioooooonnnnnnnnn         :                  ttttttees
-
-
-
 
 !
-
-
-
-
-!         Laaaaaastttttt         ccccoooooonnnnnnnnnfffiiiiiiiiggggguuuuurrrrraaaaaattttttiiiiiiiioooooonnnnnnnnn         cccchaaaaaannnnnnnnngggggee         aaaaaatttttt         ::         C         oooooonnnnnnnnn         aaaaaa                  
-
-
-
-
 !
-
-
-
-
-eerrrrrsiiiiiiiioooooonnnnnnnnn         
-
-
-
-
-seerrrrriiiiiiiiccccee         ttttttiiiiiiiieesttttttaaaaaas         deeuuuuuggggg         daaaaaatttttteettttttiiiiiiiiee         seecccc
-
-
-
-
-seerrrrriiiiiiiiccccee         ttttttiiiiiiiieesttttttaaaaaas         looooooggggg         daaaaaatttttteettttttiiiiiiiiee         seecccc
-
-
-
-
-nnnnnnnnnoooooo         seerrrrriiiiiiiiccccee         aaaaaassoooooorrrrrdeennnnnnnnnccccrrrrrttttttiiiiiiiioooooonnnnnnnnn
-
-
-
-
-seerrrrriiiiiiiiccccee         ccccoooooorrrrreessccccoooooonnnnnnnnnfffiiiiiiiiggggg
-
-
-
-
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
 !
-
-
-
-
-hoooooosttttttnnnnnnnnnaaaaaaee         eedgggggees
-
-
-
-
+hostname edge-sw01
 !
-
-
-
-
-oooooooooooottttttsttttttaaaaaarrrrrttttttaaaaaarrrrreerrrrr
-
-
-
-
-ooooooooooootttttteennnnnnnnndaaaaaarrrrreerrrrr
-
-
-
-
+boot-start-marker
+boot-end-marker
 !
-
-
-
-
 !
-
-
-
-
-rrrrrfff         deefffiiiiiiiinnnnnnnnniiiiiiiittttttiiiiiiiioooooonnnnnnnnn         gggggttttttiiiiiiiinnnnnnnnnttttttfff
-
-
-
-
-         !
-
-
-
-
-         aaaaaaddrrrrreessfffaaaaaaiiiiiiiil         iiiiiiii
-
-
-
-
-         eeiiiiiiiittttttaaaaaaddrrrrreessfffaaaaaaiiiiiiiil
-
-
-
-
-         !
-
-
-
-
-         aaaaaaddrrrrreessfffaaaaaaiiiiiiiil         iiiiiiii
-
-
-
-
-         eeiiiiiiiittttttaaaaaaddrrrrreessfffaaaaaaiiiiiiiil
-
-
-
-
+vrf definition Mgmt-intf
 !
-
-
-
-
-nnnnnnnnnoooooo         looooooggggggggggiiiiiiiinnnnnnnnnggggg         ccccoooooonnnnnnnnnsoooooolee
-
-
-
-
-eennnnnnnnnaaaaaalee         aaaaaassoooooorrrrrd         cccciiiiiiiisccccoooooo
-
-
-
-
+address-family ipv4
+exit-address-family
 !
-
-
-
-
-uuuuuseerrrrrnnnnnnnnnaaaaaaee         cccciiiiiiiisccccoooooo         rrrrriiiiiiiiiiiiiiiileegggggee                  aaaaaassoooooorrrrrd                  cccciiiiiiiisccccoooooo
-
-
-
-
-nnnnnnnnnoooooo         aaaaaaaaaaaaaaaaaa         nnnnnnnnneeoooooodeel
-
-
-
-
-nnnnnnnnnoooooo         rrrrroooooocccceess         ccccuuuuu         eetttttteennnnnnnnndeed         hiiiiiiiisttttttoooooorrrrr
-
-
-
-
-nnnnnnnnnoooooo         rrrrroooooocccceess         ccccuuuuu         aaaaaauuuuuttttttoooooorrrrroooooofffiiiiiiiilee         hooooooggggg
-
-
-
-
+address-family ipv6
+exit-address-family
 !
-
-
-
-
+no logging console
+enable password cisco
 !
-
-
-
-
+username cisco privilege 15 password 0 cisco
+no aaa new-model
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
-tttttt         dooooooaaaaaaiiiiiiiinnnnnnnnn         iiiiiiiirrrrrllaaaaaa
-
-
-
-
-tttttt         oooooodee         ttttttrrrrraaaaaannnnnnnnnsaaaaaarrrrreennnnnnnnntttttt
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
+vtp domain virl.lab
+vtp mode transparent
 !
-
-
-
-
-nnnnnnnnnoooooo         iiiiiiii         dooooooaaaaaaiiiiiiiinnnnnnnnnloooooooooooouuuuu
-
-
-
-
-iiiiiiii         dooooooaaaaaaiiiiiiiinnnnnnnnnnnnnnnnnnaaaaaaee         cccciiiiiiiisccccooooooccccoooooo
-
-
-
-
-iiiiiiii         cccceefff
-
-
-
-
-nnnnnnnnnoooooo         iiiiiiii         cccceefff
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
+no ip domain-lookup
+ip domain-name cisco.com
+ip cef
+no ipv6 cef
 !
-
-
-
-
-saaaaaannnnnnnnnnnnnnnnnniiiiiiiinnnnnnnnngggggttttttrrrrreeee         oooooodee         stttttt
-
-
-
-
-saaaaaannnnnnnnnnnnnnnnnniiiiiiiinnnnnnnnngggggttttttrrrrreeee         eetttttteennnnnnnnnd         sstttttteeiiiiiiiid
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
-laaaaaannnnnnnnn         
-
-
-
-
-         nnnnnnnnnaaaaaaee         aaaaaannnnnnnnnlaaaaaannnnnnnnn
-
-
-
-
+spanning-tree mode pvst
+spanning-tree extend system-id
 !
-
-
-
-
-laaaaaannnnnnnnn         
-
-
-
-
-         nnnnnnnnnaaaaaaee         eedgggggeettttttrrrrraaaaaannnnnnnnnsiiiiiiiitttttt
-
-
-
-
-nnnnnnnnnoooooo         ccccd         rrrrruuuuunnnnnnnnn
-
-
-
-
 !
-
-
-
-
-!         
-
-
-
-
+vlan 2
+name ank_vlan2
 !
-
-
-
-
+vlan 999
+name edge-transit
+no cdp run
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
-iiiiiiiinnnnnnnnntttttteerrrrrfffaaaaaaccccee         Looooooooooooaaaaaacccc
-
-
-
-
-         deesccccrrrrriiiiiiiittttttiiiiiiiioooooonnnnnnnnn         ttttttoooooo
-
-
-
-
-         nnnnnnnnnoooooo         iiiiiiii         aaaaaaddrrrrreess
-
-
-
-
-         shuuuuuttttttdoooooonnnnnnnnn
-
-
-
-
 !
-
-
-
-
-iiiiiiiinnnnnnnnntttttteerrrrrfffaaaaaaccccee         iiiiiiiigggggaaaaaaiiiiiiiittttttttttttheerrrrrnnnnnnnnneetttttt
-
-
-
-
-         deesccccrrrrriiiiiiiittttttiiiiiiiioooooonnnnnnnnn         ttttttoooooo         oooooorrrrrttttttsaaaaaannnnnnnnndooooooaaaaaacccceennnnnnnnnd
-
-
-
-
-         nnnnnnnnnoooooo         siiiiiiiittttttcccchoooooorrrrrtttttt
-
-
-
-
-         rrrrrfff         fffoooooorrrrraaaaaarrrrrdiiiiiiiinnnnnnnnnggggg         gggggttttttiiiiiiiinnnnnnnnnttttttfff
-
-
-
-
-         iiiiiiii         aaaaaaddrrrrreess                  
-
-
-
-
-         duuuuulee         fffuuuuull
-
-
-
-
-         nnnnnnnnnoooooo         nnnnnnnnneegggggoooooottttttiiiiiiiiaaaaaattttttiiiiiiiioooooonnnnnnnnn         aaaaaauuuuuttttttoooooo
-
-
-
-
-         nnnnnnnnnoooooo         ccccd         eennnnnnnnnaaaaaalee
-
-
-
-
 !
-
-
-
-
-iiiiiiiinnnnnnnnntttttteerrrrrfffaaaaaaccccee         iiiiiiiigggggaaaaaaiiiiiiiittttttttttttheerrrrrnnnnnnnnneetttttt
-
-
-
-
-         deesccccrrrrriiiiiiiittttttiiiiiiiioooooonnnnnnnnn         ttttttoooooo         iiiiiiiigggggaaaaaaiiiiiiiittttttttttttheerrrrrnnnnnnnnneetttttteedgggggeefffiiiiiiiirrrrreeaaaaaall
-
-
-
-
-         siiiiiiiittttttcccchoooooorrrrrtttttt         aaaaaacccccccceess         laaaaaannnnnnnnn         
-
-
-
-
-         siiiiiiiittttttcccchoooooorrrrrtttttt         oooooodee         aaaaaacccccccceess
-
-
-
-
-         duuuuulee         fffuuuuull
-
-
-
-
-         nnnnnnnnnoooooo         nnnnnnnnneegggggoooooottttttiiiiiiiiaaaaaattttttiiiiiiiioooooonnnnnnnnn         aaaaaauuuuuttttttoooooo
-
-
-
-
-         nnnnnnnnnoooooo         ccccd         eennnnnnnnnaaaaaalee
-
-
-
-
-         saaaaaannnnnnnnnnnnnnnnnniiiiiiiinnnnnnnnngggggttttttrrrrreeee         oooooorrrrrttttttfffaaaaaastttttt         eedgggggee
-
-
-
-
 !
-
-
-
-
-iiiiiiiinnnnnnnnntttttteerrrrrfffaaaaaaccccee         iiiiiiiigggggaaaaaaiiiiiiiittttttttttttheerrrrrnnnnnnnnneetttttt
-
-
-
-
-         deesccccrrrrriiiiiiiittttttiiiiiiiioooooonnnnnnnnn         ttttttoooooo         iiiiiiiigggggaaaaaaiiiiiiiittttttttttttheerrrrrnnnnnnnnneettttttccccoooooorrrrreerrrrrttttttrrrrr
-
-
-
-
-         siiiiiiiittttttcccchoooooorrrrrtttttt         aaaaaacccccccceess         laaaaaannnnnnnnn         
-
-
-
-
-         siiiiiiiittttttcccchoooooorrrrrtttttt         oooooodee         aaaaaacccccccceess
-
-
-
-
-         duuuuulee         fffuuuuull
-
-
-
-
-         nnnnnnnnnoooooo         nnnnnnnnneegggggoooooottttttiiiiiiiiaaaaaattttttiiiiiiiioooooonnnnnnnnn         aaaaaauuuuuttttttoooooo
-
-
-
-
-         nnnnnnnnnoooooo         ccccd         eennnnnnnnnaaaaaalee
-
-
-
-
-         saaaaaannnnnnnnnnnnnnnnnniiiiiiiinnnnnnnnngggggttttttrrrrreeee         oooooorrrrrttttttfffaaaaaastttttt         eedgggggee
-
-
-
-
+interface Loopback0
+description to
+no ip address
+shutdown
 !
-
-
-
-
-iiiiiiiinnnnnnnnntttttteerrrrrfffaaaaaaccccee         iiiiiiiigggggaaaaaaiiiiiiiittttttttttttheerrrrrnnnnnnnnneetttttt
-
-
-
-
-         deesccccrrrrriiiiiiiittttttiiiiiiiioooooonnnnnnnnn         ttttttoooooo         iiiiiiiigggggaaaaaaiiiiiiiittttttttttttheerrrrrnnnnnnnnneettttttccccoooooorrrrreerrrrrttttttrrrrr
-
-
-
-
-         siiiiiiiittttttcccchoooooorrrrrtttttt         aaaaaacccccccceess         laaaaaannnnnnnnn         
-
-
-
-
-         siiiiiiiittttttcccchoooooorrrrrtttttt         oooooodee         aaaaaacccccccceess
-
-
-
-
-         duuuuulee         fffuuuuull
-
-
-
-
-         nnnnnnnnnoooooo         nnnnnnnnneegggggoooooottttttiiiiiiiiaaaaaattttttiiiiiiiioooooonnnnnnnnn         aaaaaauuuuuttttttoooooo
-
-
-
-
-         nnnnnnnnnoooooo         ccccd         eennnnnnnnnaaaaaalee
-
-
-
-
-         saaaaaannnnnnnnnnnnnnnnnniiiiiiiinnnnnnnnngggggttttttrrrrreeee         oooooorrrrrttttttfffaaaaaastttttt         eedgggggee
-
-
-
-
+interface GigabitEthernet0/0
+description to port3.sandbox-backend
+no switchport
+vrf forwarding Mgmt-intf
+ip address 10.10.20.172 255.255.255.0
+duplex full
+no negotiation auto
 !
-
-
-
-
-iiiiiiii         fffoooooorrrrraaaaaarrrrrdrrrrroooooottttttooooooccccooooool         nnnnnnnnnd
-
-
-
-
+interface GigabitEthernet0/1
+description to GigabitEthernet0/1.edge-firewall01
+switchport access vlan 999
+switchport mode access
+duplex full
+no negotiation auto
+spanning-tree portfast edge
 !
-
-
-
-
-nnnnnnnnnoooooo         iiiiiiii         htttttttttttt         seerrrrreerrrrr
-
-
-
-
-nnnnnnnnnoooooo         iiiiiiii         htttttttttttt         seeccccuuuuurrrrreeseerrrrreerrrrr
-
-
-
-
+interface GigabitEthernet0/2
+description to GigabitEthernet0/0/0/1.core-rtr01
+switchport access vlan 999
+switchport mode access
+duplex full
+no negotiation auto
+spanning-tree portfast edge
 !
-
-
-
-
-iiiiiiii         rrrrroooooouuuuuttttttee         rrrrrfff         gggggttttttiiiiiiiinnnnnnnnnttttttfff                           
-
-
-
-
-iiiiiiii         ssh         eerrrrrsiiiiiiiioooooonnnnnnnnn         
-
-
-
-
-iiiiiiii         ssh         seerrrrreerrrrr         aaaaaalgggggoooooorrrrriiiiiiiitttttth         eennnnnnnnnccccrrrrrttttttiiiiiiiioooooonnnnnnnnn         aaaaaaeesccccttttttrrrrr         aaaaaaeesccccttttttrrrrr         aaaaaaeesccccttttttrrrrr
-
-
-
-
-iiiiiiii         ssh         ccccliiiiiiiieennnnnnnnntttttt         aaaaaalgggggoooooorrrrriiiiiiiitttttth         eennnnnnnnnccccrrrrrttttttiiiiiiiioooooonnnnnnnnn         aaaaaaeesccccttttttrrrrr         aaaaaaeesccccttttttrrrrr         aaaaaaeesccccttttttrrrrr
-
-
-
-
+interface GigabitEthernet0/3
+description to GigabitEthernet0/0/0/1.core-rtr02
+switchport access vlan 999
+switchport mode access
+duplex full
+no negotiation auto
+spanning-tree portfast edge
 !
-
-
-
-
+ip forward-protocol nd
 !
-
-
-
-
-nnnnnnnnnoooooo         seerrrrriiiiiiiicccceerrrrroooooouuuuuttttttiiiiiiiinnnnnnnnnggggg         ccccaaaaaaaaaaaaiiiiiiiiliiiiiiiittttttiiiiiiiieesaaaaaannnnnnnnnaaaaaagggggeerrrrr
-
-
-
-
+no ip http server
+no ip http secure-server
 !
-
-
-
-
+ip route vrf Mgmt-intf 0.0.0.0 0.0.0.0 10.10.20.254
+ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
 !
-
-
-
-
 !
-
-
-
-
 !
-
-
-
-
-ccccoooooonnnnnnnnnttttttrrrrroooooollaaaaaannnnnnnnnee
-
-
-
-
 !
-
-
-
-
-aaaaaannnnnnnnnnnnnnnnnneerrrrr         eeeecccc         CCC
-
-
-
-
-
-
-
-
-
-                  iiiiiiiis         sttttttrrrrriiiiiiiiccccttttttl         liiiiiiiiiiiiiiiitttttteed         ttttttoooooo         uuuuusee         fffoooooorrrrr         eeaaaaaaluuuuuaaaaaattttttiiiiiiiioooooonnnnnnnnn         deeoooooonnnnnnnnnsttttttrrrrraaaaaattttttiiiiiiiioooooonnnnnnnnn         aaaaaannnnnnnnnd                           
-
-
-
-
-         eeduuuuuccccaaaaaattttttiiiiiiiioooooonnnnnnnnn                  iiiiiiiis         rrrrrooooooiiiiiiiideed         aaaaaasiiiiiiiis         aaaaaannnnnnnnnd         iiiiiiiis         nnnnnnnnnooooootttttt         suuuuuoooooorrrrrtttttteed                  Ciiiiiiiisccccoooooos                                                      
-
-
-
-
-         eecccchnnnnnnnnniiiiiiiiccccaaaaaal         diiiiiiiisoooooorrrrr         Ceennnnnnnnntttttteerrrrr         nnnnnnnnn         uuuuusee         oooooorrrrr         diiiiiiiisccccloooooosuuuuurrrrree         iiiiiiiinnnnnnnnn         hoooooolee         oooooorrrrr         iiiiiiiinnnnnnnnn         aaaaaarrrrrtttttt         
-
-
-
-
-         oooooofff         tttttthee                  oooooofffttttttaaaaaarrrrree         oooooorrrrr         ooooooccccuuuuueennnnnnnnnttttttaaaaaattttttiiiiiiiioooooonnnnnnnnn         ttttttoooooo         aaaaaannnnnnnnn         tttttthiiiiiiiirrrrrd         aaaaaarrrrrtttttt         fffoooooorrrrr         aaaaaannnnnnnnn                                                               
-
-
-
-
-         uuuuurrrrroooooosees         iiiiiiiis         eerrrrreessl         rrrrroooooohiiiiiiiiiiiiiiiitttttteed         eecccceetttttt         aaaaaas         oooooottttttheerrrrriiiiiiiisee         aaaaaauuuuutttttthoooooorrrrriiiiiiiieed                                                      
-
-
-
-
-         Ciiiiiiiisccccoooooo         iiiiiiiinnnnnnnnn         rrrrriiiiiiiittttttiiiiiiiinnnnnnnnnggggg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-
-
-
-
-C
-
-
-
-
-aaaaaannnnnnnnnnnnnnnnnneerrrrr         iiiiiiiinnnnnnnnnccccooooooiiiiiiiinnnnnnnnnggggg         CCC
-
-
-
-
-
-
-
-
-
-                  iiiiiiiis         sttttttrrrrriiiiiiiiccccttttttl         liiiiiiiiiiiiiiiitttttteed         ttttttoooooo         uuuuusee         fffoooooorrrrr         eeaaaaaaluuuuuaaaaaattttttiiiiiiiioooooonnnnnnnnn         deeoooooonnnnnnnnnsttttttrrrrraaaaaattttttiiiiiiiioooooonnnnnnnnn         aaaaaannnnnnnnnd                           
-
-
-
-
-         eeduuuuuccccaaaaaattttttiiiiiiiioooooonnnnnnnnn                  iiiiiiiis         rrrrrooooooiiiiiiiideed         aaaaaasiiiiiiiis         aaaaaannnnnnnnnd         iiiiiiiis         nnnnnnnnnooooootttttt         suuuuuoooooorrrrrtttttteed                  Ciiiiiiiisccccoooooos                                                      
-
-
-
-
-         eecccchnnnnnnnnniiiiiiiiccccaaaaaal         diiiiiiiisoooooorrrrr         Ceennnnnnnnntttttteerrrrr         nnnnnnnnn         uuuuusee         oooooorrrrr         diiiiiiiisccccloooooosuuuuurrrrree         iiiiiiiinnnnnnnnn         hoooooolee         oooooorrrrr         iiiiiiiinnnnnnnnn         aaaaaarrrrrtttttt         
-
-
-
-
-         oooooofff         tttttthee                  oooooofffttttttaaaaaarrrrree         oooooorrrrr         ooooooccccuuuuueennnnnnnnnttttttaaaaaattttttiiiiiiiioooooonnnnnnnnn         ttttttoooooo         aaaaaannnnnnnnn         tttttthiiiiiiiirrrrrd         aaaaaarrrrrtttttt         fffoooooorrrrr         aaaaaannnnnnnnn                                                               
-
-
-
-
-         uuuuurrrrroooooosees         iiiiiiiis         eerrrrreessl         rrrrroooooohiiiiiiiiiiiiiiiitttttteed         eecccceetttttt         aaaaaas         oooooottttttheerrrrriiiiiiiisee         aaaaaauuuuutttttthoooooorrrrriiiiiiiieed                                                      
-
-
-
-
-         Ciiiiiiiisccccoooooo         iiiiiiiinnnnnnnnn         rrrrriiiiiiiittttttiiiiiiiinnnnnnnnnggggg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-
-
-
-
-C
-
-
-
-
-aaaaaannnnnnnnnnnnnnnnnneerrrrr         loooooogggggiiiiiiiinnnnnnnnn         CCC
-
-
-
-
-
-
-
-
-
-                  iiiiiiiis         sttttttrrrrriiiiiiiiccccttttttl         liiiiiiiiiiiiiiiitttttteed         ttttttoooooo         uuuuusee         fffoooooorrrrr         eeaaaaaaluuuuuaaaaaattttttiiiiiiiioooooonnnnnnnnn         deeoooooonnnnnnnnnsttttttrrrrraaaaaattttttiiiiiiiioooooonnnnnnnnn         aaaaaannnnnnnnnd                           
-
-
-
-
-         eeduuuuuccccaaaaaattttttiiiiiiiioooooonnnnnnnnn                  iiiiiiiis         rrrrrooooooiiiiiiiideed         aaaaaasiiiiiiiis         aaaaaannnnnnnnnd         iiiiiiiis         nnnnnnnnnooooootttttt         suuuuuoooooorrrrrtttttteed                  Ciiiiiiiisccccoooooos                                                      
-
-
-
-
-         eecccchnnnnnnnnniiiiiiiiccccaaaaaal         diiiiiiiisoooooorrrrr         Ceennnnnnnnntttttteerrrrr         nnnnnnnnn         uuuuusee         oooooorrrrr         diiiiiiiisccccloooooosuuuuurrrrree         iiiiiiiinnnnnnnnn         hoooooolee         oooooorrrrr         iiiiiiiinnnnnnnnn         aaaaaarrrrrtttttt         
-
-
-
-
-         oooooofff         tttttthee                  oooooofffttttttaaaaaarrrrree         oooooorrrrr         ooooooccccuuuuueennnnnnnnnttttttaaaaaattttttiiiiiiiioooooonnnnnnnnn         ttttttoooooo         aaaaaannnnnnnnn         tttttthiiiiiiiirrrrrd         aaaaaarrrrrtttttt         fffoooooorrrrr         aaaaaannnnnnnnn                                                               
-
-
-
-
-         uuuuurrrrroooooosees         iiiiiiiis         eerrrrreessl         rrrrroooooohiiiiiiiiiiiiiiiitttttteed         eecccceetttttt         aaaaaas         oooooottttttheerrrrriiiiiiiisee         aaaaaauuuuutttttthoooooorrrrriiiiiiiieed                                                      
-
-
-
-
-         Ciiiiiiiisccccoooooo         iiiiiiiinnnnnnnnn         rrrrriiiiiiiittttttiiiiiiiinnnnnnnnnggggg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-
-
-
-
-C
-
-
-
-
 !
-
-
-
-
-liiiiiiiinnnnnnnnnee         ccccoooooonnnnnnnnn         
-
-
-
-
-         eeeeccccttttttiiiiiiiieeoooooouuuuutttttt                  
-
-
-
-
-         aaaaaassoooooorrrrrd         cccciiiiiiiisccccoooooo
-
-
-
-
-liiiiiiiinnnnnnnnnee         aaaaaauuuuu         
-
-
-
-
-liiiiiiiinnnnnnnnnee         tttttt                  
-
-
-
-
-         eeeeccccttttttiiiiiiiieeoooooouuuuutttttt                  
-
-
-
-
-         aaaaaassoooooorrrrrd         cccciiiiiiiisccccoooooo
-
-
-
-
-         loooooogggggiiiiiiiinnnnnnnnn         looooooccccaaaaaal
-
-
-
-
-         ttttttrrrrraaaaaannnnnnnnnsoooooorrrrrtttttt         iiiiiiiinnnnnnnnnuuuuutttttt         tttttteelnnnnnnnnneetttttt         ssh
-
-
-
-
 !
-
-
-
-
+control-plane
 !
-
-
-
-
-eennnnnnnnnd
+banner exec ^CCC
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************^C
+banner incoming ^CCC
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************^C
+banner login ^CCC
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************^C
+!
+line con 0
+exec-timeout 0 0
+password cisco
+line aux 0
+line vty 0 4
+exec-timeout 720 0
+password cisco
+login local
+transport input telnet ssh
+!
+!
+end
