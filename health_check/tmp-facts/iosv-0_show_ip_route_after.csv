@@ -1,0 +1,6 @@
+PROTOCOL,TYPE,NETWORK,MASK,DISTANCE,METRIC,NEXTHOP_IP,NEXTHOP_IF,UPTIME
+S,,0.0.0.0,0,1,0,10.10.0.1,,
+C,,10.10.0.0,24,,,,GigabitEthernet0/0,
+L,,10.10.0.254,32,,,,GigabitEthernet0/0,
+C,,10.10.20.0,24,,,,GigabitEthernet0/1,
+L,,10.10.20.254,32,,,,GigabitEthernet0/1,

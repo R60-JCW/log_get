@@ -1,2 +1,2 @@
 VERSION,ROMMON,HOSTNAME,UPTIME,RELOAD_REASON,RUNNING_IMAGE,HARDWARE,SERIAL,CONFIG_REGISTER,MAC
-17.3.1a,IOS-XE,internet-rtr01,"3 hours, 13 minutes",factory-reset,packages.conf,['CSR1000V'],['9KVSLX6LKLO'],0x2102,[]
+17.3.1a,IOS-XE,internet-rtr01,"3 hours, 19 minutes",factory-reset,packages.conf,['CSR1000V'],['9KVSLX6LKLO'],0x2102,[]
