@@ -12,11 +12,11 @@
 ## 加工処理開始
 ### 加工対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/iosv-0_show_version.csv 」及び、
 ### 削除リストファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_version_del_list.txt 」の確認結果(記載なければ問題なし)
-## 加工処理終了
-##### 【ファイル無し】「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_version_del_list.txt 」が存在しません。
 ## 構造化データ化処理終了
 ## 加工処理開始
 ### 加工対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/internet-rtr01_show_version.csv 」及び、
 ### 削除リストファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_version_del_list.txt 」の確認結果(記載なければ問題なし)
+## 加工処理終了
+##### 【ファイル無し】「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_version_del_list.txt 」が存在しません。
 ## 加工処理終了
 ##### 【ファイル無し】「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_version_del_list.txt 」が存在しません。

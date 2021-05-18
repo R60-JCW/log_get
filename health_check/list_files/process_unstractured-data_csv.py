@@ -120,6 +120,14 @@ def read_template_file_and_parse(template_file_path, unstractured_date):
         else:
             fsm_data = textfsm.TextFSM(f)
             structured_data = fsm.ParseText(unstractured_date)
+            
+            #加工前ファイルの保存
+            new_file_path = data_file_path.replace('.log', '_before.'+new_extension)
+            with open(new_file_path, 'w', newline='') as f:
+                w = csv.writer(f)
+                w.writerow(fsm_data.header)
+                w.writerows(structured_datas)
+
             return fsm_data, structured_data
 
 def change_extension_and_save_fms(data_file_path, new_extension, fsm_data, structured_datas):
@@ -128,7 +136,7 @@ def change_extension_and_save_fms(data_file_path, new_extension, fsm_data, struc
     変換後、加工対象ファイルの拡張子を変更して保存
     '''
     # 加工対象ファイルの拡張子を変更
-    new_file_path = data_file_path.replace('.log', '.'+new_extension)
+    new_file_path = data_file_path.replace('.log', '_after.'+new_extension)
 
     # 新拡張子で構造化データの保存
     with open(new_file_path, 'w', newline='') as f: # Windowsの場合、空行が入ってしまうため、newline=''が必要
