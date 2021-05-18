@@ -1,0 +1,45 @@
+commands:
+#  - file_name: show_run
+    #command_: show run
+    #del_list_file: show_run_del_ist.txt
+- file_name: show_version
+  command_: show version
+  template_file: cisco_nxos_show_version.textfsm
+  del_list_file: nx9k_show_version_del_list.txt
+- file_name: show_ip_interface_brief
+  command: show ip interface brief
+  template_file: cisco_nxos_show_ip_interface_brief.textfsm
+  del_list_file: NX9K_show_ip_int_brief_del_list.txt
+- file_name: show_ip_ospf_neighbor
+  command: show ip ospf neighbor
+  template_file: cisco_nxos_show_ip_ospf_neighbor.textfsm
+  del_list_file: NX9K_show_ip_ospf_neighbor_del_list.txt
+- file_name: show_vlan
+  command: show vlan
+  template_file: cisco_nxos_show_vlan.textfsm
+  del_list_file: NX9K_show_vlan_del_list.txt
+- file_name: show_ip_route
+  command: admin show ip route
+  template_file: cisco_nxos_show_ip_route.textfsm
+  del_list_file: NX9K_show_ip_route_del_list.txt
+- file_name: show_vrf
+  command: show vrf
+  template_file: cisco_nxos_show_vrf.textfsm
+  del_list_file: NX9K_show_vrf_del_list.txt
+- file_name: show_port-channel_summary 
+  command: show port-channel summary 
+  template_file: cisco_nxos_show_port-channel_summary.textfsm
+  del_list_file: NX9K_show_port-channel_summary_del_list.txt
+- file_name: show_hsrp_all 
+  command: show hsrp all 
+  template_file: cisco_nxos_show_hsrp_all.textfsm
+  del_list_file: NX9K_show_hsrp_all_del_list.txt
+
+
+#text用の加工指定 
+        
+process_file:
+  - process_command: show_run
+    cmd_process_file: process_show_run_del_list.txt
+
+

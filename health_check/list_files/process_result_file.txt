@@ -1,8 +1,23 @@
 ###############################################################################################
+# 対象コマンド： dist-rtr01_show_version
+## 構造化データ化処理開始
+### 構造化対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr01_show_version.log 」及び、
+### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_version.textfsm 」の確認結果
+###############################################################################################
 # 対象コマンド： edge-sw01_show_version
 ## 構造化データ化処理開始
 ### 構造化対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/edge-sw01_show_version.log 」及び、
 ### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_version.textfsm 」の確認結果
+## 構造化データ化処理終了
+## 加工処理開始
+### 加工対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr01_show_version_after.csv 」及び、
+### 削除リストファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_version_del_list.txt 」の確認結果(記載なければ問題なし)
+## 構造化データ化処理終了
+## 加工処理開始
+### 加工対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/edge-sw01_show_version_after.csv 」及び、
+### 削除リストファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_version_del_list.txt 」の確認結果(記載なければ問題なし)
+## 加工処理終了
+## 加工処理終了
 ###############################################################################################
 # 対象コマンド： dist-rtr02_show_version
 ## 構造化データ化処理開始
@@ -10,23 +25,18 @@
 ### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_version.textfsm 」の確認結果
 ## 構造化データ化処理終了
 ## 加工処理開始
-### 加工対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/edge-sw01_show_version_after.csv 」及び、
-### 削除リストファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_version_del_list.txt 」の確認結果(記載なければ問題なし)
-## 構造化データ化処理終了
-## 加工処理開始
 ### 加工対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr02_show_version_after.csv 」及び、
 ### 削除リストファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_version_del_list.txt 」の確認結果(記載なければ問題なし)
 ## 加工処理終了
-## 加工処理終了
+###############################################################################################
+# 対象コマンド： dist-rtr01_show_ip_route
+## 構造化データ化処理開始
+### 構造化対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr01_show_ip_route.log 」及び、
+### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_ip_route.textfsm 」の確認結果
 ###############################################################################################
 # 対象コマンド： edge-sw01_show_ip_route
 ## 構造化データ化処理開始
 ### 構造化対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/edge-sw01_show_ip_route.log 」及び、
-### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_ip_route.textfsm 」の確認結果
-###############################################################################################
-# 対象コマンド： dist-rtr02_show_ip_route
-## 構造化データ化処理開始
-### 構造化対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr02_show_ip_route.log 」及び、
 ### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_ip_route.textfsm 」の確認結果
 ## 構造化データ化処理終了
 ## 加工処理開始
@@ -34,7 +44,17 @@
 ### 削除リストファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_ip_route_del_list.txt 」の確認結果(記載なければ問題なし)
 ## 構造化データ化処理終了
 ## 加工処理開始
-### 加工対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr02_show_ip_route_after.csv 」及び、
+### 加工対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr01_show_ip_route_after.csv 」及び、
 ### 削除リストファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_ip_route_del_list.txt 」の確認結果(記載なければ問題なし)
 ## 加工処理終了
+## 加工処理終了
+###############################################################################################
+# 対象コマンド： dist-rtr02_show_ip_route
+## 構造化データ化処理開始
+### 構造化対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr02_show_ip_route.log 」及び、
+### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_ip_route.textfsm 」の確認結果
+## 構造化データ化処理終了
+## 加工処理開始
+### 加工対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr02_show_ip_route_after.csv 」及び、
+### 削除リストファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_ip_route_del_list.txt 」の確認結果(記載なければ問題なし)
 ## 加工処理終了
