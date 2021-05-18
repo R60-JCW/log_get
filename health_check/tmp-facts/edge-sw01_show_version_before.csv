@@ -1,2 +1,2 @@
 VERSION,ROMMON,HOSTNAME,UPTIME,RELOAD_REASON,RUNNING_IMAGE,HARDWARE,SERIAL,CONFIG_REGISTER,MAC
-,Bootstrap,edge-sw01,"3 hours, 7 minutes",Unknown reason,/vios_l2-adventerprisek9-m,['IOSv'],['9MAZMX2YL8J'],0x101,[]
+,Bootstrap,edge-sw01,"3 hours, 15 minutes",Unknown reason,/vios_l2-adventerprisek9-m,['IOSv'],['9MAZMX2YL8J'],0x101,[]
