@@ -8,8 +8,9 @@ Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
        a - application route
        + - replicated route, % - next hop override, p - overrides from PfR
 
-Gateway of last resort is not set
+Gateway of last resort is 10.10.0.1 to network 0.0.0.0
 
+S*    0.0.0.0/0 [1/0] via 10.10.0.1
       10.0.0.0/8 is variably subnetted, 4 subnets, 2 masks
 C        10.10.0.0/24 is directly connected, GigabitEthernet0/0
 L        10.10.0.254/32 is directly connected, GigabitEthernet0/0

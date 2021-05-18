@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 import copy
 import sys
-
-    if __name__ == "__main__":
+if __name__ == "__main__":
     # 加工対象と削除リストを読み込み、削除リストにある文字列を加工対象から削除
     # 加工対象ファイル
 
