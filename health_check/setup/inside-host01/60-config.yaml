@@ -1,0 +1,8 @@
+network:
+  ethernets:
+    ens9:
+    dhcp4: false
+    addresses:
+      - 10.10.20.179/24
+    gateway4: 10.10.20.254
+  version: 2
