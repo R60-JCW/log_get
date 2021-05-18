@@ -126,7 +126,7 @@ def read_template_file_and_parse(data_file_path, new_extension, template_file_pa
             with open(new_file_path, 'w', newline='') as f:
                 w = csv.writer(f)
                 w.writerow(fsm_data.header)
-                w.writerows(structured_datas)
+                w.writerows(structured_data)
 
             return fsm_data, structured_data
 
