@@ -1,2 +1,2 @@
 VERSION,ROMMON,HOSTNAME,UPTIME,RELOAD_REASON,RUNNING_IMAGE,HARDWARE,SERIAL,CONFIG_REGISTER,MAC
-17.3.1a,IOS-XE,dist-rtr01,"7 hours, 14 minutes",factory-reset,packages.conf,['CSR1000V'],['9US41LZZ0Z8'],0x2102,[]
+17.3.1a,IOS-XE,dist-rtr01,"7 hours, 20 minutes",factory-reset,packages.conf,['CSR1000V'],['9US41LZZ0Z8'],0x2102,[]
