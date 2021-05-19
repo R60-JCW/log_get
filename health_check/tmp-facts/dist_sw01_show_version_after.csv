@@ -1,2 +1,2 @@
 UPTIME,LAST_REBOOT_REASON,OS,BOOT_IMAGE,PLATFORM,HOSTNAME,SERIAL
-"0 day(s), 7 hour(s), 53 minute(s), 2 second(s)",Unknown,9.2(4),bootflash:///nxos.9.2.4.bin,9000v,dist-sw01,9KB1WQRTO59
+"0 day(s), 0 hour(s), 55 minute(s), 32 second(s)",Unknown,9.2(4),bootflash:///nxos.9.2.4.bin,9000v,dist-sw01,9KB1WQRTO59

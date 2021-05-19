@@ -3,11 +3,11 @@ Copyright (c) 2017 by Cisco Systems, Inc.
 
 ROM: GRUB, Version 1.99(0), DEV RELEASE
 
-core-rtr01 uptime is 7 hours, 54 minutes
+core-rtr01 uptime is 56 minutes
 System image file is "bootflash:disk0/xrvr-os-mbi-6.3.1/mbixrvr-rp.vm"
 
 cisco IOS XRv Series (Intel 686 F6M15S0) processor with 3145215K bytes of memory.
-Intel 686 F6M15S0 processor at 2376MHz, Revision 2.174
+Intel 686 F6M15S0 processor at 2306MHz, Revision 2.174
 IOS XRv Chassis
 
 4 GigabitEthernet

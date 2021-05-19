@@ -1,6 +1,6 @@
 !Command: show running-config
-!Running configuration last done at: Tue May 18 01:41:45 2021
-!Time: Tue May 18 09:29:41 2021
+!Running configuration last done at: Wed May 19 00:49:37 2021
+!Time: Wed May 19 01:31:30 2021
 
 version 9.2(4) Bios:version  
 hostname dist-sw02
@@ -31,6 +31,7 @@ username cisco passphrase  lifetime 99999 warntime 14 gracetime 3
 username lab password 5 $1$buoy/oqy$.EXQz8rCn72ii8qtdldj00  role network-admin
 username lab passphrase  lifetime 99999 warntime 14 gracetime 3
 ip domain-lookup
+copp profile strict
 snmp-server user lab network-admin auth md5 0x5ceb414591539ee35159fca86fdfa101 priv 0x5ceb414591539ee35159fca86fdfa101 localizedkey
 snmp-server user admin network-admin auth md5 0x328945d53e05e8e7207f8c20b142f0b7 priv 0x328945d53e05e8e7207f8c20b142f0b7 localizedkey
 snmp-server user cisco network-operator auth md5 0x55b3c64a53fb95518e75358ee75e82e9 priv 0x55b3c64a53fb95518e75358ee75e82e9 localizedkey
@@ -423,6 +424,7 @@ line console
   exec-timeout 0
   terminal width  511
 line vty
+boot nxos bootflash:/nxos.9.2.4.bin 
 router ospf 1
   passive-interface default
 

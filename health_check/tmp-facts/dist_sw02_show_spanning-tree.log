@@ -1,95 +1,14 @@
-VLAN0001
-  Spanning tree enabled protocol rstp
-  Root ID    Priority    32769
-             Address     0023.04ee.be65
-             This bridge is the root
-             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
-
-  Bridge ID  Priority    32769  (priority 32768 sys-id-ext 1)
-             Address     0023.04ee.be65
-             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
-
-Interface        Role Sts Cost      Prio.Nbr Type
----------------- ---- --- --------- -------- --------------------------------
-Po1              Desg FWD 3         128.4096 (vPC peer-link) Network P2p 
-
-
-VLAN0101
-  Spanning tree enabled protocol rstp
-  Root ID    Priority    32869
-             Address     0023.04ee.be65
-             This bridge is the root
-             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
-
-  Bridge ID  Priority    32869  (priority 32768 sys-id-ext 101)
-             Address     0023.04ee.be65
-             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
-
-Interface        Role Sts Cost      Prio.Nbr Type
----------------- ---- --- --------- -------- --------------------------------
-Po1              Desg FWD 3         128.4096 (vPC peer-link) Network P2p 
-
-
 VLAN0102
   Spanning tree enabled protocol rstp
   Root ID    Priority    32870
-             Address     0023.04ee.be65
+             Address     5254.0003.5f17
              This bridge is the root
              Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
 
   Bridge ID  Priority    32870  (priority 32768 sys-id-ext 102)
-             Address     0023.04ee.be65
+             Address     5254.0003.5f17
              Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
 
 Interface        Role Sts Cost      Prio.Nbr Type
 ---------------- ---- --- --------- -------- --------------------------------
-Po1              Desg FWD 3         128.4096 (vPC peer-link) Network P2p 
-Eth1/11          Desg FWD 4         128.11   Edge P2p 
-
-
-VLAN0103
-  Spanning tree enabled protocol rstp
-  Root ID    Priority    32871
-             Address     0023.04ee.be65
-             This bridge is the root
-             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
-
-  Bridge ID  Priority    32871  (priority 32768 sys-id-ext 103)
-             Address     0023.04ee.be65
-             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
-
-Interface        Role Sts Cost      Prio.Nbr Type
----------------- ---- --- --------- -------- --------------------------------
-Po1              Desg FWD 3         128.4096 (vPC peer-link) Network P2p 
-
-
-VLAN0104
-  Spanning tree enabled protocol rstp
-  Root ID    Priority    32872
-             Address     0023.04ee.be65
-             This bridge is the root
-             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
-
-  Bridge ID  Priority    32872  (priority 32768 sys-id-ext 104)
-             Address     0023.04ee.be65
-             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
-
-Interface        Role Sts Cost      Prio.Nbr Type
----------------- ---- --- --------- -------- --------------------------------
-Po1              Desg FWD 3         128.4096 (vPC peer-link) Network P2p 
-
-
-VLAN0105
-  Spanning tree enabled protocol rstp
-  Root ID    Priority    32873
-             Address     0023.04ee.be65
-             This bridge is the root
-             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
-
-  Bridge ID  Priority    32873  (priority 32768 sys-id-ext 105)
-             Address     0023.04ee.be65
-             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
-
-Interface        Role Sts Cost      Prio.Nbr Type
----------------- ---- --- --------- -------- --------------------------------
-Po1              Desg FWD 3         128.4096 (vPC peer-link) Network P2p
+Eth1/11          Desg FWD 4         128.11   Edge P2p
