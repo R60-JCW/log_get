@@ -16,7 +16,7 @@ commands:
   del_list_file: xr_show_ospf_neighbor_del_list.txt
 - file_name: admin_show_platform
   command: admin show platform
-  template_file: cisco_xr_admin_show_platform.textfsm
+  template_file: co_xr_admin_show_platform.textfsm
   del_list_file: xr_admin_show_platform_del_list.txt
 - file_name: show_ip_route
   command: admin show ip route

@@ -10,6 +10,22 @@ commands:
   command: show ip route
   template_file: cisco_ios_show_ip_route.textfsm
   del_list_file: show_ip_route_del_list.txt
+- file_name: show_vlan
+  command: show vlan
+  template_file: cisco_ios_show_vlan.textfsm
+  del_list_file: show_vlan_del_list.txt
+- file_name: show_ip_ospf_neighbor
+  command: show ip ospf neighbor
+  template_file: cisco_ios_show_ip_ospf_neighbor.textfsm
+  del_list_file: show_ip_ospf_neighbor_del_list.txt
+- file_name: show_vrf
+  command: show vrf
+  template_file: cisco_ios_show_vrf.textfsm
+  del_list_file: show_vrf_del_list.txt
+- file_name: show_spanning-tree
+  command: show spanning-tree
+  template_file: cisco_ios_show_spanning-tree.textfsm
+  del_list_file: show_spanning-tree_del_list.txt
 
 #text用の加工指定 
         
