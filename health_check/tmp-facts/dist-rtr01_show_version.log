@@ -18,11 +18,11 @@ software.
 
 ROM: IOS-XE ROMMON
 
-dist-rtr01 uptime is 7 hours, 39 minutes
-Uptime for this control processor is 7 hours, 42 minutes
+dist-rtr01 uptime is 1 hour, 54 minutes
+Uptime for this control processor is 1 hour, 56 minutes
 System returned to ROM by reload
 System image file is "bootflash:packages.conf"
-Last reload reason: factory-reset
+Last reload reason: reload
 
 
 
@@ -55,7 +55,7 @@ Processor board ID 9US41LZZ0Z8
 Router operating mode: Autonomous
 6 Gigabit Ethernet interfaces
 32768K bytes of non-volatile configuration memory.
-3012044K bytes of physical memory.
+3012224K bytes of physical memory.
 6188032K bytes of virtual hard disk at bootflash:.
 
 Configuration register is 0x2102
