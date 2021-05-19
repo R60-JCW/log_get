@@ -1,2 +1,2 @@
 show ip route
-show ipv6 route
+#show ipv6 route
