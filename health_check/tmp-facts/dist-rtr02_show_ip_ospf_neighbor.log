@@ -1,6 +1,6 @@
 Neighbor ID     Pri   State           Dead Time   Address         Interface
-172.16.252.25     1   FULL/BDR        00:00:36    172.16.252.17   GigabitEthernet6
-172.16.101.3      1   FULL/BDR        00:00:30    172.16.252.13   GigabitEthernet5
-172.16.101.2      1   FULL/BDR        00:00:36    172.16.252.5    GigabitEthernet4
-172.16.252.38     1   FULL/BDR        00:00:32    172.16.252.34   GigabitEthernet3
-172.16.252.37     1   FULL/BDR        00:00:39    172.16.252.30   GigabitEthernet2
+172.16.252.25     1   FULL/BDR        00:00:32    172.16.252.17   GigabitEthernet6
+172.16.101.3      1   FULL/BDR        00:00:33    172.16.252.13   GigabitEthernet5
+172.16.101.2      1   FULL/BDR        00:00:33    172.16.252.5    GigabitEthernet4
+172.16.252.38     1   FULL/BDR        00:00:39    172.16.252.34   GigabitEthernet3
+172.16.252.37     1   FULL/BDR        00:00:32    172.16.252.30   GigabitEthernet2

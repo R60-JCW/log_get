@@ -1,0 +1,27 @@
+VRF,PROTOCOL,NETWORK,MASK,DISTANCE,METRIC,TYPE,NEXT_HOP,INTERFACE,UPTIME
+,S*,0.0.0.0,0,1,0,via,172.16.253.4,,02:16:13
+,O,172.16.101.0,24,110,42,via,172.16.252.25,GigabitEthernet0/0/0/2,02:15:57
+,O,172.16.101.0,24,110,42,via,172.16.252.33,GigabitEthernet0/0/0/3,02:15:57
+,O,172.16.102.0,24,110,42,via,172.16.252.25,GigabitEthernet0/0/0/2,02:08:45
+,O,172.16.102.0,24,110,42,via,172.16.252.33,GigabitEthernet0/0/0/3,02:08:45
+,O,172.16.252.0,30,110,2,via,172.16.252.25,GigabitEthernet0/0/0/2,02:15:57
+,O,172.16.252.4,30,110,2,via,172.16.252.33,GigabitEthernet0/0/0/3,02:16:02
+,O,172.16.252.8,30,110,2,via,172.16.252.25,GigabitEthernet0/0/0/2,02:15:57
+,O,172.16.252.12,30,110,2,via,172.16.252.33,GigabitEthernet0/0/0/3,02:16:02
+,O,172.16.252.16,30,110,2,via,172.16.252.25,GigabitEthernet0/0/0/2,02:15:57
+,O,172.16.252.16,30,110,2,via,172.16.252.33,GigabitEthernet0/0/0/3,02:15:57
+,O,172.16.252.20,30,110,2,via,172.16.252.37,GigabitEthernet0/0/0/0,02:15:32
+,O,172.16.252.20,30,110,2,via,172.16.253.2,GigabitEthernet0/0/0/1,02:15:32
+,O,172.16.252.20,30,110,2,via,172.16.252.25,GigabitEthernet0/0/0/2,02:15:32
+,C,172.16.252.24,30,,,directly,connected,GigabitEthernet0/0/0/2,02:16:13
+,L,172.16.252.26,32,,,directly,connected,GigabitEthernet0/0/0/2,02:16:13
+,O,172.16.252.28,30,110,2,via,172.16.252.37,GigabitEthernet0/0/0/0,02:15:32
+,O,172.16.252.28,30,110,2,via,172.16.253.2,GigabitEthernet0/0/0/1,02:15:32
+,O,172.16.252.28,30,110,2,via,172.16.252.33,GigabitEthernet0/0/0/3,02:15:32
+,C,172.16.252.32,30,,,directly,connected,GigabitEthernet0/0/0/3,02:16:13
+,L,172.16.252.34,32,,,directly,connected,GigabitEthernet0/0/0/3,02:16:13
+,C,172.16.252.36,30,,,directly,connected,GigabitEthernet0/0/0/0,02:16:13
+,L,172.16.252.38,32,,,directly,connected,GigabitEthernet0/0/0/0,02:16:13
+,C,172.16.253.0,29,,,directly,connected,GigabitEthernet0/0/0/1,02:16:13
+,L,172.16.253.3,32,,,directly,connected,GigabitEthernet0/0/0/1,02:16:13
+,O E2,172.31.0.0,16,110,20,via,172.16.253.4,GigabitEthernet0/0/0/1,02:16:03

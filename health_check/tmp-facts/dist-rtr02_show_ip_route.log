@@ -14,31 +14,31 @@ Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
 Gateway of last resort is not set
 
       172.16.0.0/16 is variably subnetted, 18 subnets, 4 masks
-O        172.16.101.0/24 [110/41] via 172.16.252.5, 02:09:35, GigabitEthernet4
+O        172.16.101.0/24 [110/41] via 172.16.252.5, 02:15:57, GigabitEthernet4
 O        172.16.102.0/24 
-           [110/41] via 172.16.252.13, 02:01:08, GigabitEthernet5
-O        172.16.252.0/30 [110/2] via 172.16.252.17, 02:10:09, GigabitEthernet6
+           [110/41] via 172.16.252.13, 02:07:30, GigabitEthernet5
+O        172.16.252.0/30 [110/2] via 172.16.252.17, 02:16:31, GigabitEthernet6
 C        172.16.252.4/30 is directly connected, GigabitEthernet4
 L        172.16.252.6/32 is directly connected, GigabitEthernet4
-O        172.16.252.8/30 [110/2] via 172.16.252.17, 02:10:09, GigabitEthernet6
+O        172.16.252.8/30 [110/2] via 172.16.252.17, 02:16:31, GigabitEthernet6
 C        172.16.252.12/30 is directly connected, GigabitEthernet5
 L        172.16.252.14/32 is directly connected, GigabitEthernet5
 C        172.16.252.16/30 is directly connected, GigabitEthernet6
 L        172.16.252.18/32 is directly connected, GigabitEthernet6
 O        172.16.252.20/30 
-           [110/2] via 172.16.252.30, 02:08:28, GigabitEthernet2
-           [110/2] via 172.16.252.17, 02:10:09, GigabitEthernet6
+           [110/2] via 172.16.252.30, 02:14:50, GigabitEthernet2
+           [110/2] via 172.16.252.17, 02:16:31, GigabitEthernet6
 O        172.16.252.24/30 
-           [110/2] via 172.16.252.34, 02:08:19, GigabitEthernet3
-           [110/2] via 172.16.252.17, 02:10:09, GigabitEthernet6
+           [110/2] via 172.16.252.34, 02:14:41, GigabitEthernet3
+           [110/2] via 172.16.252.17, 02:16:31, GigabitEthernet6
 C        172.16.252.28/30 is directly connected, GigabitEthernet2
 L        172.16.252.29/32 is directly connected, GigabitEthernet2
 C        172.16.252.32/30 is directly connected, GigabitEthernet3
 L        172.16.252.33/32 is directly connected, GigabitEthernet3
 O        172.16.252.36/30 
-           [110/2] via 172.16.252.34, 02:08:25, GigabitEthernet3
-           [110/2] via 172.16.252.30, 02:07:55, GigabitEthernet2
-O        172.16.253.0/29 [110/2] via 172.16.252.34, 02:08:25, GigabitEthernet3
-                         [110/2] via 172.16.252.30, 02:08:30, GigabitEthernet2
-O E2  172.31.0.0/16 [110/20] via 172.16.252.34, 02:08:25, GigabitEthernet3
-                    [110/20] via 172.16.252.30, 02:08:30, GigabitEthernet2
+           [110/2] via 172.16.252.34, 02:14:47, GigabitEthernet3
+           [110/2] via 172.16.252.30, 02:14:17, GigabitEthernet2
+O        172.16.253.0/29 [110/2] via 172.16.252.34, 02:14:47, GigabitEthernet3
+                         [110/2] via 172.16.252.30, 02:14:52, GigabitEthernet2
+O E2  172.31.0.0/16 [110/20] via 172.16.252.34, 02:14:47, GigabitEthernet3
+                    [110/20] via 172.16.252.30, 02:14:52, GigabitEthernet2
