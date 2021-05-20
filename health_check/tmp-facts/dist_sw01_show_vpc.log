@@ -2,17 +2,16 @@ Legend:
                 (*) - local vPC is down, forwarding via vPC peer-link
 
 vPC domain id                     : 101 
-Peer status                       : peer link is down             
+Peer status                       : peer adjacency formed ok      
 vPC keep-alive status             : peer is alive                 
-Configuration consistency status  : failed  
+Configuration consistency status  : success 
 Per-vlan consistency status       : success                       
-Configuration inconsistency reason: Consistency Check Not Performed
-Type-2 inconsistency reason       : Consistency Check Not Performed
-vPC role                          : none established              
+Type-2 consistency status         : success 
+vPC role                          : secondary                     
 Number of vPCs configured         : 0   
 Peer Gateway                      : Enabled
 Dual-active excluded VLANs        : -
-Graceful Consistency Check        : Disabled (due to peer configuration)
+Graceful Consistency Check        : Enabled
 Auto-recovery status              : Disabled
 Delay-restore status              : Timer is off.(timeout = 30s)
 Delay-restore SVI status          : Timer is off.(timeout = 10s)
@@ -23,4 +22,4 @@ vPC Peer-link status
 ---------------------------------------------------------------------
 id    Port   Status Active vlans    
 --    ----   ------ -------------------------------------------------
-1     Po1    down   -
+1     Po1    up     1,101-105

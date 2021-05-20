@@ -1,6 +1,6 @@
 !Command: show running-config
-!Running configuration last done at: Wed May 19 00:49:37 2021
-!Time: Wed May 19 02:57:08 2021
+!No configuration change since last restart
+!Time: Thu May 20 05:59:36 2021
 
 version 9.2(4) Bios:version  
 hostname dist-sw02
