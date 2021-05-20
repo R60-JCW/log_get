@@ -6,5 +6,5 @@ show ip ospf neighbor
 show vrf
 show spanning-tree
 show vpc
-show port-channel summary 
+show port-channel summary
 show hsrp all

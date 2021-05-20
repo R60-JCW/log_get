@@ -5,7 +5,7 @@ commands:
 - file_name: show_version
   command_: show version
   template_file: cisco_nxos_show_version.textfsm
-  del_list_file: nx9k_show_version_del_list.txt
+  del_list_file: NX9k_show_version_del_list.txt
 - file_name: show_ip_interface_brief
   command: show ip interface brief
   template_file: cisco_nxos_show_ip_interface_brief.textfsm
@@ -27,7 +27,7 @@ commands:
   template_file: cisco_nxos_show_vrf.textfsm
   del_list_file: NX9K_show_vrf_del_list.txt
 - file_name: show_port-channel_summary 
-  command: show port-channel summary 
+  command: show port-channel summary
   template_file: cisco_nxos_show_port-channel_summary.textfsm
   del_list_file: NX9K_show_port-channel_summary_del_list.txt
 - file_name: show_hsrp_all 
