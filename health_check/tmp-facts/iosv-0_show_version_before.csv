@@ -1,2 +1,2 @@
 VERSION,ROMMON,HOSTNAME,UPTIME,RELOAD_REASON,RUNNING_IMAGE,HARDWARE,SERIAL,CONFIG_REGISTER,MAC
-15.9(3)M2,Bootstrap,iosv-0,"5 hours, 4 minutes",Unknown reason,/vios-adventerprisek9-m,['IOSv'],['99OZNPL7AXXQNXJZBUXGC'],0x0,[]
+15.9(3)M2,Bootstrap,iosv-0,"5 hours, 30 minutes",Unknown reason,/vios-adventerprisek9-m,['IOSv'],['99OZNPL7AXXQNXJZBUXGC'],0x0,[]
