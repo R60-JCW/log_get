@@ -26,10 +26,14 @@ commands:
   command: show spanning-tree
   template_file: cisco_ios_show_spanning-tree.textfsm
   del_list_file: show_spanning-tree_del_list.txt
-  del_list_file: show_vrf_del_list.txt
-- file_name: show_spanning-tree
-  command: show spanning-tree
-  template_file: cisco_ios_show_spanning-tree.textfsm
+- file_name: show_boot
+  command: show boot
+  template_file: cisco_ios_show_boot.textfsm
+  del_list_file: show_boot_del_list.txt
+- file_name: show_ip_interface_brief
+  command: show ip interface brief
+  template_file: cisco_ios_show_ip_interface_brief.textfsm
+  del_list_file: show_ip_interface_brief_del_list.txt
 
 #text用の加工指定 
         

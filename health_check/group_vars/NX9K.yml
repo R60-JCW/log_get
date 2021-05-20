@@ -34,6 +34,10 @@ commands:
   command: show hsrp all 
   template_file: cisco_nxos_show_hsrp_all.textfsm
   del_list_file: NX9K_show_hsrp_all_del_list.txt
+- file_name: show_vpc
+  command: show vpc 
+  template_file: cisco_nxos_show_vpc.textfsm
+  del_list_file: NX9K_show_vpc_del_list.txt
 
 
 #text用の加工指定 
