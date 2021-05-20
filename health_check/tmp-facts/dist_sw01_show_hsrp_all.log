@@ -2,63 +2,63 @@ Vlan101 - Group 10 (HSRP-V1) (IPv4)
   Local state is Standby, priority 100 (Cfged 100)
     Forwarding threshold(for vPC), lower: 0 upper: 100 
   Hellotime 3 sec, holdtime 10 sec
-  Next hello sent in 2.220000 sec(s)
+  Next hello sent in 0.252000 sec(s)
   Virtual IP address is 172.16.101.1 (Cfged)
-  Active router is 172.16.101.3, priority 100 expires in 8.359000 sec(s)
+  Active router is 172.16.101.3, priority 100 expires in 9.265000 sec(s)
   Standby router is local 
   Authentication text "cisco"
   Virtual mac address is 0000.0c07.ac0a (Default MAC)
-  3 state changes, last state change 04:16:40
+  3 state changes, last state change 05:02:26
   IP redundancy name is hsrp-Vlan101-10 (default)
 
 Vlan102 - Group 10 (HSRP-V1) (IPv4)
   Local state is Standby, priority 100 (Cfged 100)
     Forwarding threshold(for vPC), lower: 0 upper: 100 
   Hellotime 3 sec, holdtime 10 sec
-  Next hello sent in 0.298000 sec(s)
+  Next hello sent in 1.353000 sec(s)
   Virtual IP address is 172.16.102.1 (Cfged)
-  Active router is 172.16.102.3, priority 100 expires in 9.572000 sec(s)
+  Active router is 172.16.102.3, priority 100 expires in 7.732000 sec(s)
   Standby router is local 
   Authentication text "cisco"
   Virtual mac address is 0000.0c07.ac0a (Default MAC)
-  3 state changes, last state change 04:16:40
+  3 state changes, last state change 05:02:26
   IP redundancy name is hsrp-Vlan102-10 (default)
 
 Vlan103 - Group 10 (HSRP-V1) (IPv4)
   Local state is Standby, priority 100 (Cfged 100)
     Forwarding threshold(for vPC), lower: 0 upper: 100 
   Hellotime 3 sec, holdtime 10 sec
-  Next hello sent in 2.332000 sec(s)
+  Next hello sent in 1.589000 sec(s)
   Virtual IP address is 172.16.103.1 (Cfged)
-  Active router is 172.16.103.3, priority 100 expires in 8.541000 sec(s)
+  Active router is 172.16.103.3, priority 100 expires in 7.698000 sec(s)
   Standby router is local 
   Authentication text "cisco"
   Virtual mac address is 0000.0c07.ac0a (Default MAC)
-  3 state changes, last state change 04:16:40
+  3 state changes, last state change 05:02:26
   IP redundancy name is hsrp-Vlan103-10 (default)
 
 Vlan104 - Group 10 (HSRP-V1) (IPv4)
   Local state is Standby, priority 100 (Cfged 100)
     Forwarding threshold(for vPC), lower: 0 upper: 100 
   Hellotime 3 sec, holdtime 10 sec
-  Next hello sent in 0.602000 sec(s)
+  Next hello sent in 1.707000 sec(s)
   Virtual IP address is 172.16.104.1 (Cfged)
-  Active router is 172.16.104.3, priority 100 expires in 8.804000 sec(s)
+  Active router is 172.16.104.3, priority 100 expires in 9.852000 sec(s)
   Standby router is local 
   Authentication text "cisco"
   Virtual mac address is 0000.0c07.ac0a (Default MAC)
-  3 state changes, last state change 04:16:40
+  3 state changes, last state change 05:02:26
   IP redundancy name is hsrp-Vlan104-10 (default)
 
 Vlan105 - Group 10 (HSRP-V1) (IPv4)
   Local state is Standby, priority 100 (Cfged 100)
     Forwarding threshold(for vPC), lower: 0 upper: 100 
   Hellotime 3 sec, holdtime 10 sec
-  Next hello sent in 1.841000 sec(s)
+  Next hello sent in 1.071000 sec(s)
   Virtual IP address is 172.16.105.1 (Cfged)
-  Active router is 172.16.105.3, priority 100 expires in 7.617000 sec(s)
+  Active router is 172.16.105.3, priority 100 expires in 9.652000 sec(s)
   Standby router is local 
   Authentication text "cisco"
   Virtual mac address is 0000.0c07.ac0a (Default MAC)
-  3 state changes, last state change 04:16:40
+  3 state changes, last state change 05:02:25
   IP redundancy name is hsrp-Vlan105-10 (default)

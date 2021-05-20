@@ -1,8 +1,6 @@
 Building configuration...
 
-Current configuration : 3184 bytes
-!
-! Last configuration change at 01:43:05 UTC Tue May 18 2021
+Current configuration : 3122 bytes
 !
 version 15.9
 service timestamps debug datetime msec
