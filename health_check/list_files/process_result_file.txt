@@ -1,9 +1,4 @@
 ###############################################################################################
-# 対象コマンド： dist-rtr01_show_version
-## 構造化データ化処理開始
-### 構造化対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr01_show_version.log 」及び、
-### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_version.textfsm 」の確認結果
-###############################################################################################
 # 対象コマンド： dist-rtr02_show_version
 ## 構造化データ化処理開始
 ### 構造化対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr02_show_version.log 」及び、
@@ -12,31 +7,16 @@
 ## 加工処理開始
 ### 加工対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr02_show_version_after.csv 」及び、
 ### 削除リストファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_version_del_list.txt 」の確認結果(記載なければ問題なし)
-## 構造化データ化処理終了
-## 加工処理開始
-### 加工対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr01_show_version_after.csv 」及び、
-### 削除リストファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_version_del_list.txt 」の確認結果(記載なければ問題なし)
-## 加工処理終了
 ## 加工処理終了
 ###############################################################################################
 # 対象コマンド： dist-rtr02_show_ip_route
 ## 構造化データ化処理開始
 ### 構造化対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr02_show_ip_route.log 」及び、
 ### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_ip_route.textfsm 」の確認結果
-###############################################################################################
-# 対象コマンド： dist-rtr01_show_ip_route
-## 構造化データ化処理開始
-### 構造化対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr01_show_ip_route.log 」及び、
-### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_ip_route.textfsm 」の確認結果
 ## 構造化データ化処理終了
 ## 加工処理開始
 ### 加工対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr02_show_ip_route_after.csv 」及び、
 ### 削除リストファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_ip_route_del_list.txt 」の確認結果(記載なければ問題なし)
-## 構造化データ化処理終了
-## 加工処理開始
-### 加工対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr01_show_ip_route_after.csv 」及び、
-### 削除リストファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_ip_route_del_list.txt 」の確認結果(記載なければ問題なし)
-## 加工処理終了
 ## 加工処理終了
 ###############################################################################################
 # 対象コマンド： dist-rtr02_show_vlan
@@ -44,13 +24,6 @@
 ### 構造化対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr02_show_vlan.log 」及び、
 ### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_vlan.textfsm 」の確認結果
 ##### 【ファイル無し】「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr02_show_vlan.log 」が存在しません。
-## 構造化データ化処理終了
-###############################################################################################
-# 対象コマンド： dist-rtr01_show_vlan
-## 構造化データ化処理開始
-### 構造化対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr01_show_vlan.log 」及び、
-### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_vlan.textfsm 」の確認結果
-##### 【ファイル無し】「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr01_show_vlan.log 」が存在しません。
 ## 構造化データ化処理終了
 ###############################################################################################
 # 対象コマンド： dist-rtr02_show_ip_ospf_neighbor
@@ -61,46 +34,18 @@
 ## 加工処理開始
 ### 加工対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr02_show_ip_ospf_neighbor_after.csv 」及び、
 ### 削除リストファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_ip_ospf_neighbor_del_list.txt 」の確認結果(記載なければ問題なし)
-###############################################################################################
-# 対象コマンド： dist-rtr01_show_ip_ospf_neighbor
-## 構造化データ化処理開始
-### 構造化対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr01_show_ip_ospf_neighbor.log 」及び、
-### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_ip_ospf_neighbor.textfsm 」の確認結果
-## 加工処理終了
-## 構造化データ化処理終了
-## 加工処理開始
-### 加工対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr01_show_ip_ospf_neighbor_after.csv 」及び、
-### 削除リストファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_ip_ospf_neighbor_del_list.txt 」の確認結果(記載なければ問題なし)
 ## 加工処理終了
 ###############################################################################################
 # 対象コマンド： dist-rtr02_show_vrf
 ## 構造化データ化処理開始
 ### 構造化対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr02_show_vrf.log 」及び、
 ### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_vrf.textfsm 」の確認結果
-###############################################################################################
-# 対象コマンド： dist-rtr01_show_vrf
-## 構造化データ化処理開始
-### 構造化対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr01_show_vrf.log 」及び、
-### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_vrf.textfsm 」の確認結果
-## 構造化データ化処理終了
-## 加工処理開始
-### 加工対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr01_show_vrf_after.csv 」及び、
-### 削除リストファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_vrf_del_list.txt 」の確認結果(記載なければ問題なし)
 ## 構造化データ化処理終了
 ## 加工処理開始
 ### 加工対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr02_show_vrf_after.csv 」及び、
 ### 削除リストファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_vrf_del_list.txt 」の確認結果(記載なければ問題なし)
 ##### 【内容確認】 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_vrf_del_list.txt に削除対象の記載なし
 ## 加工処理終了
-##### 【内容確認】 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/show_vrf_del_list.txt に削除対象の記載なし
-## 加工処理終了
-###############################################################################################
-# 対象コマンド： dist-rtr01_show_spanning-tree
-## 構造化データ化処理開始
-### 構造化対象ファイル  :「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr01_show_spanning-tree.log 」及び、
-### templateファイル：「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/list_files/cisco_ios_show_spanning-tree.textfsm 」の確認結果
-##### 【ファイル無し】「 /home/ubuntu/Multi-Platform-Network_add_bastion/health_check/tmp-facts/dist-rtr01_show_spanning-tree.log 」が存在しません。
-## 構造化データ化処理終了
 ###############################################################################################
 # 対象コマンド： dist-rtr02_show_spanning-tree
 ## 構造化データ化処理開始
