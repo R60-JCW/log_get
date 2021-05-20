@@ -5,14 +5,14 @@ Neighbors for OSPF 1
 
 Neighbor ID     Pri   State           Dead Time   Address         Interface
 172.16.252.37   1     FULL/BDR        00:00:33    172.16.252.37   GigabitEthernet0/0/0/0
-    Neighbor is up for 03:49:50
-172.16.252.37   1     FULL/BDR        00:00:37    172.16.253.2    GigabitEthernet0/0/0/1
-    Neighbor is up for 03:49:50
-172.31.252.2    1     FULL/DR         00:00:39    172.16.253.4    GigabitEthernet0/0/0/1
-    Neighbor is up for 03:49:50
-172.16.252.25   1     FULL/DR         00:00:34    172.16.252.25   GigabitEthernet0/0/0/2
-    Neighbor is up for 03:49:51
-172.16.252.33   1     FULL/DR         00:00:37    172.16.252.33   GigabitEthernet0/0/0/3
-    Neighbor is up for 03:49:45
+    Neighbor is up for 04:15:29
+172.16.252.37   1     FULL/BDR        00:00:34    172.16.253.2    GigabitEthernet0/0/0/1
+    Neighbor is up for 04:15:29
+172.31.252.2    1     FULL/DR         00:00:32    172.16.253.4    GigabitEthernet0/0/0/1
+    Neighbor is up for 04:15:29
+172.16.252.25   1     FULL/DR         00:00:30    172.16.252.25   GigabitEthernet0/0/0/2
+    Neighbor is up for 04:15:29
+172.16.252.33   1     FULL/DR         00:00:33    172.16.252.33   GigabitEthernet0/0/0/3
+    Neighbor is up for 04:15:23
 
 Total neighbor count: 5

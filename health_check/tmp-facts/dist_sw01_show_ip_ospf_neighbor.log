@@ -1,5 +1,5 @@
 OSPF Process ID 1 VRF default
  Total number of neighbors: 2
  Neighbor ID     Pri State            Up Time  Address         Interface
- 172.16.252.25     1 FULL/DR          03:52:14 172.16.252.2    Eth1/3 
- 172.16.252.33     1 FULL/DR          03:52:16 172.16.252.6    Eth1/4
+ 172.16.252.25     1 FULL/DR          04:17:22 172.16.252.2    Eth1/3 
+ 172.16.252.33     1 FULL/DR          04:17:24 172.16.252.6    Eth1/4
