@@ -1,2 +1,0 @@
-fvRsDomAtt.attributes.lagPolicyName
-fvBD.attributes.nameAlias

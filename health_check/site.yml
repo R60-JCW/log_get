@@ -2,20 +2,6 @@
 - hosts: all
   gather_facts: false
   tasks:
-    - name: dable start check  # 2重起動防止シェルの確認
-      shell: "sh dable_start_check.sh"
-      delegate_to: localhost
-      run_once: true
-#      async: 5
-#      poll: 0
-
-    - name: execute lock playbook sh  # 2重起動防止シェルの実行
-      shell: "sh lock_playbook.sh"
-      delegate_to: localhost
-      async: 1
-      poll: 0
-      run_once: true
-
     - name: create time      # ログ保存日時ディレクトリ作成
       set_fact:
         exe_date: "{{ lookup('pipe', 'date +%Y%m%d_%H%M_%S') }}"
@@ -24,7 +10,6 @@
     - name: create parent directory
       set_fact:
         logdir_date: "{{ inventory_dir }}/log/log_{{ exe_date }}"
-        #logdir_date: "./log/log_{{ lookup('pipe', 'date +%Y%m%d_%H%M_%S') }}"
       run_once: true
   
     - name: create directory for log      # ログ保存用実行日時別ディレクトリ作成
@@ -32,16 +17,14 @@
         path: "{{ logdir_date }}/"
         state: directory
       register: logdir
-#      become: yes
       delegate_to: localhost
       run_once: true
 
     - name: create directory for repository   # リポジトリ保存用ディレクトリ作成
       file:
-        path: "{{ inventory_dir }}/{{ repository_dir }}/"
+        path: "{{ inventory_dir }}/repository_dir/"
         state: directory
       register: repodir
-#      become: yes
       delegate_to: localhost
       run_once: true
 

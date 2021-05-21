@@ -1,0 +1,38 @@
+---
+- hosts: localhost
+  gather_facts: no
+  connection: network_cli
+
+  vars:
+    template: templates/vars_template.j2
+    command_list: create_group_inventory_list.csv
+    tergetname: [ ios, nxos, xr ]
+    group_vars_filename: "group_vars/{{ tergetname }}.yml"
+
+  tasks:
+    - name: read inventory csv
+      read_csv:
+        path: "{{ command_list }}"
+      run_once: yes
+      register: command_requests
+ 
+    - name: display 
+      debug:
+        msg: "{{ command_requests.list }}"
+      run_once: yes
+
+    - name: set command requests
+      set_fact:
+        cmds: "{{ command_requests.list }}"
+      run_once: yes
+
+    - name: display
+      debug:
+        var: cmds
+      run_once: yes
+
+    - name: create inventory
+      template:
+        src: "{{ template }}"
+        dest: "{{ group_vars_filename }}"
+        lstrip_blocks: yes

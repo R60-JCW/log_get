@@ -1,7 +1,0 @@
-show run
-show version
-show boot
-show ip interface brief
-show vlan
-show vrf
-show spanning-tree

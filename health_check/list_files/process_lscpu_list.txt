@@ -1,2 +1,0 @@
-CPU family:
-Model name:

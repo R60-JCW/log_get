@@ -1,2 +1,0 @@
-show route
-show route ipv6

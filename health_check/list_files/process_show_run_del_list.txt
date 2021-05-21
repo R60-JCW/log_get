@@ -1,5 +1,0 @@
-Building configuration
-Current configuration : 
-
-! Last configuration change at 
-!! Last configuration change at

@@ -1,0 +1,16 @@
+{% for item in cmds %}
+    commands:
+    {% if item.group == 'nxos' %}
+        test
+    {% elif item.group == 'ios' %}
+        {% if item.get == 'no' %}
+            test
+　　　　{% elif item.get == 'yes' %}
+            - file_name: {{ item.command | replace(' ', '_') }}
+              command_: {{ item.command }}
+              template_file: {{ item.template_file }}
+              no_template: {{ item.no_teplate }}
+              del_list_file: {{ item.delete_list }}
+        {% endif -%}
+    {% endif %}
+{% endfor%}
