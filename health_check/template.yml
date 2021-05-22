@@ -1,13 +1,13 @@
 ---
-- hosts: localhost
+- hosts: all
   gather_facts: no
   connection: network_cli
 
   vars:
     template: templates/vars_template.j2
     command_list: create_group_inventory_list.csv
-    tergetname: [ ios, nxos, xr ]
-    group_vars_filename: "group_vars/{{ tergetname }}.yml"
+    #tergetname: [ ios, nxos, xr ]
+    #group_vars_filename: "group_vars/{{ tergetname }}.yml"
 
   tasks:
     - name: read inventory csv
@@ -31,8 +31,14 @@
         var: cmds
       run_once: yes
 
+    - name: display
+      debug:
+        var: group_names
+      run_once: yes
+
     - name: create inventory
       template:
         src: "{{ template }}"
-        dest: "{{ group_vars_filename }}"
+        dest: "group_vars/{{ inventory_hostname }}.yml"
         lstrip_blocks: yes
+    

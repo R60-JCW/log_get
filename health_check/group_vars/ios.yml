@@ -1,0 +1,21 @@
+commands:
+- file_name: show_running-config
+        command_: show running-config
+        template_file: 
+        no_template: snow_running-config
+        del_list_file: cisco_ios_show_running-config_del_list
+- file_name: show_version
+        command_: show version
+        template_file: cisco_ios_show_version.textfsm
+        no_template: 
+        del_list_file: cisco_ios_show_version_del_list
+- file_name: show_ip_interface_brief
+        command_: show ip interface brief
+        template_file: cisco_ios_show_ip_interface_brief.textfsm
+        no_template: 
+        del_list_file: cisco_ios_show_ip_interface_brief_del_list
+- file_name: show_boot
+        command_: show boot
+        template_file: 
+        no_template: 
+        del_list_file: 

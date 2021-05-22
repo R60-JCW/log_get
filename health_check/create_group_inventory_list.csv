@@ -1,5 +1,5 @@
-group,command,get,template_file,no_template,delete_list
-ios,show running-config,yes,,snow_running-config,cisco_ios_show_running-config_del_list
-ios,show version,yes,cisco_ios_show_version.textfsm,,cisco_ios_show_version_del_list
-ios,show ip interface brief,yes,cisco_ios_show_ip_interface_brief.textfsm,,cisco_ios_show_ip_interface_brief_del_list
-ios,show boot,no,,,
+group,command,template_file,no_template,delete_list
+ios,show running-config,,snow_running-config,cisco_ios_show_running-config_del_list
+ios,show version,cisco_ios_show_version.textfsm,,cisco_ios_show_version_del_list
+ios,show ip interface brief,cisco_ios_show_ip_interface_brief.textfsm,,cisco_ios_show_ip_interface_brief_del_list
+ios,show boot,,,
