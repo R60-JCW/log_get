@@ -1,0 +1,8 @@
+show version
+show running-config
+show vpc
+show ip interface brief
+show port-channel summary
+show spanning-tree
+show hsrp all
+show ip ospf neighbor

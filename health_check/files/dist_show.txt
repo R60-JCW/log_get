@@ -1,0 +1,6 @@
+show run
+show version
+show boot
+show vrf
+show ip interface brief
+show ip ospf neighbor

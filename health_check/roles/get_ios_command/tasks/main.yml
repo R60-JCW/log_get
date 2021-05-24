@@ -3,8 +3,17 @@
   ios_command:
     commands: "{{ item }}" 
   register: show_result
-  loop: "{{ lookup('file', '{{ inventory_dir }}/{{ process_dir }}/{{ commands_show }}').splitlines() }}"
+  loop: "{{ lookup('file', 'files/{{ commands_show }}').splitlines() }}"
+#  loop: "{{ lookup('file', '{{ inventory_dir }}/{{ process_dir }}/{{ commands_show }}').splitlines() }}"
   
+- name: debug
+  debug:
+    var: show_result
+
+- name: debug
+  debug:
+    var: show_result.results
+
 - name: set show results
   set_fact:
     show_results: "{{ show_result.results }}"
@@ -13,7 +22,7 @@
   ios_command:
     commands: "{{ item }}"
   register: route_result
-  loop: "{{ lookup('file', '{{ inventory_dir }}/{{ process_dir }}/{{ commands_route }}').splitlines() }}"
+  loop: "{{ lookup('file', 'files/{{ commands_route }}').splitlines() }}"
 
 - name: set route results
   set_fact:

@@ -1,0 +1,8 @@
+show ip route
+show ip route 0.0.0.0
+show ip route 172.16.101.0
+show ip route 172.16.102.0
+show ip route 172.16.103.0
+show ip route 172.16.104.0
+show ip route 172.16.105.0
+show ip route 172.31.0.0
