@@ -1,1 +1,13 @@
 commands:
+- file_name: cisco_nxos_show_running-config
+  command_: show running-config
+  no_template: yes
+  del_list_file: cisco_nxos_show_running-config_del_list.txt
+- file_name: cisco_nxos_show_version
+  command_: show version
+  template_file: cisco_nxos_show_version.textfsm
+  del_list_file: cisco_nxos_show_version_del_list.txt
+- file_name: cisco_nxos_show_ip_interface_brief
+  command_: show ip interface brief
+  template_file: cisco_nxos_show_ip_interface_brief.textfsm
+  del_list_file: cisco_nxos_show_ip_interface_brief_del_list.txt

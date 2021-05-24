@@ -1,0 +1,18 @@
+- name: debug
+  debug:
+    var: item.del_list_file
+  loop: "{{ commands }}"
+
+- name:  delete line text file without template
+  #set_fact:
+    #delete_list: "{{ item }}"
+  lineinfile:
+    dest: "repository/cisco_{{  }}"
+  with_list: "{{ lookup('file', 'files/{{ item.del_list_file }}') }}"
+  delegate_to: localhost
+  loop: "{{ commands }}"
+
+- name: debug
+  debug:
+    var: delete_list
+  delegate_to: localhost

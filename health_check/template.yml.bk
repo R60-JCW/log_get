@@ -19,9 +19,14 @@
         msg: "{{ command_requests.list }}"
       run_once: yes
 
-    - name: set command requests # 変数化してtemplateからのfile作成で使用する
+    - name: set command requests
       set_fact:
         cmds: "{{ command_requests.list }}"
+      run_once: yes
+
+    - name: display
+      debug:
+        var: cmds
       run_once: yes
 
     - name: create inventory
@@ -29,8 +34,22 @@
         src: "{{ template }}"
         dest: "group_vars/{{ inventory_hostname }}.yml"
         lstrip_blocks: yes
+    
+#- hosts: all
+  #gather_facts: no
+  #vars_files:
+    #- "group_vars/{{ inventory_hostname }}.yml"
+  #tasks:  
+    
+    #- name: set vars frome files
+      #set_Fact:
+        #vars_file: "{{ lookup('file', 'group_vars/'+ inventory_hostname + '.yml').splitlines() }}"
 
-    - name: include vars # 作成したグループ変数ファイルを変数ファイルとして読み込む
+    #- name: display
+      #debug:
+        #var: vars_file
+
+    - name: include vars
       include_vars: "group_vars/{{ inventory_hostname }}.yml"
 
     - name: debug
@@ -44,3 +63,10 @@
       loop: "{{ commands }}"
       delegate_to: localhost
 
+- name: role section
+  hosts: all
+  gather_facts: no
+  #vars_files:
+    #- "group_vars/{{ inventory_hostname }}.yml" #前playの変数が跨げないので再度読み込む
+  roles:
+    - delete_line_without_template
