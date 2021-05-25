@@ -1,0 +1,8 @@
+Routing entry for 172.31.0.0/16
+  Known via "ospf 1", distance 110, metric 20, type extern 2, forward metric 2
+  Last update from 172.16.252.26 on GigabitEthernet3, 01:34:11 ago
+  Routing Descriptor Blocks:
+    172.16.252.26, from 172.31.252.2, 01:34:11 ago, via GigabitEthernet3
+      Route metric is 20, traffic share count is 1
+  * 172.16.252.22, from 172.31.252.2, 01:34:17 ago, via GigabitEthernet2
+      Route metric is 20, traffic share count is 1

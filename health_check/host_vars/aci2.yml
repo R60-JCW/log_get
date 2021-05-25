@@ -1,4 +1,0 @@
----
-aci_rest_host: xx.xx.xx.xx
-aci_rest_username: #ユーザー名記載 #マスク処理
-aci_rest_password: #パスワード記載 #マスク処理

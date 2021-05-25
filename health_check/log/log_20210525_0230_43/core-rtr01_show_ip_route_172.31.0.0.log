@@ -1,0 +1,7 @@
+Routing entry for 172.31.0.0/16
+  Known via "ospf 1", distance 110, metric 20, type extern 2
+  Installed May 25 07:56:31.235 for 01:35:05
+  Routing Descriptor Blocks
+    172.16.253.4, from 172.31.252.2, via GigabitEthernet0/0/0/1
+      Route metric is 20
+  No advertising protos.

@@ -1,0 +1,5 @@
+Routing entry for 172.16.0.0/16
+  Known via "static", distance 1, metric 0
+  Routing Descriptor Blocks:
+  * 172.31.252.2
+      Route metric is 0, traffic share count is 1

@@ -1,8 +1,0 @@
-INTF,IPADDR,STATUS,PROTO
-GigabitEthernet1,10.10.20.176,up,up
-GigabitEthernet2,172.16.252.29,up,up
-GigabitEthernet3,172.16.252.33,up,up
-GigabitEthernet4,172.16.252.6,up,up
-GigabitEthernet5,172.16.252.14,up,up
-GigabitEthernet6,172.16.252.18,up,up
-Loopback0,unassigned,administratively down,down

@@ -1,8 +1,0 @@
-VRF,INTF,IPADDR,STATUS,LINK,PROTO
-default,Vlan101,172.16.101.3,admin-up,link-up,protocol-up
-default,Vlan102,172.16.102.3,admin-up,link-up,protocol-up
-default,Vlan103,172.16.103.3,admin-up,link-up,protocol-up
-default,Vlan104,172.16.104.3,admin-up,link-up,protocol-up
-default,Vlan105,172.16.105.3,admin-up,link-up,protocol-up
-default,Eth1/3,172.16.252.9,admin-up,link-up,protocol-up
-default,Eth1/4,172.16.252.13,admin-up,link-up,protocol-up

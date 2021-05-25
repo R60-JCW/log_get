@@ -1,0 +1,323 @@
+======================  show run =======================
+Load for five secs: 0%/0%; one minute: 0%; five minutes: 1%
+Time source is hardware calendar, *09:29:47.071 UTC Tue May 25 2021
+
+Building configuration...
+
+Current configuration : 3953 bytes
+!
+! Last configuration change at 08:29:51 UTC Tue May 25 2021 by cisco
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname edge-sw01
+!
+boot-start-marker
+boot-end-marker
+!
+!
+vrf definition Mgmt-intf
+ !
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+no logging console
+enable password cisco
+!
+username cisco privilege 15 password 0 cisco
+no aaa new-model
+!
+!
+!
+!
+!
+vtp domain virl.lab
+vtp mode transparent
+!
+!
+!
+no ip domain-lookup
+ip domain-name cisco.com
+ip cef
+no ipv6 cef
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+!
+vlan 2
+ name ank_vlan2
+!
+vlan 999
+ name edge-transit
+no cdp run
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ description to
+ no ip address
+ shutdown
+!
+interface GigabitEthernet0/0
+ description to port3.sandbox-backend
+ no switchport
+ vrf forwarding Mgmt-intf
+ ip address 10.10.20.172 255.255.255.0
+ duplex full
+ no negotiation auto
+!
+interface GigabitEthernet0/1
+ description to GigabitEthernet0/1.edge-firewall01
+ switchport access vlan 999
+ switchport mode access
+ duplex full
+ no negotiation auto
+ spanning-tree portfast edge
+!
+interface GigabitEthernet0/2
+ description to GigabitEthernet0/0/0/1.core-rtr01
+ switchport access vlan 999
+ switchport mode access
+ duplex full
+ no negotiation auto
+ spanning-tree portfast edge
+!
+interface GigabitEthernet0/3
+ description to GigabitEthernet0/0/0/1.core-rtr02
+ switchport access vlan 999
+ switchport mode access
+ duplex full
+ no negotiation auto
+ spanning-tree portfast edge
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+ip route vrf Mgmt-intf 0.0.0.0 0.0.0.0 10.10.20.254
+ip ssh version 2
+ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+!
+!
+!
+!
+!
+!
+control-plane
+!
+banner exec ^CCC
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************^C
+banner incoming ^CCC
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************^C
+banner login ^CCC
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************^C
+!
+line con 0
+ exec-timeout 0 0
+ password cisco
+line aux 0
+line vty 0 4
+ exec-timeout 720 0
+ password cisco
+ login local
+ exec prompt timestamp
+ transport input telnet ssh
+!
+!
+end
+======================  show run =======================
+======================  show version =======================
+Load for five secs: 27%/0%; one minute: 2%; five minutes: 1%
+Time source is hardware calendar, *09:29:49.585 UTC Tue May 25 2021
+Cisco IOS Software, vios_l2 Software (vios_l2-ADVENTERPRISEK9-M), Version 15.2(CML_NIGHTLY_20190423)FLO_DSGS7, EARLY DEPLOYMENT DEVELOPMENT BUILD, synced to  V152_6_0_81_E
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2019 by Cisco Systems, Inc.
+Compiled Tue 23-Apr-19 04:48 by mmen
+
+
+ROM: Bootstrap program is IOSv
+
+edge-sw01 uptime is 1 hour, 37 minutes
+System returned to ROM by reload
+System image file is "flash0:/vios_l2-adventerprisek9-m"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco IOSv () processor (revision 1.0) with 722281K/62464K bytes of memory.
+Processor board ID 9EKZTBWR5G5
+4 Gigabit Ethernet interfaces
+DRAM configuration is 72 bits wide with parity disabled.
+256K bytes of non-volatile configuration memory.
+2097152K bytes of ATA System CompactFlash 0 (Read/Write)
+0K bytes of ATA CompactFlash 1 (Read/Write)
+11217K bytes of ATA CompactFlash 2 (Read/Write)
+0K bytes of ATA CompactFlash 3 (Read/Write)
+
+Configuration register is 0x101
+======================  show version =======================
+======================  show boot =======================
+Load for five secs: 27%/0%; one minute: 2%; five minutes: 1%
+Time source is hardware calendar, *09:29:50.066 UTC Tue May 25 2021
+
+BOOT variable does not exist
+CONFIG_FILE variable does not exist
+Configuration register is 0x101
+
+IOSv GRUB info:
+
+GRUB multiboot info:
+  IOMEM percent       '25'
+  Config Register     '0x101'
+  Boot loader         'GRUB 2.00'
+  Command line        '/vios_l2-adventerprisek9-m'
+  Memory size         766Mb, low 639K, high 785384K
+  Multiboot info      0x056A2630, flags 0x00000247
+  Boot device         0x8000FFFF
+  Memory map          0x056A288E (168 bytes)
+    0x00000000 .. 0x0009FBFF (     639K, available)
+    0x0009FC00 .. 0x0009FFFF (       1K, reserved)
+    0x000F0000 .. 0x000FFFFF (      64K, reserved)
+    0x00100000 .. 0x2FFF9FFF (  785384K, available)
+    0x2FFFA000 .. 0x2FFFFFFF (      24K, reserved)
+    0xFEFFC000 .. 0xFEFFFFFF (      16K, reserved)
+    0xFFFC0000 .. 0xFFFFFFFF (     256K, reserved)
+Linker:
+  _initdata_start     0x6396FD8
+  _data1_start        0x6F46B60
+  _initdata_end       0x6F46B5C
+
+Router memory: 766Mb, 803578880 bytes
+======================  show boot =======================
+======================  show vrf =======================
+Load for five secs: 27%/0%; one minute: 2%; five minutes: 1%
+Time source is hardware calendar, *09:29:50.540 UTC Tue May 25 2021
+
+  Name                             Default RD            Protocols   Interfaces
+  Mgmt-intf                        <not set>             ipv4,ipv6   Gi0/0
+======================  show vrf =======================
+======================  show ip interface brief =======================
+Load for five secs: 27%/0%; one minute: 2%; five minutes: 1%
+Time source is hardware calendar, *09:29:51.055 UTC Tue May 25 2021
+
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet0/0     10.10.20.172    YES TFTP   up                    up      
+GigabitEthernet0/1     unassigned      YES unset  up                    up      
+GigabitEthernet0/2     unassigned      YES unset  up                    up      
+GigabitEthernet0/3     unassigned      YES unset  up                    up      
+Loopback0              unassigned      YES unset  administratively down down
+======================  show ip interface brief =======================
+======================  show vlan =======================
+Load for five secs: 27%/0%; one minute: 2%; five minutes: 1%
+Time source is hardware calendar, *09:29:51.523 UTC Tue May 25 2021
+
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    
+2    ank_vlan2                        active    
+999  edge-transit                     active    Gi0/1, Gi0/2, Gi0/3
+1002 fddi-default                     act/unsup 
+1003 token-ring-default               act/unsup 
+1004 fddinet-default                  act/unsup 
+1005 trnet-default                    act/unsup 
+
+VLAN Type  SAID       MTU   Parent RingNo BridgeNo Stp  BrdgMode Trans1 Trans2
+---- ----- ---------- ----- ------ ------ -------- ---- -------- ------ ------
+1    enet  100001     1500  -      -      -        -    -        0      0   
+2    enet  100002     1500  -      -      -        -    -        0      0   
+999  enet  100999     1500  -      -      -        -    -        0      0   
+1002 fddi  101002     1500  -      -      -        -    -        0      0   
+1003 tr    101003     1500  -      -      -        -    -        0      0   
+1004 fdnet 101004     1500  -      -      -        ieee -        0      0   
+1005 trnet 101005     1500  -      -      -        ibm  -        0      0   
+
+Remote SPAN VLANs
+------------------------------------------------------------------------------
+
+
+Primary Secondary Type              Ports
+------- --------- ----------------- ------------------------------------------
+======================  show vlan =======================
+======================  show spanning-tree =======================
+Load for five secs: 27%/0%; one minute: 2%; five minutes: 1%
+Time source is hardware calendar, *09:29:52.024 UTC Tue May 25 2021
+
+
+VLAN0999
+  Spanning tree enabled protocol ieee
+  Root ID    Priority    33767
+             Address     5254.0015.2f83
+             This bridge is the root
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    33767  (priority 32768 sys-id-ext 999)
+             Address     5254.0015.2f83
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+             Aging Time  300 sec
+
+Interface           Role Sts Cost      Prio.Nbr Type
+------------------- ---- --- --------- -------- --------------------------------
+Gi0/1               Desg FWD 4         128.2    P2p Edge 
+Gi0/2               Desg FWD 4         128.3    P2p Edge 
+Gi0/3               Desg FWD 4         128.4    P2p Edge
+======================  show spanning-tree =======================

@@ -1,0 +1,8 @@
+Routing entry for 172.16.103.0/24
+  Known via "ospf 1", distance 110, metric 41, type intra area
+  Last update from 172.16.252.1 on GigabitEthernet4, 01:29:46 ago
+  Routing Descriptor Blocks:
+  * 172.16.252.9, from 172.16.101.3, 01:29:51 ago, via GigabitEthernet5
+      Route metric is 41, traffic share count is 1
+    172.16.252.1, from 172.16.101.2, 01:29:46 ago, via GigabitEthernet4
+      Route metric is 41, traffic share count is 1

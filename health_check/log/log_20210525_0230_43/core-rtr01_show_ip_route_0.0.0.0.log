@@ -1,0 +1,7 @@
+Routing entry for 0.0.0.0/0
+  Known via "static", distance 1, metric 0, candidate default path
+  Installed May 25 07:56:29.675 for 01:34:57
+  Routing Descriptor Blocks
+    172.16.253.4
+      Route metric is 0, Wt is 1
+  No advertising protos.

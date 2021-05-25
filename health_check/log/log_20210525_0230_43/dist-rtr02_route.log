@@ -1,0 +1,120 @@
+======================  show ip route =======================
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, m - OMP
+       n - NAT, Ni - NAT inside, No - NAT outside, Nd - NAT DIA
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       H - NHRP, G - NHRP registered, g - NHRP registration summary
+       o - ODR, P - periodic downloaded static route, l - LISP
+       a - application route
+       + - replicated route, % - next hop override, p - overrides from PfR
+
+Gateway of last resort is not set
+
+      172.16.0.0/16 is variably subnetted, 21 subnets, 4 masks
+O        172.16.101.0/24 
+           [110/41] via 172.16.252.13, 01:29:49, GigabitEthernet5
+           [110/41] via 172.16.252.5, 01:32:51, GigabitEthernet4
+O        172.16.102.0/24 
+           [110/41] via 172.16.252.13, 01:32:45, GigabitEthernet5
+           [110/41] via 172.16.252.5, 01:29:50, GigabitEthernet4
+O        172.16.103.0/24 
+           [110/41] via 172.16.252.13, 01:29:49, GigabitEthernet5
+           [110/41] via 172.16.252.5, 01:29:45, GigabitEthernet4
+O        172.16.104.0/24 
+           [110/41] via 172.16.252.13, 01:29:49, GigabitEthernet5
+           [110/41] via 172.16.252.5, 01:29:45, GigabitEthernet4
+O        172.16.105.0/24 
+           [110/41] via 172.16.252.13, 01:29:49, GigabitEthernet5
+           [110/41] via 172.16.252.5, 01:29:45, GigabitEthernet4
+O        172.16.252.0/30 [110/2] via 172.16.252.17, 01:35:26, GigabitEthernet6
+C        172.16.252.4/30 is directly connected, GigabitEthernet4
+L        172.16.252.6/32 is directly connected, GigabitEthernet4
+O        172.16.252.8/30 [110/2] via 172.16.252.17, 01:35:26, GigabitEthernet6
+C        172.16.252.12/30 is directly connected, GigabitEthernet5
+L        172.16.252.14/32 is directly connected, GigabitEthernet5
+C        172.16.252.16/30 is directly connected, GigabitEthernet6
+L        172.16.252.18/32 is directly connected, GigabitEthernet6
+O        172.16.252.20/30 
+           [110/2] via 172.16.252.30, 01:34:14, GigabitEthernet2
+           [110/2] via 172.16.252.17, 01:35:26, GigabitEthernet6
+O        172.16.252.24/30 
+           [110/2] via 172.16.252.34, 01:34:14, GigabitEthernet3
+           [110/2] via 172.16.252.17, 01:35:26, GigabitEthernet6
+C        172.16.252.28/30 is directly connected, GigabitEthernet2
+L        172.16.252.29/32 is directly connected, GigabitEthernet2
+C        172.16.252.32/30 is directly connected, GigabitEthernet3
+L        172.16.252.33/32 is directly connected, GigabitEthernet3
+O        172.16.252.36/30 
+           [110/2] via 172.16.252.34, 01:34:14, GigabitEthernet3
+           [110/2] via 172.16.252.30, 01:33:41, GigabitEthernet2
+O        172.16.253.0/29 [110/2] via 172.16.252.34, 01:34:08, GigabitEthernet3
+                         [110/2] via 172.16.252.30, 01:34:22, GigabitEthernet2
+O E2  172.31.0.0/16 [110/20] via 172.16.252.34, 01:34:08, GigabitEthernet3
+                    [110/20] via 172.16.252.30, 01:34:22, GigabitEthernet2
+======================  show ip route =======================
+======================  show ip route 0.0.0.0 =======================
+% Network not in table
+======================  show ip route 0.0.0.0 =======================
+======================  show ip route 172.16.101.0 =======================
+Routing entry for 172.16.101.0/24
+  Known via "ospf 1", distance 110, metric 41, type intra area
+  Last update from 172.16.252.13 on GigabitEthernet5, 01:29:50 ago
+  Routing Descriptor Blocks:
+    172.16.252.13, from 172.16.101.3, 01:29:50 ago, via GigabitEthernet5
+      Route metric is 41, traffic share count is 1
+  * 172.16.252.5, from 172.16.101.2, 01:32:52 ago, via GigabitEthernet4
+      Route metric is 41, traffic share count is 1
+======================  show ip route 172.16.101.0 =======================
+======================  show ip route 172.16.102.0 =======================
+Routing entry for 172.16.102.0/24
+  Known via "ospf 1", distance 110, metric 41, type intra area
+  Last update from 172.16.252.5 on GigabitEthernet4, 01:29:51 ago
+  Routing Descriptor Blocks:
+  * 172.16.252.13, from 172.16.101.3, 01:32:46 ago, via GigabitEthernet5
+      Route metric is 41, traffic share count is 1
+    172.16.252.5, from 172.16.101.2, 01:29:51 ago, via GigabitEthernet4
+      Route metric is 41, traffic share count is 1
+======================  show ip route 172.16.102.0 =======================
+======================  show ip route 172.16.103.0 =======================
+Routing entry for 172.16.103.0/24
+  Known via "ospf 1", distance 110, metric 41, type intra area
+  Last update from 172.16.252.5 on GigabitEthernet4, 01:29:47 ago
+  Routing Descriptor Blocks:
+  * 172.16.252.13, from 172.16.101.3, 01:29:51 ago, via GigabitEthernet5
+      Route metric is 41, traffic share count is 1
+    172.16.252.5, from 172.16.101.2, 01:29:47 ago, via GigabitEthernet4
+      Route metric is 41, traffic share count is 1
+======================  show ip route 172.16.103.0 =======================
+======================  show ip route 172.16.104.0 =======================
+Routing entry for 172.16.104.0/24
+  Known via "ospf 1", distance 110, metric 41, type intra area
+  Last update from 172.16.252.5 on GigabitEthernet4, 01:29:47 ago
+  Routing Descriptor Blocks:
+  * 172.16.252.13, from 172.16.101.3, 01:29:51 ago, via GigabitEthernet5
+      Route metric is 41, traffic share count is 1
+    172.16.252.5, from 172.16.101.2, 01:29:47 ago, via GigabitEthernet4
+      Route metric is 41, traffic share count is 1
+======================  show ip route 172.16.104.0 =======================
+======================  show ip route 172.16.105.0 =======================
+Routing entry for 172.16.105.0/24
+  Known via "ospf 1", distance 110, metric 41, type intra area
+  Last update from 172.16.252.5 on GigabitEthernet4, 01:29:48 ago
+  Routing Descriptor Blocks:
+  * 172.16.252.13, from 172.16.101.3, 01:29:52 ago, via GigabitEthernet5
+      Route metric is 41, traffic share count is 1
+    172.16.252.5, from 172.16.101.2, 01:29:48 ago, via GigabitEthernet4
+      Route metric is 41, traffic share count is 1
+======================  show ip route 172.16.105.0 =======================
+======================  show ip route 172.31.0.0 =======================
+Routing entry for 172.31.0.0/16
+  Known via "ospf 1", distance 110, metric 20, type extern 2, forward metric 2
+  Last update from 172.16.252.34 on GigabitEthernet3, 01:34:11 ago
+  Routing Descriptor Blocks:
+    172.16.252.34, from 172.31.252.2, 01:34:11 ago, via GigabitEthernet3
+      Route metric is 20, traffic share count is 1
+  * 172.16.252.30, from 172.31.252.2, 01:34:25 ago, via GigabitEthernet2
+      Route metric is 20, traffic share count is 1
+======================  show ip route 172.31.0.0 =======================

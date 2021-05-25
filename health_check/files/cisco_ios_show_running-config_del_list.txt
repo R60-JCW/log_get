@@ -1,5 +1,0 @@
-Current configuration :
-
-ss
-
-! Last configuration change at

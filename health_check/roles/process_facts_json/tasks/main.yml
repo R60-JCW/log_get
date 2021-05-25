@@ -1,6 +1,0 @@
-- name: Remove line
-#   command: "python3 {{ inventory_dir }}/logSV_pop_for_DEMO.py {{ inventory_dir }}/{{ repository_dir }}/logSV_ansible_facts.txt"
-#  command: "python3 {{ inventory_dir }}/list_files/process_facts_json.py {{ inventory_dir }}/{{ repository_dir }}/{{inventory_hostname}}_ansible_facts.txt {{ inventory_dir }}/list_files/{{ item.cmd_process_file }}"
-  command: "python3 {{ inventory_dir }}/{{ process_dir }}/{{ process_facts_json_script }} {{ inventory_dir }}/{{ repository_dir }}/{{inventory_hostname}}_ansible_facts.txt {{ inventory_dir }}/{{ process_dir }}/{{ item.cmd_process_file }}"
-  loop: "{{ process_file }}"
-  delegate_to: localhost

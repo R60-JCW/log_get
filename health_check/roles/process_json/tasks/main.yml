@@ -1,8 +1,0 @@
-- name: do process python file
-#  command: "python3 {{ role_path }}/files/process_json.py {{ repodir.path }}{{ inventory_hostname }}_{{ item.process_command }}.log {{ role_path }}/files/{{ item.cmd_process_file }}"
-  command: "python3 {{ inventory_dir }}/{{ process_dir }}/{{ process_json_script }} {{ repodir.path }}{{ inventory_hostname }}_{{ item.process_command }}.log {{ inventory_dir }}/{{ process_dir }}/{{ item.cmd_process_file }}"
-  args:
-    chdir: "{{ inventory_dir }}/{{ process_dir }}/"
-  loop: "{{ process_file }}"
-  delegate_to: localhost
-

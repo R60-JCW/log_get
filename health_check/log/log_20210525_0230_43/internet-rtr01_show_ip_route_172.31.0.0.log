@@ -1,0 +1,7 @@
+Routing entry for 172.31.0.0/16, 4 known subnets
+  Attached (4 connections)
+  Variably subnetted with 2 masks
+C        172.31.0.0/24 is directly connected, GigabitEthernet3
+L        172.31.0.1/32 is directly connected, GigabitEthernet3
+C        172.31.252.0/24 is directly connected, GigabitEthernet2
+L        172.31.252.1/32 is directly connected, GigabitEthernet2

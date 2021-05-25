@@ -1,0 +1,5 @@
+Load for five secs: 27%/0%; one minute: 2%; five minutes: 1%
+Time source is hardware calendar, *09:29:50.540 UTC Tue May 25 2021
+
+  Name                             Default RD            Protocols   Interfaces
+  Mgmt-intf                        <not set>             ipv4,ipv6   Gi0/0

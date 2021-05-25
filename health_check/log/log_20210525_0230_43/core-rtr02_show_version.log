@@ -1,0 +1,84 @@
+Cisco IOS XR Software, Version 6.3.1[Default]
+Copyright (c) 2017 by Cisco Systems, Inc.
+
+ROM: GRUB, Version 1.99(0), DEV RELEASE
+
+core-rtr02 uptime is 1 hour, 38 minutes
+System image file is "bootflash:disk0/xrvr-os-mbi-6.3.1/mbixrvr-rp.vm"
+
+cisco IOS XRv Series (Pentium II Stepping 7) processor with 3145343K bytes of memory.
+Pentium II Stepping 7 processor at 2111MHz, Revision 2.174
+IOS XRv Chassis
+
+4 GigabitEthernet
+1 Management Ethernet
+97070k bytes of non-volatile configuration memory.
+866M bytes of hard disk.
+2321392k bytes of disk0: (Sector size 512 bytes).
+
+Configuration register on node 0/0/CPU0 is 0x2102
+Boot device on node 0/0/CPU0 is disk0:
+Package active on node 0/0/CPU0:
+iosxr-infra, V 6.3.1[Default], Cisco Systems, at disk0:iosxr-infra-6.3.1
+    Built on Thu Sep 14 02:24:13 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+iosxr-fwding, V 6.3.1[Default], Cisco Systems, at disk0:iosxr-fwding-6.3.1
+    Built on Thu Sep 14 02:24:13 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+iosxr-routing, V 6.3.1[Default], Cisco Systems, at disk0:iosxr-routing-6.3.1
+    Built on Thu Sep 14 02:24:13 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+iosxr-ce, V 6.3.1[Default], Cisco Systems, at disk0:iosxr-ce-6.3.1
+    Built on Thu Sep 14 02:24:13 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+xrvr-os-mbi, V 6.3.1[Default], Cisco Systems, at disk0:xrvr-os-mbi-6.3.1
+    Built on Thu Sep 14 02:24:45 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+xrvr-base, V 6.3.1[Default], Cisco Systems, at disk0:xrvr-base-6.3.1
+    Built on Thu Sep 14 02:24:13 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+xrvr-fwding, V 6.3.1[Default], Cisco Systems, at disk0:xrvr-fwding-6.3.1
+    Built on Thu Sep 14 02:24:13 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+xrvr-mgbl-x, V 6.3.1[Default], Cisco Systems, at disk0:xrvr-mgbl-x-6.3.1
+    Built on Thu Sep 14 02:24:17 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+iosxr-mpls, V 6.3.1[Default], Cisco Systems, at disk0:iosxr-mpls-6.3.1
+    Built on Thu Sep 14 02:24:13 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+iosxr-mgbl, V 6.3.1[Default], Cisco Systems, at disk0:iosxr-mgbl-6.3.1
+    Built on Thu Sep 14 02:24:13 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+iosxr-mcast, V 6.3.1[Default], Cisco Systems, at disk0:iosxr-mcast-6.3.1
+    Built on Thu Sep 14 02:24:13 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+xrvr-mcast-supp, V 6.3.1[Default], Cisco Systems, at disk0:xrvr-mcast-supp-6.3.1
+    Built on Thu Sep 14 02:24:13 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+iosxr-bng, V 6.3.1[Default], Cisco Systems, at disk0:iosxr-bng-6.3.1
+    Built on Thu Sep 14 02:24:14 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+xrvr-bng-supp, V 6.3.1[Default], Cisco Systems, at disk0:xrvr-bng-supp-6.3.1
+    Built on Thu Sep 14 02:24:14 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+iosxr-security, V 6.3.1[Default], Cisco Systems, at disk0:iosxr-security-6.3.1
+    Built on Thu Sep 14 02:24:09 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+xrvr-fullk9-x, V 6.3.1[Default], Cisco Systems, at disk0:xrvr-fullk9-x-6.3.1
+    Built on Thu Sep 14 02:24:48 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie

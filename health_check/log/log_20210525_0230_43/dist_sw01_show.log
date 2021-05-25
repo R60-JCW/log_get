@@ -1,0 +1,698 @@
+======================  show version =======================
+Cisco Nexus Operating System (NX-OS) Software
+TAC support: http://www.cisco.com/tac
+Documents: http://www.cisco.com/en/US/products/ps9372/tsd_products_support_series_home.html
+Copyright (c) 2002-2019, Cisco Systems, Inc. All rights reserved.
+The copyrights to certain works contained herein are owned by
+other third parties and are used and distributed under license.
+Some parts of this software are covered under the GNU Public
+License. A copy of the license is available at
+http://www.gnu.org/licenses/gpl.html.
+
+Nexus 9000v is a demo version of the Nexus Operating System
+
+Software
+  BIOS: version 
+ NXOS: version 9.2(3)
+  BIOS compile time:  
+  NXOS image file is: bootflash:///nxos.9.2.3.bin
+  NXOS compile time:  2/17/2019 5:00:00 [02/17/2019 15:07:27]
+
+
+Hardware
+  cisco Nexus9000 9000v Chassis 
+  Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz with 8163960 kB of memory.
+  Processor Board ID 9ZL88R988M6
+
+  Device name: dist-sw01
+  bootflash:    3509454 kB
+Kernel uptime is 0 day(s), 1 hour(s), 37 minute(s), 29 second(s)
+
+Last reset 
+  Reason: Unknown
+  System version: 
+  Service: 
+
+plugin
+  Core Plugin, Ethernet Plugin
+
+Active Package(s):
+======================  show version =======================
+======================  show running-config =======================
+!Command: show running-config
+!Running configuration last done at: Tue May 25 07:58:45 2021
+!Time: Tue May 25 09:31:54 2021
+
+version 9.2(3) Bios:version  
+hostname dist-sw01
+vdc dist-sw01 id 1
+  limit-resource vlan minimum 16 maximum 4094
+  limit-resource vrf minimum 2 maximum 4096
+  limit-resource port-channel minimum 0 maximum 511
+  limit-resource u4route-mem minimum 96 maximum 96
+  limit-resource u6route-mem minimum 24 maximum 24
+  limit-resource m4route-mem minimum 58 maximum 58
+  limit-resource m6route-mem minimum 8 maximum 8
+
+feature telnet
+cfs eth distribute
+feature ospf
+feature interface-vlan
+feature hsrp
+feature lacp
+feature vpc
+
+no password strength-check
+username admin password 5 $1$KuOSBsvW$Cy0TSD..gEBGBPjzpDgf51  role network-admin
+username adminbackup password 5 !  role network-operator
+username adminbackup passphrase  lifetime 99999 warntime 14 gracetime 3
+username cisco password 5 $1$Nk7ZkwH0$fyiRmMMfIheqE3BqvcL0C1  role network-operator
+username cisco role network-admin
+username cisco passphrase  lifetime 99999 warntime 14 gracetime 3
+username lab password 5 $1$buoy/oqy$.EXQz8rCn72ii8qtdldj00  role network-admin
+username lab passphrase  lifetime 99999 warntime 14 gracetime 3
+ip domain-lookup
+snmp-server user lab network-admin auth md5 0x5ceb414591539ee35159fca86fdfa101 priv 0x5ceb414591539ee35159fca86fdfa101 localizedkey
+snmp-server user admin network-admin auth md5 0x328945d53e05e8e7207f8c20b142f0b7 priv 0x328945d53e05e8e7207f8c20b142f0b7 localizedkey
+snmp-server user cisco network-operator auth md5 0x55b3c64a53fb95518e75358ee75e82e9 priv 0x55b3c64a53fb95518e75358ee75e82e9 localizedkey
+snmp-server user cisco network-admin
+rmon event 1 log trap public description FATAL(1) owner PMON@FATAL
+rmon event 2 log trap public description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 log trap public description ERROR(3) owner PMON@ERROR
+rmon event 4 log trap public description WARNING(4) owner PMON@WARNING
+rmon event 5 log trap public description INFORMATION(5) owner PMON@INFO
+
+vlan 1,101-105
+vlan 101
+  name prod
+vlan 102
+  name dev
+vlan 103
+  name test
+vlan 104
+  name security
+vlan 105
+  name iot
+
+vrf context management
+  ip route 0.0.0.0/0 10.10.20.254
+hardware forwarding unicast trace
+vpc domain 101
+  peer-switch
+  peer-keepalive destination 10.10.20.178 source 10.10.20.177
+  peer-gateway
+
+
+interface Vlan1
+  no ip redirects
+  no ipv6 redirects
+
+interface Vlan101
+  description prod svi
+  no shutdown
+  no ip redirects
+  ip address 172.16.101.2/24
+  no ipv6 redirects
+  ip router ospf 1 area 0.0.0.0
+  hsrp 10 
+    ip 172.16.101.1
+
+interface Vlan102
+  description dev svi
+  no shutdown
+  no ip redirects
+  ip address 172.16.102.2/24
+  no ipv6 redirects
+  ip router ospf 1 area 0.0.0.0
+  hsrp 10 
+    ip 172.16.102.1
+
+interface Vlan103
+  description test svi
+  no shutdown
+  no ip redirects
+  ip address 172.16.103.2/24
+  no ipv6 redirects
+  ip router ospf 1 area 0.0.0.0
+  hsrp 10 
+    ip 172.16.103.1
+
+interface Vlan104
+  description security svi
+  no shutdown
+  no ip redirects
+  ip address 172.16.104.2/24
+  no ipv6 redirects
+  ip router ospf 1 area 0.0.0.0
+  hsrp 10 
+    ip 172.16.104.1
+
+interface Vlan105
+  description iot svi
+  no shutdown
+  no ip redirects
+  ip address 172.16.105.2/24
+  no ipv6 redirects
+  ip router ospf 1 area 0.0.0.0
+  hsrp 10 
+    ip 172.16.105.1
+
+interface port-channel1
+  switchport mode trunk
+  spanning-tree port type network
+  vpc peer-link
+
+interface Ethernet1/1
+  description VPC Peer Link
+  switchport mode trunk
+  channel-group 1 mode active
+
+interface Ethernet1/2
+  description VPC Peer Link
+  switchport mode trunk
+  channel-group 1 mode active
+
+interface Ethernet1/3
+  description L3 link to dist-rtr01
+  no switchport
+  ip address 172.16.252.1/30
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet1/4
+  description L3 link to dist-rtr02
+  no switchport
+  ip address 172.16.252.5/30
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  no shutdown
+
+interface Ethernet1/5
+  description to
+  shutdown
+
+interface Ethernet1/6
+  description to
+  shutdown
+
+interface Ethernet1/7
+  description to
+  shutdown
+
+interface Ethernet1/8
+  description to
+  shutdown
+
+interface Ethernet1/9
+  description to
+  shutdown
+
+interface Ethernet1/10
+  description to
+  shutdown
+
+interface Ethernet1/11
+  description Link to inside-host01
+  switchport access vlan 101
+  spanning-tree port type edge
+
+interface Ethernet1/12
+
+interface Ethernet1/13
+
+interface Ethernet1/14
+
+interface Ethernet1/15
+
+interface Ethernet1/16
+
+interface Ethernet1/17
+
+interface Ethernet1/18
+
+interface Ethernet1/19
+
+interface Ethernet1/20
+
+interface Ethernet1/21
+
+interface Ethernet1/22
+
+interface Ethernet1/23
+
+interface Ethernet1/24
+
+interface Ethernet1/25
+
+interface Ethernet1/26
+
+interface Ethernet1/27
+
+interface Ethernet1/28
+
+interface Ethernet1/29
+
+interface Ethernet1/30
+
+interface Ethernet1/31
+
+interface Ethernet1/32
+
+interface Ethernet1/33
+
+interface Ethernet1/34
+
+interface Ethernet1/35
+
+interface Ethernet1/36
+
+interface Ethernet1/37
+
+interface Ethernet1/38
+
+interface Ethernet1/39
+
+interface Ethernet1/40
+
+interface Ethernet1/41
+
+interface Ethernet1/42
+
+interface Ethernet1/43
+
+interface Ethernet1/44
+
+interface Ethernet1/45
+
+interface Ethernet1/46
+
+interface Ethernet1/47
+
+interface Ethernet1/48
+
+interface Ethernet1/49
+
+interface Ethernet1/50
+
+interface Ethernet1/51
+
+interface Ethernet1/52
+
+interface Ethernet1/53
+
+interface Ethernet1/54
+
+interface Ethernet1/55
+
+interface Ethernet1/56
+
+interface Ethernet1/57
+
+interface Ethernet1/58
+
+interface Ethernet1/59
+
+interface Ethernet1/60
+
+interface Ethernet1/61
+
+interface Ethernet1/62
+
+interface Ethernet1/63
+
+interface Ethernet1/64
+
+interface Ethernet1/65
+
+interface Ethernet1/66
+
+interface Ethernet1/67
+
+interface Ethernet1/68
+
+interface Ethernet1/69
+
+interface Ethernet1/70
+
+interface Ethernet1/71
+
+interface Ethernet1/72
+
+interface Ethernet1/73
+
+interface Ethernet1/74
+
+interface Ethernet1/75
+
+interface Ethernet1/76
+
+interface Ethernet1/77
+
+interface Ethernet1/78
+
+interface Ethernet1/79
+
+interface Ethernet1/80
+
+interface Ethernet1/81
+
+interface Ethernet1/82
+
+interface Ethernet1/83
+
+interface Ethernet1/84
+
+interface Ethernet1/85
+
+interface Ethernet1/86
+
+interface Ethernet1/87
+
+interface Ethernet1/88
+
+interface Ethernet1/89
+
+interface Ethernet1/90
+
+interface Ethernet1/91
+
+interface Ethernet1/92
+
+interface Ethernet1/93
+
+interface Ethernet1/94
+
+interface Ethernet1/95
+
+interface Ethernet1/96
+
+interface Ethernet1/97
+
+interface Ethernet1/98
+
+interface Ethernet1/99
+
+interface Ethernet1/100
+
+interface Ethernet1/101
+
+interface Ethernet1/102
+
+interface Ethernet1/103
+
+interface Ethernet1/104
+
+interface Ethernet1/105
+
+interface Ethernet1/106
+
+interface Ethernet1/107
+
+interface Ethernet1/108
+
+interface Ethernet1/109
+
+interface Ethernet1/110
+
+interface Ethernet1/111
+
+interface Ethernet1/112
+
+interface Ethernet1/113
+
+interface Ethernet1/114
+
+interface Ethernet1/115
+
+interface Ethernet1/116
+
+interface Ethernet1/117
+
+interface Ethernet1/118
+
+interface Ethernet1/119
+
+interface Ethernet1/120
+
+interface Ethernet1/121
+
+interface Ethernet1/122
+
+interface Ethernet1/123
+
+interface Ethernet1/124
+
+interface Ethernet1/125
+
+interface Ethernet1/126
+
+interface Ethernet1/127
+
+interface Ethernet1/128
+
+interface mgmt0
+  description to port8.sandbox-backend
+  duplex full
+  vrf member management
+  ip address 10.10.20.177/24
+
+interface loopback0
+  description to
+  shutdown
+line console
+  exec-timeout 0
+  terminal width  511
+line vty
+boot nxos bootflash:/nxos.9.2.3.bin 
+router ospf 1
+  passive-interface default
+event manager applet BOOTCONFIG
+  event syslog pattern "mgmt0 is UP"
+  action 2.0 cli python bootflash:set_boot.py
+
+no logging console
+======================  show running-config =======================
+======================  show vpc =======================
+Legend:
+                (*) - local vPC is down, forwarding via vPC peer-link
+
+vPC domain id                     : 101 
+Peer status                       : peer adjacency formed ok      
+vPC keep-alive status             : peer is alive                 
+Configuration consistency status  : success 
+Per-vlan consistency status       : success                       
+Type-2 consistency status         : success 
+vPC role                          : primary                       
+Number of vPCs configured         : 0   
+Peer Gateway                      : Enabled
+Dual-active excluded VLANs        : -
+Graceful Consistency Check        : Enabled
+Auto-recovery status              : Disabled
+Delay-restore status              : Timer is off.(timeout = 30s)
+Delay-restore SVI status          : Timer is off.(timeout = 10s)
+Operational Layer3 Peer-router    : Disabled
+Virtual-peerlink mode             : Disabled
+
+vPC Peer-link status
+---------------------------------------------------------------------
+id    Port   Status Active vlans    
+--    ----   ------ -------------------------------------------------
+1     Po1    up     1,101-105
+======================  show vpc =======================
+======================  show ip interface brief =======================
+IP Interface Status for VRF "default"(1)
+Interface            IP Address      Interface Status
+Vlan101              172.16.101.2    protocol-up/link-up/admin-up       
+Vlan102              172.16.102.2    protocol-up/link-up/admin-up       
+Vlan103              172.16.103.2    protocol-up/link-up/admin-up       
+Vlan104              172.16.104.2    protocol-up/link-up/admin-up       
+Vlan105              172.16.105.2    protocol-up/link-up/admin-up       
+Eth1/3               172.16.252.1    protocol-up/link-up/admin-up       
+Eth1/4               172.16.252.5    protocol-up/link-up/admin-up
+======================  show ip interface brief =======================
+======================  show port-channel summary =======================
+Flags:  D - Down        P - Up in port-channel (members)
+        I - Individual  H - Hot-standby (LACP only)
+        s - Suspended   r - Module-removed
+        b - BFD Session Wait
+        S - Switched    R - Routed
+        U - Up (port-channel)
+        p - Up in delay-lacp mode (member)
+        M - Not in use. Min-links not met
+--------------------------------------------------------------------------------
+Group Port-       Type     Protocol  Member Ports
+      Channel
+--------------------------------------------------------------------------------
+1     Po1(SU)     Eth      LACP      Eth1/1(P)    Eth1/2(P)
+======================  show port-channel summary =======================
+======================  show spanning-tree =======================
+VLAN0001
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    32769
+             Address     0023.04ee.be65
+             This bridge is the root
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    32769  (priority 32768 sys-id-ext 1)
+             Address     0023.04ee.be65
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po1              Desg FWD 3         128.4096 (vPC peer-link) Network P2p 
+
+
+VLAN0101
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    32869
+             Address     0023.04ee.be65
+             This bridge is the root
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    32869  (priority 32768 sys-id-ext 101)
+             Address     0023.04ee.be65
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po1              Desg FWD 3         128.4096 (vPC peer-link) Network P2p 
+Eth1/11          Desg FWD 4         128.11   Edge P2p 
+
+
+VLAN0102
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    32870
+             Address     0023.04ee.be65
+             This bridge is the root
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    32870  (priority 32768 sys-id-ext 102)
+             Address     0023.04ee.be65
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po1              Desg FWD 3         128.4096 (vPC peer-link) Network P2p 
+
+
+VLAN0103
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    32871
+             Address     0023.04ee.be65
+             This bridge is the root
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    32871  (priority 32768 sys-id-ext 103)
+             Address     0023.04ee.be65
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po1              Desg FWD 3         128.4096 (vPC peer-link) Network P2p 
+
+
+VLAN0104
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    32872
+             Address     0023.04ee.be65
+             This bridge is the root
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    32872  (priority 32768 sys-id-ext 104)
+             Address     0023.04ee.be65
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po1              Desg FWD 3         128.4096 (vPC peer-link) Network P2p 
+
+
+VLAN0105
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    32873
+             Address     0023.04ee.be65
+             This bridge is the root
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    32873  (priority 32768 sys-id-ext 105)
+             Address     0023.04ee.be65
+             Hello Time  2  sec  Max Age 20 sec  Forward Delay 15 sec
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Po1              Desg FWD 3         128.4096 (vPC peer-link) Network P2p
+======================  show spanning-tree =======================
+======================  show hsrp all =======================
+Vlan101 - Group 10 (HSRP-V1) (IPv4)
+  Local state is Active, priority 100 (Cfged 100)
+    Forwarding threshold(for vPC), lower: 0 upper: 100 
+  Hellotime 3 sec, holdtime 10 sec
+  Next hello sent in 0.706000 sec(s)
+  Virtual IP address is 172.16.101.1 (Cfged)
+  Active router is local
+  Standby router is 172.16.101.3 , priority 100 expires in 8.312000 sec(s)
+  Authentication text "cisco"
+  Virtual mac address is 0000.0c07.ac0a (Default MAC)
+  2 state changes, last state change 01:33:51
+  IP redundancy name is hsrp-Vlan101-10 (default)
+
+Vlan102 - Group 10 (HSRP-V1) (IPv4)
+  Local state is Standby, priority 100 (Cfged 100)
+    Forwarding threshold(for vPC), lower: 0 upper: 100 
+  Hellotime 3 sec, holdtime 10 sec
+  Next hello sent in 1.783000 sec(s)
+  Virtual IP address is 172.16.102.1 (Cfged)
+  Active router is 172.16.102.3, priority 100 expires in 7.978000 sec(s)
+  Standby router is local 
+  Authentication text "cisco"
+  Virtual mac address is 0000.0c07.ac0a (Default MAC)
+  1 state changes, last state change 01:30:36
+  IP redundancy name is hsrp-Vlan102-10 (default)
+
+Vlan103 - Group 10 (HSRP-V1) (IPv4)
+  Local state is Standby, priority 100 (Cfged 100)
+    Forwarding threshold(for vPC), lower: 0 upper: 100 
+  Hellotime 3 sec, holdtime 10 sec
+  Next hello sent in 1.180000 sec(s)
+  Virtual IP address is 172.16.103.1 (Cfged)
+  Active router is 172.16.103.3, priority 100 expires in 8.168000 sec(s)
+  Standby router is local 
+  Authentication text "cisco"
+  Virtual mac address is 0000.0c07.ac0a (Default MAC)
+  1 state changes, last state change 01:30:14
+  IP redundancy name is hsrp-Vlan103-10 (default)
+
+Vlan104 - Group 10 (HSRP-V1) (IPv4)
+  Local state is Standby, priority 100 (Cfged 100)
+    Forwarding threshold(for vPC), lower: 0 upper: 100 
+  Hellotime 3 sec, holdtime 10 sec
+  Next hello sent in 1.499000 sec(s)
+  Virtual IP address is 172.16.104.1 (Cfged)
+  Active router is 172.16.104.3, priority 100 expires in 8.530000 sec(s)
+  Standby router is local 
+  Authentication text "cisco"
+  Virtual mac address is 0000.0c07.ac0a (Default MAC)
+  1 state changes, last state change 01:30:14
+  IP redundancy name is hsrp-Vlan104-10 (default)
+
+Vlan105 - Group 10 (HSRP-V1) (IPv4)
+  Local state is Standby, priority 100 (Cfged 100)
+    Forwarding threshold(for vPC), lower: 0 upper: 100 
+  Hellotime 3 sec, holdtime 10 sec
+  Next hello sent in 0.236000 sec(s)
+  Virtual IP address is 172.16.105.1 (Cfged)
+  Active router is 172.16.105.3, priority 100 expires in 9.085000 sec(s)
+  Standby router is local 
+  Authentication text "cisco"
+  Virtual mac address is 0000.0c07.ac0a (Default MAC)
+  1 state changes, last state change 01:30:14
+  IP redundancy name is hsrp-Vlan105-10 (default)
+======================  show hsrp all =======================
+======================  show ip ospf neighbor =======================
+OSPF Process ID 1 VRF default
+ Total number of neighbors: 2
+ Neighbor ID     Pri State            Up Time  Address         Interface
+ 172.16.252.25     1 FULL/DR          01:34:05 172.16.252.2    Eth1/3 
+ 172.16.252.33     1 FULL/DR          01:34:04 172.16.252.6    Eth1/4
+======================  show ip ospf neighbor =======================

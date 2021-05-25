@@ -1,0 +1,221 @@
+======================  show run =======================
+Building configuration...
+!! IOS XR Configuration 6.3.1
+!! Last configuration change at Tue May 25 09:20:57 2021 by cisco
+!
+hostname core-rtr01
+logging console disable
+service timestamps log datetime msec
+service timestamps debug datetime msec
+telnet vrf default ipv4 server max-servers 10
+telnet vrf Mgmt-intf ipv4 server max-servers 10
+domain name virl.info
+domain lookup disable
+vrf Mgmt-intf
+ address-family ipv4 unicast
+ !
+ address-family ipv6 unicast
+ !
+!
+line template vty
+ timestamp
+ exec-timeout 720 0
+!
+line console
+ exec-timeout 0 0
+ absolute-timeout 0
+ session-timeout 0
+!
+line default
+ exec-timeout 0 0
+ absolute-timeout 0
+ session-timeout 0
+!
+vty-pool default 0 50
+control-plane
+ management-plane
+  inband
+   interface all
+    allow all
+   !
+  !
+ !
+!
+ipv4 access-list PERMIT-SSH
+ 10 permit ipv4 10.10.20.0 0.0.0.255 any
+!
+interface Loopback0
+ description to
+ shutdown
+!
+interface MgmtEth0/0/CPU0/0
+ description to port4.sandbox-backend
+ vrf Mgmt-intf
+ ipv4 address 10.10.20.173 255.255.255.0
+!
+interface GigabitEthernet0/0/0/0
+ description L3 Link to core-rtr02
+ ipv4 address 172.16.252.37 255.255.255.252
+!
+interface GigabitEthernet0/0/0/1
+ description L3 Link to edge-sw01
+ ipv4 address 172.16.253.2 255.255.255.248
+!
+interface GigabitEthernet0/0/0/2
+ description L3 Link to dist-rtr01
+ ipv4 address 172.16.252.22 255.255.255.252
+!
+interface GigabitEthernet0/0/0/3
+ description L3 Link to dist-rtr02
+ ipv4 address 172.16.252.30 255.255.255.252
+!
+router static
+ address-family ipv4 unicast
+  0.0.0.0/0 172.16.253.4
+ !
+ vrf Mgmt-intf
+  address-family ipv4 unicast
+   0.0.0.0/0 10.10.20.254
+  !
+ !
+!
+router ospf 1
+ area 0
+  interface GigabitEthernet0/0/0/0
+  !
+  interface GigabitEthernet0/0/0/1
+  !
+  interface GigabitEthernet0/0/0/2
+  !
+  interface GigabitEthernet0/0/0/3
+  !
+ !
+!
+ssh server v2
+ssh server vrf Mgmt-intf ipv4 access-list PERMIT-SSH
+end
+======================  show run =======================
+======================  show version =======================
+Cisco IOS XR Software, Version 6.3.1[Default]
+Copyright (c) 2017 by Cisco Systems, Inc.
+
+ROM: GRUB, Version 1.99(0), DEV RELEASE
+
+core-rtr01 uptime is 1 hour, 38 minutes
+System image file is "bootflash:disk0/xrvr-os-mbi-6.3.1/mbixrvr-rp.vm"
+
+cisco IOS XRv Series (Pentium II Stepping 7) processor with 3145343K bytes of memory.
+Pentium II Stepping 7 processor at 2088MHz, Revision 2.174
+IOS XRv Chassis
+
+1 Management Ethernet
+4 GigabitEthernet
+97070k bytes of non-volatile configuration memory.
+866M bytes of hard disk.
+2321392k bytes of disk0: (Sector size 512 bytes).
+
+Configuration register on node 0/0/CPU0 is 0x2102
+Boot device on node 0/0/CPU0 is disk0:
+Package active on node 0/0/CPU0:
+iosxr-infra, V 6.3.1[Default], Cisco Systems, at disk0:iosxr-infra-6.3.1
+    Built on Thu Sep 14 02:24:13 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+iosxr-fwding, V 6.3.1[Default], Cisco Systems, at disk0:iosxr-fwding-6.3.1
+    Built on Thu Sep 14 02:24:13 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+iosxr-routing, V 6.3.1[Default], Cisco Systems, at disk0:iosxr-routing-6.3.1
+    Built on Thu Sep 14 02:24:13 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+iosxr-ce, V 6.3.1[Default], Cisco Systems, at disk0:iosxr-ce-6.3.1
+    Built on Thu Sep 14 02:24:13 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+xrvr-os-mbi, V 6.3.1[Default], Cisco Systems, at disk0:xrvr-os-mbi-6.3.1
+    Built on Thu Sep 14 02:24:45 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+xrvr-base, V 6.3.1[Default], Cisco Systems, at disk0:xrvr-base-6.3.1
+    Built on Thu Sep 14 02:24:13 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+xrvr-fwding, V 6.3.1[Default], Cisco Systems, at disk0:xrvr-fwding-6.3.1
+    Built on Thu Sep 14 02:24:13 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+xrvr-mgbl-x, V 6.3.1[Default], Cisco Systems, at disk0:xrvr-mgbl-x-6.3.1
+    Built on Thu Sep 14 02:24:17 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+iosxr-mpls, V 6.3.1[Default], Cisco Systems, at disk0:iosxr-mpls-6.3.1
+    Built on Thu Sep 14 02:24:13 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+iosxr-mgbl, V 6.3.1[Default], Cisco Systems, at disk0:iosxr-mgbl-6.3.1
+    Built on Thu Sep 14 02:24:13 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+iosxr-mcast, V 6.3.1[Default], Cisco Systems, at disk0:iosxr-mcast-6.3.1
+    Built on Thu Sep 14 02:24:13 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+xrvr-mcast-supp, V 6.3.1[Default], Cisco Systems, at disk0:xrvr-mcast-supp-6.3.1
+    Built on Thu Sep 14 02:24:13 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+iosxr-bng, V 6.3.1[Default], Cisco Systems, at disk0:iosxr-bng-6.3.1
+    Built on Thu Sep 14 02:24:14 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+xrvr-bng-supp, V 6.3.1[Default], Cisco Systems, at disk0:xrvr-bng-supp-6.3.1
+    Built on Thu Sep 14 02:24:14 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+iosxr-security, V 6.3.1[Default], Cisco Systems, at disk0:iosxr-security-6.3.1
+    Built on Thu Sep 14 02:24:09 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+
+xrvr-fullk9-x, V 6.3.1[Default], Cisco Systems, at disk0:xrvr-fullk9-x-6.3.1
+    Built on Thu Sep 14 02:24:48 UTC 2017
+    By iox-lnx-052 in /auto/srcarchive11/production/6.3.1/xrvr/workspace for pie
+======================  show version =======================
+======================  admin show platform =======================
+Node		Type		PLIM		State		Config State
+-----------------------------------------------------------------------------
+0/0/CPU0        RP(Active)      N/A             IOS XR RUN      PWR,NSHUT,MON
+======================  admin show platform =======================
+======================  show vrf all =======================
+VRF                  RD                  RT                         AFI   SAFI     
+Mgmt-intf            not set
+======================  show vrf all =======================
+======================  show ip interface brief =======================
+Interface                      IP-Address      Status          Protocol Vrf-Name
+Loopback0                      unassigned      Shutdown        Down     default 
+MgmtEth0/0/CPU0/0              10.10.20.173    Up              Up       Mgmt-intf
+GigabitEthernet0/0/0/0         172.16.252.37   Up              Up       default 
+GigabitEthernet0/0/0/1         172.16.253.2    Up              Up       default 
+GigabitEthernet0/0/0/2         172.16.252.22   Up              Up       default 
+GigabitEthernet0/0/0/3         172.16.252.30   Up              Up       default
+======================  show ip interface brief =======================
+======================  show ospf neighbor =======================
+* Indicates MADJ interface
+# Indicates Neighbor awaiting BFD session up
+
+Neighbors for OSPF 1
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+172.16.252.38   1     FULL/DR         00:00:35    172.16.252.38   GigabitEthernet0/0/0/0
+    Neighbor is up for 01:34:39
+172.16.252.38   1     FULL/DROTHER    00:00:32    172.16.253.3    GigabitEthernet0/0/0/1
+    Neighbor is up for 01:34:41
+172.31.252.2    1     FULL/DR         00:00:34    172.16.253.4    GigabitEthernet0/0/0/1
+    Neighbor is up for 01:34:51
+172.16.252.25   1     FULL/DR         00:00:32    172.16.252.21   GigabitEthernet0/0/0/2
+    Neighbor is up for 01:34:42
+172.16.252.33   1     FULL/DR         00:00:32    172.16.252.29   GigabitEthernet0/0/0/3
+    Neighbor is up for 01:34:50
+
+Total neighbor count: 5
+======================  show ospf neighbor =======================

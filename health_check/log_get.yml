@@ -2,7 +2,7 @@
 - hosts: all
   gather_facts: false
   tasks:
-    - name: create time      # ログ保存日時ディレクトリ作成
+    - name: create time
       set_fact:
         exe_date: "{{ lookup('pipe', 'date +%Y%m%d_%H%M_%S') }}"
       run_once: true
@@ -12,7 +12,7 @@
         logdir_date: "{{ inventory_dir }}/log/log_{{ exe_date }}"
       run_once: true
   
-    - name: create directory for log      # ログ保存用実行日時別ディレクトリ作成
+    - name: create directory for log
       file:
         path: "{{ logdir_date }}/"
         state: directory
@@ -20,41 +20,19 @@
       delegate_to: localhost
       run_once: true
 
-#    - name: create directory for repository   # リポジトリ保存用ディレクトリ作成
-#      file:
-#        path: "{{ inventory_dir }}/repository_dir/"
-#        state: directory
-#      register: repodir
-#      delegate_to: localhost
-#      run_once: true
-
 - name: ios section
   hosts: ios
   gather_facts: false
   roles:
     - { role: get_ios_command, when: "'ios' in groups and inventory_hostname in groups['ios']" }
     - { role: save_cisco_command_logdir, when: "'ios' in groups and inventory_hostname in groups['ios']" }
-#    - { role: save_cisco_command_repodir, when: "'IOS' in groups and inventory_hostname in groups['IOS']" }
-#    - { role: process_text, when: "'IOS' in groups and inventory_hostname in groups['IOS'] and 'process_file' is defined" }
-#    - { role: process_unstractured_csv, when: "'IOS' in groups and inventory_hostname in groups['IOS'] and 'template_file' is defined" }
 
-- name: xr section
-  hosts: xr 
+- name: iosxr section
+  hosts: iosxr 
   gather_facts: false
   roles:
-    - { role: get_iosxr_command, when: "'xr' in groups and inventory_hostname in groups['xr']" }  
-    - { role: save_cisco_command_logdir, when: "'xr' in groups and inventory_hostname in groups['xr']" }  
-#    - { role: save_cisco_command_repodir, when: "'XR' in groups and inventory_hostname in groups['XR']" }
-#    - { role: process_text, when: "'XR' in groups and inventory_hostname in groups['XR'] and 'process_file' is defined" }
-#    - { role: process_unstractured_csv, when: "'XR' in groups and inventory_hostname in groups['XR'] and 'template_file' is defined" }
-
-#- name: XE section
-#  hosts: XE 
-#  gather_facts: false
-#  roles:
-#    - { role: get_ios_command, when: "'XE' in groups and inventory_hostname in groups['XE']" }  
-#    - { role: save_cisco_command_logdir, when: "'XE' in groups and inventory_hostname in groups['XE']" }  
-#    - { role: save_cisco_command_repodir, when: "'XE' in groups and inventory_hostname in groups['XE']" }  
+    - { role: get_iosxr_command, when: "'iosxr' in groups and inventory_hostname in groups['iosxr']" }  
+    - { role: save_cisco_command_logdir, when: "'iosxr' in groups and inventory_hostname in groups['iosxr']" }  
 
 - name: nxos section
   hosts: nxos
@@ -62,19 +40,3 @@
   roles:
     - { role: get_nxos_command, when: "'nxos' in groups and inventory_hostname in groups['nxos']" }  
     - { role: save_cisco_command_logdir, when: "'nxos' in groups and inventory_hostname in groups['nxos']" }  
-#    - { role: save_cisco_command_repodir, when: "'NXOS' in groups and inventory_hostname in groups['NXOS']" }  
-#    - { role: process_text, when: "'NXOS' in groups and inventory_hostname in groups['NXOS'] and 'process_file' is defined" }
-#    - { role: process_unstractured_csv, when: "'NXOS' in groups and inventory_hostname in groups['NXOS'] and 'template_file' is defined" }
-
-#  post_tasks:
-#    - name: git
-#      shell: "sh git_and_notify.sh {{ trigger }} {{ exe_date }} {{ repository_dir }}"
-#      args:
-#        #chdir: "{{ inventory_dir }}"
-#      delegate_to: localhost
-#      run_once: true
-    
-#    - name: finish dable start check shell  # 2重起動防止シェルの終了
-#      shell: "sh finish_dable_start.sh"
-#      delegate_to: localhost
-#      run_once: true

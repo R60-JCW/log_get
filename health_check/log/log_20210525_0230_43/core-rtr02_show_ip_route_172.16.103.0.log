@@ -1,0 +1,9 @@
+Routing entry for 172.16.103.0/24
+  Known via "ospf 1", distance 110, metric 42, type intra area
+  Installed May 25 08:01:04.156 for 01:30:28
+  Routing Descriptor Blocks
+    172.16.252.25, from 172.16.101.3, via GigabitEthernet0/0/0/2
+      Route metric is 42
+    172.16.252.33, from 172.16.101.3, via GigabitEthernet0/0/0/3
+      Route metric is 42
+  No advertising protos.

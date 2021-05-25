@@ -1,9 +1,0 @@
----
-- name: save files per commands
-  copy:
-    content: "{{ item | to_nice_json }}"
-    dest: "{{ logdir.path }}/{{ inventory_hostname }}_{{ item.item.file_name }}.log"
-  loop: "{{ results }}"
-  delegate_to: localhost
-  no_log: True
-
