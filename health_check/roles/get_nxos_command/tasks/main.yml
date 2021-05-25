@@ -3,7 +3,7 @@
   nxos_command:
     commands: "{{ item }}" 
   register: show_result
-  loop: "{{ lookup('file', '{{ inventory_dir }}/{{ process_dir }}/{{ commands_show }}').splitlines() }}"
+  loop: "{{ lookup('file', 'files/{{ commands_show }}').splitlines() }}"
   
 - name: set show results
   set_fact:
@@ -13,7 +13,7 @@
   nxos_command:
     commands: "{{ item }}"
   register: route_result
-  loop: "{{ lookup('file', '{{ inventory_dir }}/{{ process_dir }}/{{ commands_route }}').splitlines() }}"
+  loop: "{{ lookup('file', 'files/{{ commands_route }}').splitlines() }}"
 
 - name: set route results
   set_fact:
